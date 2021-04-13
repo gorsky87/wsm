@@ -1,0 +1,26 @@
+uuid: 62273852-f235-4084-85ed-ec62971add3c
+langcode: pl
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: jwQ6hgEe-cv-eKsM2YEvZCNa8PumkG23YbrKoM4HgMc
+id: content_nodes
+label: 'Content nodes'
+description: ''
+matchers:
+  a0278b17-a284-42b8-ac99-54c4d4c39dbe:
+    uuid: a0278b17-a284-42b8-ac99-54c4d4c39dbe
+    id: 'entity:node'
+    weight: 0
+    settings:
+      result_description: '[node:langcode], [node:author], [node:created]'
+      bundles:
+        content_page: content_page
+        blog_post: blog_post
+      group_by_bundle: false
+      include_unpublished: false
+      metadata: ''
+      substitution_type: canonical
+      limit: 100

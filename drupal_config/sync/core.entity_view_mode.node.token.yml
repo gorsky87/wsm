@@ -1,0 +1,12 @@
+uuid: 7a209c2c-a6ca-4318-92d2-cc051fce9df4
+langcode: pl
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: vIX64lRX14_lPePewHfWVFSyTfJt0Yh-Lja05UgP8N0
+id: node.token
+label: Wzorzec
+targetEntityType: node
+cache: true

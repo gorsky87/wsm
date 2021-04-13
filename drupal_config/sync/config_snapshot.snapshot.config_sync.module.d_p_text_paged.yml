@@ -1,0 +1,482 @@
+uuid: a0d8353d-8565-4ab6-9da6-ab62e27b7449
+langcode: pl
+status: true
+dependencies:
+  module:
+    - d_p_text_paged
+id: config_sync.module.d_p_text_paged
+snapshotSet: config_sync
+extensionType: module
+extensionName: d_p_text_paged
+items:
+  -
+    collection: ''
+    name: core.entity_form_display.paragraph.d_p_text_paged.default
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.field.paragraph.d_p_text_paged.field_d_cta_link
+          - field.field.paragraph.d_p_text_paged.field_d_long_text
+          - field.field.paragraph.d_p_text_paged.field_d_main_title
+          - field.field.paragraph.d_p_text_paged.field_d_media_icon
+          - field.field.paragraph.d_p_text_paged.field_d_settings
+          - field.field.paragraph.d_p_text_paged.field_d_subtitle
+          - paragraphs.paragraphs_type.d_p_text_paged
+        module:
+          - d_p
+          - field_group
+          - link_attributes
+          - media_library
+          - text
+      third_party_settings:
+        field_group:
+          group_tabsd:
+            children:
+              - group_basic
+              - group_settings
+            parent_name: ''
+            weight: 0
+            format_type: tabs
+            region: content
+            format_settings:
+              id: ''
+              classes: ''
+              direction: horizontal
+            label: Tabs
+          group_basic:
+            children:
+              - field_d_main_title
+              - field_d_subtitle
+              - field_d_media_icon
+              - field_d_long_text
+              - field_d_cta_link
+              - translation
+            parent_name: group_tabsd
+            weight: 10
+            format_type: tab
+            region: content
+            format_settings:
+              id: ''
+              classes: ''
+              description: ''
+              formatter: open
+              required_fields: true
+            label: Basic
+          group_settings:
+            children:
+              - field_d_settings
+            parent_name: group_tabsd
+            weight: 11
+            format_type: tab
+            region: content
+            format_settings:
+              id: ''
+              classes: ''
+              description: ''
+              formatter: closed
+              required_fields: true
+            label: Settings
+      id: paragraph.d_p_text_paged.default
+      targetEntityType: paragraph
+      bundle: d_p_text_paged
+      mode: default
+      content:
+        field_d_cta_link:
+          weight: 5
+          settings:
+            placeholder_url: ''
+            placeholder_title: ''
+            enabled_attributes:
+              id: true
+              name: true
+              target: true
+              rel: true
+              class: true
+              accesskey: true
+          third_party_settings: {  }
+          type: link_attributes
+          region: content
+        field_d_long_text:
+          weight: 4
+          settings:
+            rows: 5
+            placeholder: ''
+          third_party_settings: {  }
+          type: text_textarea
+          region: content
+        field_d_main_title:
+          weight: 1
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: string_textfield
+          region: content
+        field_d_media_icon:
+          weight: 3
+          settings:
+            media_types: {  }
+          third_party_settings: {  }
+          type: media_library_widget
+          region: content
+        field_d_settings:
+          weight: 7
+          settings:
+            filter_mode: '1'
+            allowed_settings:
+              heading_type:
+                status: '1'
+              custom_class:
+                status: '1'
+                modifiers:
+                  padding-bottom:
+                    status: '1'
+                  paragraph-theme:
+                    status: '1'
+                  margin-bottom:
+                    status: '1'
+                  margin-top:
+                    status: '1'
+                  padding-top:
+                    status: '1'
+                  stripe-sidebar:
+                    status: 0
+                  tile:
+                    status: 0
+                  with-divider:
+                    status: 0
+                  with-tiles:
+                    status: 0
+                  half-transparent:
+                    status: 0
+                  with-grid:
+                    status: 0
+                  with-price:
+                    status: 0
+                  header-into-columns:
+                    status: 0
+                  full-width:
+                    status: 0
+              side_image_layout:
+                status: 0
+              column_count_tablet:
+                status: 0
+              form_layout:
+                status: 0
+              side_tiles_layout:
+                status: 0
+              featured_images:
+                status: 0
+              column_count_mobile:
+                status: 0
+              embed_layout:
+                status: 0
+              column_count:
+                status: 0
+          third_party_settings: {  }
+          type: field_d_p_set_settings
+          region: content
+        field_d_subtitle:
+          weight: 2
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: string_textfield
+          region: content
+        translation:
+          weight: 6
+          region: content
+          settings: {  }
+          third_party_settings: {  }
+      hidden:
+        created: true
+        status: true
+        uid: true
+      _core:
+        default_config_hash: Sj12Z2FjLa3TOx48elrSyLqLM-_qZokoh2N7xMOZGt8
+  -
+    collection: ''
+    name: core.entity_view_display.paragraph.d_p_text_paged.default
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.field.paragraph.d_p_text_paged.field_d_cta_link
+          - field.field.paragraph.d_p_text_paged.field_d_long_text
+          - field.field.paragraph.d_p_text_paged.field_d_main_title
+          - field.field.paragraph.d_p_text_paged.field_d_media_icon
+          - field.field.paragraph.d_p_text_paged.field_d_settings
+          - field.field.paragraph.d_p_text_paged.field_d_subtitle
+          - paragraphs.paragraphs_type.d_p_text_paged
+        module:
+          - d_p
+          - link
+          - text
+      id: paragraph.d_p_text_paged.default
+      targetEntityType: paragraph
+      bundle: d_p_text_paged
+      mode: default
+      content:
+        field_d_cta_link:
+          weight: 4
+          label: hidden
+          settings:
+            trim_length: 80
+            url_only: false
+            url_plain: false
+            rel: ''
+            target: ''
+          third_party_settings: {  }
+          type: link
+          region: content
+        field_d_long_text:
+          weight: 3
+          label: hidden
+          settings: {  }
+          third_party_settings: {  }
+          type: text_default
+          region: content
+        field_d_main_title:
+          weight: 1
+          label: hidden
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          type: string
+          region: content
+        field_d_media_icon:
+          weight: 0
+          label: hidden
+          settings:
+            view_mode: d_icon
+            link: false
+          third_party_settings: {  }
+          type: entity_reference_entity_view
+          region: content
+        field_d_settings:
+          weight: 5
+          label: above
+          settings: {  }
+          third_party_settings: {  }
+          type: field_configuration_formatter
+          region: content
+        field_d_subtitle:
+          weight: 2
+          label: hidden
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          type: string
+          region: content
+      hidden:
+        search_api_excerpt: true
+      _core:
+        default_config_hash: nQfDzaeN2iuR4j7m3ceO6QbiRMS1iaLkUJTtQhTx8zg
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_text_paged.field_d_cta_link
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_cta_link
+          - paragraphs.paragraphs_type.d_p_text_paged
+        module:
+          - link
+      id: paragraph.d_p_text_paged.field_d_cta_link
+      field_name: field_d_cta_link
+      entity_type: paragraph
+      bundle: d_p_text_paged
+      label: 'Call To Action'
+      description: ''
+      required: false
+      translatable: true
+      default_value:
+        -
+          options:
+            attributes:
+              class: 'btn btn-secondary'
+      default_value_callback: ''
+      settings:
+        link_type: 17
+        title: 1
+      field_type: link
+      _core:
+        default_config_hash: Ikis-CoVOWXZ0zoaLyxKweC49FNogX5IH4VcLLEeYNc
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_text_paged.field_d_long_text
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_long_text
+          - paragraphs.paragraphs_type.d_p_text_paged
+        module:
+          - text
+      id: paragraph.d_p_text_paged.field_d_long_text
+      field_name: field_d_long_text
+      entity_type: paragraph
+      bundle: d_p_text_paged
+      label: 'Long text'
+      description: ''
+      required: false
+      translatable: true
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: text_long
+      _core:
+        default_config_hash: fjWTiKiGgjDvPGv1t6ZlrjqVQXMY4mBtMTAuan5aoYY
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_text_paged.field_d_main_title
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_main_title
+          - paragraphs.paragraphs_type.d_p_text_paged
+      id: paragraph.d_p_text_paged.field_d_main_title
+      field_name: field_d_main_title
+      entity_type: paragraph
+      bundle: d_p_text_paged
+      label: 'Main title'
+      description: ''
+      required: false
+      translatable: true
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: string
+      _core:
+        default_config_hash: GtxaMTuU6vJYrswZcYbQn-_3jul8ZimgvKpvJ4yiY8M
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_text_paged.field_d_media_icon
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_media_icon
+          - media.type.d_image
+          - paragraphs.paragraphs_type.d_p_text_paged
+      id: paragraph.d_p_text_paged.field_d_media_icon
+      field_name: field_d_media_icon
+      entity_type: paragraph
+      bundle: d_p_text_paged
+      label: Icon
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        handler: 'default:media'
+        handler_settings:
+          target_bundles:
+            d_image: d_image
+          sort:
+            field: revision_created
+            direction: DESC
+          auto_create: false
+          auto_create_bundle: ''
+      field_type: entity_reference
+      _core:
+        default_config_hash: '-2ZnmDlvZvNbEJNbKA4GwX7AxeCG_ZnWn4FmPTjHOdY'
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_text_paged.field_d_settings
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_settings
+          - paragraphs.paragraphs_type.d_p_text_paged
+        module:
+          - d_p
+      id: paragraph.d_p_text_paged.field_d_settings
+      field_name: field_d_settings
+      entity_type: paragraph
+      bundle: d_p_text_paged
+      label: 'Paragraph settings'
+      description: ''
+      required: false
+      translatable: true
+      default_value:
+        -
+          value: '{"custom_class":"","heading_type":"h2"}'
+      default_value_callback: ''
+      settings: {  }
+      field_type: field_p_configuration_storage
+      _core:
+        default_config_hash: Ghik_tND9JBjcL7LoUnl-arOFRlt9MlAISPQfT-QpMM
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_text_paged.field_d_subtitle
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_subtitle
+          - paragraphs.paragraphs_type.d_p_text_paged
+      id: paragraph.d_p_text_paged.field_d_subtitle
+      field_name: field_d_subtitle
+      entity_type: paragraph
+      bundle: d_p_text_paged
+      label: Subtitle
+      description: ''
+      required: false
+      translatable: true
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: string
+      _core:
+        default_config_hash: ewqLeiIaKqRotirPCgmbJftFjVOKDzdQMbyZ_QynGd4
+  -
+    collection: ''
+    name: language.content_settings.paragraph.d_p_text_paged
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - paragraphs.paragraphs_type.d_p_text_paged
+        module:
+          - content_translation
+      third_party_settings:
+        content_translation:
+          enabled: true
+      id: paragraph.d_p_text_paged
+      target_entity_type_id: paragraph
+      target_bundle: d_p_text_paged
+      default_langcode: site_default
+      language_alterable: true
+      _core:
+        default_config_hash: Uty_1zMOWSBITIH-2frKBgBJydkrl2Ug6PDPL18eCnI
+  -
+    collection: ''
+    name: paragraphs.paragraphs_type.d_p_text_paged
+    data:
+      langcode: en
+      status: true
+      dependencies: {  }
+      id: d_p_text_paged
+      label: 'Text page'
+      icon_uuid: null
+      icon_default: null
+      description: 'A simple text paragraph.'
+      behavior_plugins: {  }
+      _core:
+        default_config_hash: RLkJywJCbLEQvJWJ4sFIteGoUznpR9c9TEomEKzsUKI

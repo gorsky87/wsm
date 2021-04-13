@@ -1,0 +1,20 @@
+uuid: 279f3ac1-0a91-41c5-aa85-ab6171611cd7
+langcode: pl
+status: true
+dependencies:
+  module:
+    - url_restrictions
+id: config_sync.module.url_restrictions
+snapshotSet: config_sync
+extensionType: module
+extensionName: url_restrictions
+items:
+  -
+    collection: ''
+    name: url_restrictions.settings
+    data:
+      entity_type: ''
+      url: /
+      pages: "/user/login\n/user/register"
+      _core:
+        default_config_hash: ENxYlV_g4WiJFH_BA73aHjy7k5dfuDWOx0KIg6rVr0Q

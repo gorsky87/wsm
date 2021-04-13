@@ -1,0 +1,515 @@
+uuid: 2dbd2603-73ee-4a36-b27c-f42333313539
+langcode: pl
+status: true
+dependencies:
+  module:
+    - d_p
+id: config_sync.module.d_p
+snapshotSet: config_sync
+extensionType: module
+extensionName: d_p
+items:
+  -
+    collection: ''
+    name: features.bundle.d_p
+    data:
+      langcode: en
+      status: true
+      dependencies: {  }
+      name: Paragraphs
+      machine_name: d_p
+      description: 'All Droopler paragraphs'
+      assignments:
+        alter:
+          core: true
+          uuid: true
+          user_permissions: true
+          enabled: true
+          weight: 0
+        base:
+          types:
+            config:
+              paragraphs_type: paragraphs_type
+            content: {  }
+          enabled: true
+          weight: -2
+        core:
+          types:
+            config:
+              date_format: date_format
+              field_storage_config: field_storage_config
+              entity_form_mode: entity_form_mode
+              image_style: image_style
+              menu: menu
+              responsive_image_style: responsive_image_style
+              user_role: user_role
+              entity_view_mode: entity_view_mode
+          enabled: false
+          weight: 5
+        dependency:
+          enabled: true
+          weight: 15
+        exclude:
+          types:
+            config:
+              features_bundle: features_bundle
+          curated: true
+          module:
+            installed: true
+            profile: true
+            namespace: true
+            namespace_any: false
+          enabled: true
+          weight: -5
+        existing:
+          enabled: true
+          weight: 12
+        forward_dependency:
+          enabled: true
+          weight: 4
+        namespace:
+          enabled: true
+          weight: 0
+        optional:
+          types:
+            config: {  }
+          enabled: true
+          weight: 0
+        packages:
+          enabled: true
+          weight: -20
+        profile:
+          curated: true
+          standard:
+            files: true
+            dependencies: true
+          types:
+            config:
+              block: block
+              language_content_settings: language_content_settings
+              configurable_language: configurable_language
+              migration: migration
+              shortcut_set: shortcut_set
+              tour: tour
+          enabled: false
+          weight: 10
+        site:
+          types:
+            config:
+              action: action
+              contact_form: contact_form
+              block_content_type: block_content_type
+              rdf_mapping: rdf_mapping
+              search_page: search_page
+              taxonomy_vocabulary: taxonomy_vocabulary
+              editor: editor
+              filter_format: filter_format
+          enabled: false
+          weight: 7
+      profile_name: ''
+      is_profile: false
+      _core:
+        default_config_hash: WQUGaXWdwW8RM_TjwkcJE50bxrRTWV7P7oAFc_t3lV8
+  -
+    collection: ''
+    name: field.storage.node.field_meta_tags
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - metatag
+          - node
+      id: node.field_meta_tags
+      field_name: field_meta_tags
+      entity_type: node
+      type: metatag
+      settings: {  }
+      module: metatag
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+      _core:
+        default_config_hash: toqvFhfgG3CpkhzHPz_gW5KwBaCstfihpup6v3aX1AI
+  -
+    collection: ''
+    name: field.storage.paragraph.field_d_cta_link
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - link
+          - paragraphs
+      id: paragraph.field_d_cta_link
+      field_name: field_d_cta_link
+      entity_type: paragraph
+      type: link
+      settings: {  }
+      module: link
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: true
+      custom_storage: false
+      _core:
+        default_config_hash: T0zTmO2PW1krXSnp6KKA-ywQS2wJUMVqP8pP9xXvhmM
+  -
+    collection: ''
+    name: field.storage.paragraph.field_d_icon
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - file
+          - image
+          - paragraphs
+      id: paragraph.field_d_icon
+      field_name: field_d_icon
+      entity_type: paragraph
+      type: image
+      settings:
+        uri_scheme: public
+        default_image:
+          uuid: ''
+          alt: ''
+          title: ''
+          width: null
+          height: null
+        target_type: file
+        display_field: false
+        display_default: false
+      module: image
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: true
+      custom_storage: false
+      _core:
+        default_config_hash: QL-z39fvS_vIVODgP-fw0y4kvTHzUtxRi4BgJD77ISU
+  -
+    collection: ''
+    name: field.storage.paragraph.field_d_image
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - file
+          - image
+          - paragraphs
+      id: paragraph.field_d_image
+      field_name: field_d_image
+      entity_type: paragraph
+      type: image
+      settings:
+        uri_scheme: public
+        default_image:
+          uuid: ''
+          alt: ''
+          title: ''
+          width: null
+          height: null
+        target_type: file
+        display_field: false
+        display_default: false
+      module: image
+      locked: false
+      cardinality: -1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: true
+      custom_storage: false
+      _core:
+        default_config_hash: GL4uuiRIn7AK60lADxiTeA48yNVl1ypobSx_JP6I58w
+  -
+    collection: ''
+    name: field.storage.paragraph.field_d_image_background
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - file
+          - image
+          - paragraphs
+      id: paragraph.field_d_image_background
+      field_name: field_d_image_background
+      entity_type: paragraph
+      type: image
+      settings:
+        uri_scheme: public
+        default_image:
+          uuid: ''
+          alt: ''
+          title: ''
+          width: null
+          height: null
+        target_type: file
+        display_field: false
+        display_default: false
+      module: image
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: true
+      custom_storage: false
+      _core:
+        default_config_hash: pJHxR_JO476q1BZvUtoYuYjAKGrQXxW-lI5RufOZXm8
+  -
+    collection: ''
+    name: field.storage.paragraph.field_d_long_text
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - paragraphs
+          - text
+      id: paragraph.field_d_long_text
+      field_name: field_d_long_text
+      entity_type: paragraph
+      type: text_long
+      settings: {  }
+      module: text
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: true
+      custom_storage: false
+      _core:
+        default_config_hash: bEAjiASBZvV1AUxOpTnoBfQkEaWc3DbU4VyAcrIxrck
+  -
+    collection: ''
+    name: field.storage.paragraph.field_d_main_title
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - paragraphs
+      id: paragraph.field_d_main_title
+      field_name: field_d_main_title
+      entity_type: paragraph
+      type: string
+      settings:
+        max_length: 255
+        is_ascii: false
+        case_sensitive: false
+      module: core
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: true
+      custom_storage: false
+      _core:
+        default_config_hash: TyB1eW-i-n4ZByZEX5eMjK8Ja02jl0AxYhVQbx9hGhs
+  -
+    collection: ''
+    name: field.storage.paragraph.field_d_node_reference
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - node
+          - paragraphs
+      id: paragraph.field_d_node_reference
+      field_name: field_d_node_reference
+      entity_type: paragraph
+      type: entity_reference
+      settings:
+        target_type: node
+      module: core
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+      _core:
+        default_config_hash: vnRkMcwQTkJGOfTInHoy4hXqK4S_OGKQQXoa57FqG90
+  -
+    collection: ''
+    name: field.storage.paragraph.field_d_number
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - paragraphs
+      id: paragraph.field_d_number
+      field_name: field_d_number
+      entity_type: paragraph
+      type: integer
+      settings:
+        unsigned: false
+        size: normal
+      module: core
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: true
+      custom_storage: false
+      _core:
+        default_config_hash: 4E1rVj7HqEpRFZh_tAPJiOy-a4qD-dbB9Q-L1DvsOoQ
+  -
+    collection: ''
+    name: field.storage.paragraph.field_d_settings
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - d_p
+          - paragraphs
+      id: paragraph.field_d_settings
+      field_name: field_d_settings
+      entity_type: paragraph
+      type: field_p_configuration_storage
+      settings: {  }
+      module: d_p
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+      _core:
+        default_config_hash: BfZL8-_o1jb8rPlvi4AY-4uG5jdXOPvubCN70mss9hQ
+  -
+    collection: ''
+    name: field.storage.paragraph.field_d_subtitle
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - paragraphs
+      id: paragraph.field_d_subtitle
+      field_name: field_d_subtitle
+      entity_type: paragraph
+      type: string
+      settings:
+        max_length: 255
+        is_ascii: false
+        case_sensitive: false
+      module: core
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: true
+      custom_storage: false
+      _core:
+        default_config_hash: AXZKppLVh6gr7VB4old2Z6mKhdRt889Rggz_16oP6nY
+  -
+    collection: ''
+    name: image.style.responsive_image_1200
+    data:
+      langcode: en
+      status: true
+      dependencies: {  }
+      name: responsive_image_1200
+      label: 'Responsive image 1200'
+      effects:
+        b45525bc-d613-4935-8bb2-d35ca332a003:
+          uuid: b45525bc-d613-4935-8bb2-d35ca332a003
+          id: image_scale
+          weight: 1
+          data:
+            width: 1200
+            height: null
+            upscale: false
+      _core:
+        default_config_hash: 6mAemXTTmaL7gb-Dbgxlgm2Cq-HfNgjtqHi1xagttEg
+  -
+    collection: ''
+    name: image.style.responsive_image_1600
+    data:
+      langcode: en
+      status: true
+      dependencies: {  }
+      name: responsive_image_1600
+      label: 'Responsive image 1600'
+      effects:
+        09b9b41f-0c65-4094-9ab0-d25882da46c4:
+          uuid: 09b9b41f-0c65-4094-9ab0-d25882da46c4
+          id: image_scale
+          weight: 1
+          data:
+            width: 1600
+            height: null
+            upscale: false
+      _core:
+        default_config_hash: KjfSi3f7-DD1qy-euRHwC5czGGCnbc7gLrYpancOjrk
+  -
+    collection: ''
+    name: image.style.responsive_image_2000
+    data:
+      langcode: en
+      status: true
+      dependencies: {  }
+      name: responsive_image_2000
+      label: 'Responsive image 2000'
+      effects:
+        09b9b41f-0c65-4094-9ab0-d25882da46c4:
+          uuid: 09b9b41f-0c65-4094-9ab0-d25882da46c4
+          id: image_scale
+          weight: 1
+          data:
+            width: 2000
+            height: null
+            upscale: false
+      _core:
+        default_config_hash: 1z0zMSwTYZnb-JRVWpAhhw3-LNtsNJ3zOEC96PyEQ1o
+  -
+    collection: ''
+    name: image.style.responsive_image_768
+    data:
+      langcode: en
+      status: true
+      dependencies: {  }
+      name: responsive_image_768
+      label: 'Responsive image 768'
+      effects:
+        4807ce3c-0829-4697-b237-04b6df1bc76f:
+          uuid: 4807ce3c-0829-4697-b237-04b6df1bc76f
+          id: image_scale
+          weight: 1
+          data:
+            width: 768
+            height: null
+            upscale: false
+      _core:
+        default_config_hash: 4-ycod9mm-_XopcjD_DU2XDB_nbARyZD8iuXPM5e48A
+  -
+    collection: ''
+    name: image.style.responsive_image_992
+    data:
+      langcode: en
+      status: true
+      dependencies: {  }
+      name: responsive_image_992
+      label: 'Responsive image 992'
+      effects:
+        65259776-6be5-4a73-b51c-1dd5667c1b9f:
+          uuid: 65259776-6be5-4a73-b51c-1dd5667c1b9f
+          id: image_scale
+          weight: 1
+          data:
+            width: 992
+            height: null
+            upscale: false
+      _core:
+        default_config_hash: qNSvgFkYqIP9nUA6Fn_AJZllLZUx_ZIkSp3rWVdrkOI

@@ -1,0 +1,49 @@
+uuid: 4f420132-8ccc-442c-be8e-8787f8f23bca
+langcode: pl
+status: true
+dependencies:
+  module:
+    - lazy
+id: config_sync.module.lazy
+snapshotSet: config_sync
+extensionType: module
+extensionName: lazy
+items:
+  -
+    collection: ''
+    name: lazy.settings
+    data:
+      image_fields: {  }
+      alter_tag:
+        img: img
+        iframe: 0
+      formatters:
+        lazy_image: 0
+        lazy_responsive_image: 0
+      skipClass: no-lazy
+      disabled_paths: /rss.xml
+      placeholderSrc: ''
+      preferNative: false
+      cssEffect: false
+      lazysizes:
+        lazyClass: lazyload
+        loadedClass: lazyloaded
+        loadingClass: lazyloading
+        preloadClass: lazypreload
+        errorClass: lazyerror
+        autosizesClass: lazyautosizes
+        srcAttr: data-src
+        srcsetAttr: data-srcset
+        sizesAttr: data-sizes
+        minSize: 40
+        customMedia: {  }
+        init: true
+        expFactor: 1.5
+        hFac: 0.8
+        loadMode: 2
+        loadHidden: true
+        ricTimeout: 0
+        throttleDelay: 125
+        plugins: {  }
+      _core:
+        default_config_hash: y7LBTPYVTcA6s3XuXz3mXS0he0kmx7NQWmTz2fDSI-s

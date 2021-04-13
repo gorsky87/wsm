@@ -1,0 +1,11 @@
+uuid: 2afe8484-6584-4d85-939b-246218f2a08a
+langcode: pl
+status: true
+dependencies:
+  config:
+    - node.type.track
+id: node.track
+target_entity_type_id: node
+target_bundle: track
+default_langcode: site_default
+language_alterable: false

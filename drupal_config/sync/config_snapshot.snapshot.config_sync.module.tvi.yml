@@ -1,0 +1,21 @@
+uuid: 7645b64f-3b3b-4334-b29a-95ff25484e83
+langcode: pl
+status: true
+dependencies:
+  module:
+    - tvi
+id: config_sync.module.tvi
+snapshotSet: config_sync
+extensionType: module
+extensionName: tvi
+items:
+  -
+    collection: ''
+    name: tvi.settings
+    data:
+      default_settings:
+        enable_override: false
+        view: ''
+        view_display: ''
+      _core:
+        default_config_hash: GzcWXQv77pdUc9h43D9QI6jw_0efBoM8KeHz5jB-z4c

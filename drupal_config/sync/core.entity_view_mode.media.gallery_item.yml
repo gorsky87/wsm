@@ -1,0 +1,12 @@
+uuid: bd473250-2ba5-4250-a7d2-b3d8a61e5773
+langcode: pl
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: RUKLb4wz4nx6eW64SmjRE0Jkn_Rq9KefNfCJlntCTiw
+id: media.gallery_item
+label: 'Gallery Item'
+targetEntityType: media
+cache: true

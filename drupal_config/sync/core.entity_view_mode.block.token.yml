@@ -1,0 +1,12 @@
+uuid: 77c5e56f-683f-4fb4-90e8-ae99f8fafbe5
+langcode: pl
+status: true
+dependencies:
+  module:
+    - block
+_core:
+  default_config_hash: AJ4KPUipTz1VsDPfMT_D9pamgbfXUJBgvYVel4P1DHE
+id: block.token
+label: Wzorzec
+targetEntityType: block
+cache: true

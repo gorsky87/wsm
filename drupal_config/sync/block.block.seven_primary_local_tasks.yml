@@ -1,0 +1,22 @@
+uuid: 62a28702-2cb0-409f-843b-e23af4f4f43c
+langcode: pl
+status: true
+dependencies:
+  theme:
+    - seven
+_core:
+  default_config_hash: ddy1OsBbWxjwEI8VL1viD4I69qcLHOkul4BxbTqLBTs
+id: seven_primary_local_tasks
+theme: seven
+region: header
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Zakładki podstawowe'
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: false
+visibility: {  }

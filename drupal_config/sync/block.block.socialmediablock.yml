@@ -1,0 +1,20 @@
+uuid: 9dc38f9e-0cf6-4840-b23b-3e944c540a40
+langcode: pl
+status: true
+dependencies:
+  module:
+    - d_social_media
+  theme:
+    - droopler_subtheme
+id: socialmediablock
+theme: droopler_subtheme
+region: footer_sixth
+weight: 0
+provider: null
+plugin: social_media_block
+settings:
+  id: social_media_block
+  label: 'Social Media'
+  provider: d_social_media
+  label_display: visible
+visibility: {  }

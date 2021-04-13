@@ -1,0 +1,14 @@
+uuid: 5970147d-e9e2-4303-bd5b-155a680e785f
+langcode: pl
+status: true
+dependencies:
+  module:
+    - search_api_db
+id: default_index
+name: 'default index'
+description: ''
+backend: search_api_db
+backend_config:
+  database: 'default:default'
+  min_chars: 3
+  matching: words

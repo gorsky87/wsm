@@ -1,0 +1,8 @@
+uuid: 42e98384-9d79-4a04-b08d-a01387417069
+langcode: pl
+status: true
+dependencies: {  }
+name: 'Discount Category'
+vid: discount_category
+description: ''
+weight: 0

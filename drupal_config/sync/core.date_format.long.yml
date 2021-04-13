@@ -1,0 +1,10 @@
+uuid: 0db44e5a-6945-43e2-a52e-fb75304c531e
+langcode: pl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: og8sWXhBuHbLMw3CoiBEZjgqSyhFBFmcbUW_wLcfNbo
+id: long
+label: 'Domyślna data długa'
+locked: false
+pattern: 'l, F j, Y - H:i'

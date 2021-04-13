@@ -1,0 +1,20 @@
+uuid: 47a90f6a-02e8-4078-8ead-2c5b56953da4
+langcode: pl
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_track_tags
+field_name: field_track_tags
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 5
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

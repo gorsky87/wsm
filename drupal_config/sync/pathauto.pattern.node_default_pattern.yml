@@ -1,0 +1,25 @@
+uuid: e9d055ee-4a69-4277-b41c-04507220e4ac
+langcode: pl
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: 3n9MD1MvjBjTeFMQ9luy6QzwBKYxEvfSwYwDdblTC3E
+id: node_default_pattern
+label: node_default_pattern
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  3e27dedb-1f20-44e5-9e22-3ac90dcf9ed7:
+    id: node_type
+    bundles:
+      blog_post: blog_post
+      content_page: content_page
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 3e27dedb-1f20-44e5-9e22-3ac90dcf9ed7
+selection_logic: and
+weight: 0
+relationships: {  }

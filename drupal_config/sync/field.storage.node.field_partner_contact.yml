@@ -1,0 +1,19 @@
+uuid: f8ee98fe-e897-483f-a0d5-088c60f39af1
+langcode: pl
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_partner_contact
+field_name: field_partner_contact
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

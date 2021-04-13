@@ -1,0 +1,19 @@
+uuid: 79b0704f-cf49-4d96-a4f1-0e3f9ea3bc6e
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_embed_map
+    - node.type.track
+id: node.track.field_embed_map
+field_name: field_embed_map
+entity_type: node
+bundle: track
+label: Mapa
+description: "Wklej kod mapy lub link do mapy. Jeżeli masz problem podaj punkty gdzie biegnie trasa, a my zrobimy mapę.\r\nZobacz jak wygenerować kod mapy <a target=\"_blank\" href='/jak-dodac-trase'>Tutaj</a>\r\n"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

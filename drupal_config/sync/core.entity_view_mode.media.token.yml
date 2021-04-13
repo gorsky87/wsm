@@ -1,0 +1,12 @@
+uuid: 983b8855-111a-4a23-86e8-062489fe31ad
+langcode: pl
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: 4bWYX7aQyveXIE-cBSeWwmAlN0Q_p5b_1Ml88xlMniM
+id: media.token
+label: Wzorzec
+targetEntityType: media
+cache: true

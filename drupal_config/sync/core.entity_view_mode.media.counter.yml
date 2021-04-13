@@ -1,0 +1,12 @@
+uuid: 9f921df8-cca7-4605-b596-eb6003e5f4c1
+langcode: pl
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: aqSMz0JpOm4rS_N_fWjnJvWMZrQu9Pcs35LJ92TbGrw
+id: media.counter
+label: Licznik
+targetEntityType: media
+cache: true

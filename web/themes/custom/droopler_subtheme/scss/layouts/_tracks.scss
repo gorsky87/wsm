@@ -1,0 +1,40 @@
+.node--type-track.node--view-mode-teaser {
+  margin-bottom: 0;
+  .field--name-field-track-gallery {
+    .field__item {
+      display: inline-flex;
+    }
+  }
+  .node__title {
+    font-size: 2rem;
+    padding-top: 4rem;
+    @include media-breakpoint-down(md) {
+      font-size: 1.5rem;
+      padding-top: 0rem;
+    }
+  }
+}
+
+.view-tracks.view-id-tracks {
+  .views-row:nth-child(even) {
+    @extend .bg-light;
+  }
+}
+
+.item-list__links {
+  list-style: none;
+  li.facet-item {
+    margin: 0.25rem;
+    display: inline-flex;
+    a {
+      font-size: 100%;
+      @extend .badge;
+      @extend .badge-light;
+      &.is-active {
+        @extend .badge-primary;
+      }
+
+    }
+  }
+}
+

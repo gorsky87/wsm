@@ -1,0 +1,10 @@
+uuid: d170df2b-938e-4ce7-aeb8-a9960ddb2549
+langcode: pl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 5VpawMrKPEPCkoO4YpPa0TDFO2dgiIHfTziJtwlmUxc
+id: html_yearless_date
+label: 'Data bez roku HTML'
+locked: true
+pattern: m-d

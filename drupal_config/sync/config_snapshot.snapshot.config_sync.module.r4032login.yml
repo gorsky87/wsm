@@ -1,0 +1,27 @@
+uuid: 10d9e947-cb0f-4a85-9c93-1386a05c75c1
+langcode: pl
+status: true
+dependencies:
+  module:
+    - r4032login
+id: config_sync.module.r4032login
+snapshotSet: config_sync
+extensionType: module
+extensionName: r4032login
+items:
+  -
+    collection: ''
+    name: r4032login.settings
+    data:
+      display_denied_message: true
+      access_denied_message: 'Access denied. You must log in to view this page.'
+      access_denied_message_type: error
+      redirect_authenticated_users_to: ''
+      user_login_path: /user/login
+      default_redirect_code: 307
+      destination_parameter_override: ''
+      match_noredirect_pages: ''
+      redirect_to_destination: true
+      langcode: en
+      _core:
+        default_config_hash: PMB0aJrA5afgG0swQ81b31o6ax8keNE22FKGnQH81EQ

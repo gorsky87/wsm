@@ -1,0 +1,968 @@
+uuid: 59654f58-faf7-459b-928f-7bc7fe255a3c
+langcode: pl
+status: true
+dependencies:
+  module:
+    - d_p_carousel
+id: config_sync.module.d_p_carousel
+snapshotSet: config_sync
+extensionType: module
+extensionName: d_p_carousel
+items:
+  -
+    collection: ''
+    name: core.entity_form_display.paragraph.d_p_carousel.default
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.field.paragraph.d_p_carousel.field_d_cta_link
+          - field.field.paragraph.d_p_carousel.field_d_long_text
+          - field.field.paragraph.d_p_carousel.field_d_main_title
+          - field.field.paragraph.d_p_carousel.field_d_media_icon
+          - field.field.paragraph.d_p_carousel.field_d_p_cs_item_reference
+          - field.field.paragraph.d_p_carousel.field_d_settings
+          - paragraphs.paragraphs_type.d_p_carousel
+        module:
+          - d_p
+          - field_group
+          - link_attributes
+          - media_library
+          - paragraphs
+          - text
+      third_party_settings:
+        field_group:
+          group_tabs:
+            children:
+              - group_basic
+              - group_items
+              - group_settings
+            parent_name: ''
+            weight: 6
+            format_type: tabs
+            format_settings:
+              id: ''
+              classes: ''
+              direction: horizontal
+            label: Tabs
+            region: content
+          group_settings:
+            children:
+              - field_d_settings
+            parent_name: group_tabs
+            weight: 22
+            format_type: tab
+            format_settings:
+              description: ''
+              formatter: closed
+              required_fields: true
+              id: ''
+              classes: ''
+            label: Settings
+            region: content
+          group_items:
+            children:
+              - field_d_p_cs_item_reference
+            parent_name: group_tabs
+            weight: 21
+            format_type: tab
+            format_settings:
+              id: ''
+              classes: ''
+              description: ''
+              formatter: closed
+              required_fields: true
+            label: Items
+            region: content
+          group_basic:
+            children:
+              - field_d_main_title
+              - field_d_media_icon
+              - field_d_long_text
+              - field_d_cta_link
+            parent_name: group_tabs
+            weight: 20
+            format_type: tab
+            region: content
+            format_settings:
+              id: ''
+              classes: ''
+              description: ''
+              formatter: open
+              required_fields: true
+            label: Basic
+      id: paragraph.d_p_carousel.default
+      targetEntityType: paragraph
+      bundle: d_p_carousel
+      mode: default
+      content:
+        field_d_cta_link:
+          weight: 5
+          settings:
+            placeholder_url: ''
+            placeholder_title: ''
+            enabled_attributes:
+              id: true
+              name: true
+              target: true
+              rel: true
+              class: true
+              accesskey: true
+              aria-label: false
+              title: false
+          third_party_settings: {  }
+          type: link_attributes
+          region: content
+        field_d_long_text:
+          weight: 4
+          settings:
+            rows: 5
+            placeholder: ''
+          third_party_settings: {  }
+          type: text_textarea
+          region: content
+        field_d_main_title:
+          weight: 2
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: string_textfield
+          region: content
+        field_d_media_icon:
+          weight: 3
+          settings:
+            media_types: {  }
+          third_party_settings: {  }
+          type: media_library_widget
+          region: content
+        field_d_p_cs_item_reference:
+          type: entity_reference_paragraphs
+          weight: 4
+          settings:
+            title: Paragraph
+            title_plural: Paragraphs
+            edit_mode: closed
+            add_mode: dropdown
+            form_display_mode: default
+            default_paragraph_type: d_p_carousel_item
+          third_party_settings: {  }
+          region: content
+        field_d_settings:
+          weight: 6
+          settings:
+            filter_mode: '1'
+            allowed_settings:
+              heading_type:
+                status: '1'
+              column_count_tablet:
+                status: '1'
+              column_count_mobile:
+                status: '1'
+              custom_class:
+                status: '1'
+                modifiers:
+                  padding-bottom:
+                    status: '1'
+                  paragraph-theme:
+                    status: '1'
+                  with-divider:
+                    status: '1'
+                  margin-bottom:
+                    status: '1'
+                  margin-top:
+                    status: '1'
+                  padding-top:
+                    status: '1'
+                  full-width:
+                    status: '1'
+                  stripe-sidebar:
+                    status: 0
+                  tile:
+                    status: 0
+                  with-tiles:
+                    status: 0
+                  half-transparent:
+                    status: 0
+                  with-grid:
+                    status: 0
+                  with-price:
+                    status: 0
+                  header-into-columns:
+                    status: 0
+              column_count:
+                status: '1'
+              side_image_layout:
+                status: 0
+              form_layout:
+                status: 0
+              side_tiles_layout:
+                status: 0
+              featured_images:
+                status: 0
+              embed_layout:
+                status: 0
+          third_party_settings: {  }
+          type: field_d_p_set_settings
+          region: content
+      hidden:
+        created: true
+        status: true
+        uid: true
+      _core:
+        default_config_hash: cmReqQpjHdPz1ntiVe8wDq7RfLoRJU0uXqDJmWiaaTA
+  -
+    collection: ''
+    name: core.entity_form_display.paragraph.d_p_carousel_item.default
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.field.paragraph.d_p_carousel_item.field_d_cta_link
+          - field.field.paragraph.d_p_carousel_item.field_d_long_text
+          - field.field.paragraph.d_p_carousel_item.field_d_main_title
+          - field.field.paragraph.d_p_carousel_item.field_d_media_icon
+          - field.field.paragraph.d_p_carousel_item.field_d_settings
+          - paragraphs.paragraphs_type.d_p_carousel_item
+        module:
+          - d_p
+          - field_group
+          - link
+          - media_library
+          - text
+      third_party_settings:
+        field_group:
+          group_tabs:
+            children:
+              - group_basic
+              - group_settings
+            parent_name: ''
+            weight: 0
+            format_type: tabs
+            region: content
+            format_settings:
+              id: ''
+              classes: ''
+              direction: horizontal
+            label: Tabs
+          group_basic:
+            children:
+              - field_d_main_title
+              - field_d_media_icon
+              - field_d_long_text
+              - field_d_cta_link
+            parent_name: group_tabs
+            weight: 8
+            format_type: tab
+            region: content
+            format_settings:
+              id: ''
+              classes: ''
+              description: ''
+              formatter: open
+              required_fields: true
+            label: Basic
+          group_settings:
+            children:
+              - field_d_settings
+            parent_name: group_tabs
+            weight: 9
+            format_type: tab
+            region: content
+            format_settings:
+              id: ''
+              classes: ''
+              description: ''
+              formatter: closed
+              required_fields: true
+            label: Settings
+      id: paragraph.d_p_carousel_item.default
+      targetEntityType: paragraph
+      bundle: d_p_carousel_item
+      mode: default
+      content:
+        field_d_cta_link:
+          weight: 4
+          settings:
+            placeholder_url: ''
+            placeholder_title: ''
+          third_party_settings: {  }
+          type: link_default
+          region: content
+        field_d_long_text:
+          weight: 3
+          settings:
+            rows: 5
+            placeholder: ''
+          third_party_settings: {  }
+          type: text_textarea
+          region: content
+        field_d_main_title:
+          weight: 1
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: string_textfield
+          region: content
+        field_d_media_icon:
+          type: media_library_widget
+          weight: 2
+          settings:
+            media_types: {  }
+          third_party_settings: {  }
+          region: content
+        field_d_settings:
+          weight: 10
+          settings:
+            filter_mode: '1'
+            allowed_settings:
+              heading_type:
+                status: '1'
+              custom_class:
+                status: '1'
+                modifiers:
+                  paragraph-theme:
+                    status: '1'
+                  padding-bottom:
+                    status: 0
+                  stripe-sidebar:
+                    status: 0
+                  tile:
+                    status: 0
+                  with-divider:
+                    status: 0
+                  with-tiles:
+                    status: 0
+                  half-transparent:
+                    status: 0
+                  margin-bottom:
+                    status: 0
+                  margin-top:
+                    status: 0
+                  with-grid:
+                    status: 0
+                  padding-top:
+                    status: 0
+                  with-price:
+                    status: 0
+                  header-into-columns:
+                    status: 0
+                  full-width:
+                    status: 0
+              side_image_layout:
+                status: 0
+              column_count_tablet:
+                status: 0
+              form_layout:
+                status: 0
+              side_tiles_layout:
+                status: 0
+              featured_images:
+                status: 0
+              column_count_mobile:
+                status: 0
+              embed_layout:
+                status: 0
+              column_count:
+                status: 0
+          third_party_settings: {  }
+          type: field_d_p_set_settings
+          region: content
+      hidden:
+        created: true
+        status: true
+        uid: true
+      _core:
+        default_config_hash: NcxT7IX9NKyq5oLb-m0Zvp1znYupFjBdKAQ5M6FOxYE
+  -
+    collection: ''
+    name: core.entity_view_display.paragraph.d_p_carousel.default
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.field.paragraph.d_p_carousel.field_d_cta_link
+          - field.field.paragraph.d_p_carousel.field_d_long_text
+          - field.field.paragraph.d_p_carousel.field_d_main_title
+          - field.field.paragraph.d_p_carousel.field_d_media_icon
+          - field.field.paragraph.d_p_carousel.field_d_p_cs_item_reference
+          - field.field.paragraph.d_p_carousel.field_d_settings
+          - paragraphs.paragraphs_type.d_p_carousel
+        module:
+          - d_p
+          - entity_reference_revisions
+          - link
+          - text
+      id: paragraph.d_p_carousel.default
+      targetEntityType: paragraph
+      bundle: d_p_carousel
+      mode: default
+      content:
+        field_d_cta_link:
+          weight: 6
+          label: hidden
+          settings:
+            trim_length: 80
+            url_only: false
+            url_plain: false
+            rel: ''
+            target: ''
+          third_party_settings: {  }
+          type: link
+          region: content
+        field_d_long_text:
+          weight: 3
+          label: hidden
+          settings: {  }
+          third_party_settings: {  }
+          type: text_default
+          region: content
+        field_d_main_title:
+          weight: 2
+          label: hidden
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          type: string
+          region: content
+        field_d_media_icon:
+          weight: 1
+          label: hidden
+          settings:
+            view_mode: d_icon
+            link: false
+          third_party_settings: {  }
+          type: entity_reference_entity_view
+          region: content
+        field_d_p_cs_item_reference:
+          type: entity_reference_revisions_entity_view
+          weight: 4
+          label: hidden
+          settings:
+            view_mode: default
+            link: ''
+          third_party_settings: {  }
+          region: content
+        field_d_settings:
+          weight: 5
+          label: hidden
+          settings: {  }
+          third_party_settings: {  }
+          type: field_configuration_formatter
+          region: content
+      hidden:
+        search_api_excerpt: true
+      _core:
+        default_config_hash: TTI5Bi432eU40PtsZwSKXmw1EfM_x42B0NPV4Cmc0Vo
+  -
+    collection: ''
+    name: core.entity_view_display.paragraph.d_p_carousel_item.default
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.field.paragraph.d_p_carousel_item.field_d_cta_link
+          - field.field.paragraph.d_p_carousel_item.field_d_long_text
+          - field.field.paragraph.d_p_carousel_item.field_d_main_title
+          - field.field.paragraph.d_p_carousel_item.field_d_media_icon
+          - field.field.paragraph.d_p_carousel_item.field_d_settings
+          - paragraphs.paragraphs_type.d_p_carousel_item
+        module:
+          - text
+      id: paragraph.d_p_carousel_item.default
+      targetEntityType: paragraph
+      bundle: d_p_carousel_item
+      mode: default
+      content:
+        field_d_long_text:
+          weight: 2
+          label: hidden
+          settings: {  }
+          third_party_settings: {  }
+          type: text_default
+          region: content
+        field_d_main_title:
+          weight: 1
+          label: hidden
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          type: string
+          region: content
+        field_d_media_icon:
+          type: entity_reference_entity_view
+          weight: 0
+          label: hidden
+          settings:
+            view_mode: carousel_item
+            link: false
+          third_party_settings: {  }
+          region: content
+      hidden:
+        field_d_cta_link: true
+        field_d_settings: true
+        search_api_excerpt: true
+      _core:
+        default_config_hash: M3Ky7OO76943b1H4U22eacFJGKO1mWZa311chg0GOvU
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_carousel.field_d_cta_link
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_cta_link
+          - paragraphs.paragraphs_type.d_p_carousel
+        module:
+          - link
+      id: paragraph.d_p_carousel.field_d_cta_link
+      field_name: field_d_cta_link
+      entity_type: paragraph
+      bundle: d_p_carousel
+      label: 'Call To Action'
+      description: ''
+      required: false
+      translatable: true
+      default_value:
+        -
+          options:
+            attributes:
+              class: 'btn btn-primary'
+      default_value_callback: ''
+      settings:
+        link_type: 17
+        title: 1
+      field_type: link
+      _core:
+        default_config_hash: YOT1iGzlVzyloKQFgS0YKs_C7xKSx25bCWKdlX6Eiqc
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_carousel.field_d_long_text
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_long_text
+          - paragraphs.paragraphs_type.d_p_carousel
+        module:
+          - text
+      id: paragraph.d_p_carousel.field_d_long_text
+      field_name: field_d_long_text
+      entity_type: paragraph
+      bundle: d_p_carousel
+      label: 'Long text'
+      description: ''
+      required: false
+      translatable: true
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: text_long
+      _core:
+        default_config_hash: 7aCWer9XneI-FEcOEMTDPrDb3dKA0Z7YefWM0EHANMY
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_carousel.field_d_main_title
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_main_title
+          - paragraphs.paragraphs_type.d_p_carousel
+      id: paragraph.d_p_carousel.field_d_main_title
+      field_name: field_d_main_title
+      entity_type: paragraph
+      bundle: d_p_carousel
+      label: 'Main title'
+      description: ''
+      required: false
+      translatable: true
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: string
+      _core:
+        default_config_hash: 8TgimHvBys3JPzi-oPpONkYy55iE9Yp9pWtHnAB063o
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_carousel.field_d_media_icon
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_media_icon
+          - media.type.d_image
+          - paragraphs.paragraphs_type.d_p_carousel
+      id: paragraph.d_p_carousel.field_d_media_icon
+      field_name: field_d_media_icon
+      entity_type: paragraph
+      bundle: d_p_carousel
+      label: Icon
+      description: ''
+      required: false
+      translatable: true
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        handler: 'default:media'
+        handler_settings:
+          target_bundles:
+            d_image: d_image
+          sort:
+            field: revision_created
+            direction: DESC
+          auto_create: false
+          auto_create_bundle: ''
+      field_type: entity_reference
+      _core:
+        default_config_hash: FcnqdWW6fKYIt1id2LLep62awDwvsNBkI6QdrFULJHU
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_carousel.field_d_p_cs_item_reference
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_p_cs_item_reference
+          - paragraphs.paragraphs_type.d_p_carousel
+          - paragraphs.paragraphs_type.d_p_carousel_item
+        module:
+          - entity_reference_revisions
+      id: paragraph.d_p_carousel.field_d_p_cs_item_reference
+      field_name: field_d_p_cs_item_reference
+      entity_type: paragraph
+      bundle: d_p_carousel
+      label: 'Carousel items'
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        handler: 'default:paragraph'
+        handler_settings:
+          negate: 0
+          target_bundles:
+            d_p_carousel_item: d_p_carousel_item
+          target_bundles_drag_drop:
+            d_p_carousel:
+              weight: 11
+              enabled: false
+            d_p_banner:
+              weight: 12
+              enabled: false
+            d_p_carousel_item:
+              enabled: true
+              weight: 13
+            d_p_form:
+              weight: 14
+              enabled: false
+            d_p_group_of_text_blocks:
+              weight: 15
+              enabled: false
+            d_p_side_image:
+              weight: 16
+              enabled: false
+            d_p_single_text_block:
+              weight: 17
+              enabled: false
+            d_p_subscribe_file:
+              weight: 18
+              enabled: false
+            d_p_text_paged:
+              weight: 19
+              enabled: false
+            d_p_text_with_bckg:
+              weight: 20
+              enabled: false
+            d_p_blog_image:
+              weight: 23
+              enabled: false
+            d_p_blog_text:
+              weight: 24
+              enabled: false
+            d_p_gallery:
+              weight: 28
+              enabled: false
+            d_p_group_of_counters:
+              weight: 29
+              enabled: false
+            d_p_node:
+              weight: 31
+              enabled: false
+            d_p_reference_content:
+              weight: 32
+              enabled: false
+            d_p_side_by_side:
+              weight: 33
+              enabled: false
+            d_p_side_embed:
+              weight: 34
+              enabled: false
+            d_p_side_tiles:
+              weight: 36
+              enabled: false
+            d_p_single_counter:
+              weight: 37
+              enabled: false
+            d_p_tiles:
+              weight: 42
+              enabled: false
+      field_type: entity_reference_revisions
+      _core:
+        default_config_hash: lX_e-M9_eEf9CxbiXqh2JrFhuDh6txuIELiAy55yk3Q
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_carousel.field_d_settings
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_settings
+          - paragraphs.paragraphs_type.d_p_carousel
+        module:
+          - d_p
+      id: paragraph.d_p_carousel.field_d_settings
+      field_name: field_d_settings
+      entity_type: paragraph
+      bundle: d_p_carousel
+      label: 'Paragraph settings'
+      description: ''
+      required: false
+      translatable: false
+      default_value:
+        -
+          value: '{"custom_class":"","heading_type":"h2"}'
+      default_value_callback: ''
+      settings: {  }
+      field_type: field_p_configuration_storage
+      _core:
+        default_config_hash: 3yg5zI4Xk64bCo4r5W24OrpdhvCPiAg4uZpUK4_it0o
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_carousel_item.field_d_cta_link
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_cta_link
+          - paragraphs.paragraphs_type.d_p_carousel_item
+        module:
+          - link
+      id: paragraph.d_p_carousel_item.field_d_cta_link
+      field_name: field_d_cta_link
+      entity_type: paragraph
+      bundle: d_p_carousel_item
+      label: 'Call To Action'
+      description: ''
+      required: false
+      translatable: true
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        link_type: 17
+        title: 0
+      field_type: link
+      _core:
+        default_config_hash: 49lJGfhi_QOGfz_uMzPpr4PjZxacLt4gbovJG5xJQlw
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_carousel_item.field_d_long_text
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_long_text
+          - paragraphs.paragraphs_type.d_p_carousel_item
+        module:
+          - text
+      id: paragraph.d_p_carousel_item.field_d_long_text
+      field_name: field_d_long_text
+      entity_type: paragraph
+      bundle: d_p_carousel_item
+      label: 'Long text'
+      description: ''
+      required: false
+      translatable: true
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: text_long
+      _core:
+        default_config_hash: cZokb7uxBcaEB7PYkTwdfr9ieqnpA0p6F6TpkyTz85A
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_carousel_item.field_d_main_title
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_main_title
+          - paragraphs.paragraphs_type.d_p_carousel_item
+      id: paragraph.d_p_carousel_item.field_d_main_title
+      field_name: field_d_main_title
+      entity_type: paragraph
+      bundle: d_p_carousel_item
+      label: 'Main title'
+      description: ''
+      required: false
+      translatable: true
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: string
+      _core:
+        default_config_hash: WEaWFTWOUx93yyrB3Tb2QOM9FZrx23GbCx5whu_vgFU
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_carousel_item.field_d_media_icon
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_media_icon
+          - media.type.d_image
+          - media.type.d_video
+          - paragraphs.paragraphs_type.d_p_carousel_item
+      id: paragraph.d_p_carousel_item.field_d_media_icon
+      field_name: field_d_media_icon
+      entity_type: paragraph
+      bundle: d_p_carousel_item
+      label: Image
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        handler: 'default:media'
+        handler_settings:
+          target_bundles:
+            d_image: d_image
+            d_video: d_video
+          sort:
+            field: revision_created
+            direction: DESC
+          auto_create: false
+          auto_create_bundle: d_image
+      field_type: entity_reference
+      _core:
+        default_config_hash: QAjNAo-VzYGUUTaGT9T0VjuEAEvq3JEja0eGKmYOiPw
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_carousel_item.field_d_settings
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_settings
+          - paragraphs.paragraphs_type.d_p_carousel_item
+        module:
+          - d_p
+      id: paragraph.d_p_carousel_item.field_d_settings
+      field_name: field_d_settings
+      entity_type: paragraph
+      bundle: d_p_carousel_item
+      label: 'Paragraph settings'
+      description: ''
+      required: false
+      translatable: true
+      default_value:
+        -
+          value: '{"custom_class":"","heading_type":"h2"}'
+      default_value_callback: ''
+      settings: {  }
+      field_type: field_p_configuration_storage
+      _core:
+        default_config_hash: EYgSmBibDzA3O4JnlDw6aV0qeBvlkbgOPcKQGEkPBHs
+  -
+    collection: ''
+    name: field.storage.paragraph.field_d_p_cs_item_reference
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - entity_reference_revisions
+          - paragraphs
+      id: paragraph.field_d_p_cs_item_reference
+      field_name: field_d_p_cs_item_reference
+      entity_type: paragraph
+      type: entity_reference_revisions
+      settings:
+        target_type: paragraph
+      module: entity_reference_revisions
+      locked: false
+      cardinality: -1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+      _core:
+        default_config_hash: HISbxGI5b3l29MaPEQm8I6dZ_UARBQRhebhJH3A-cK4
+  -
+    collection: ''
+    name: image.style.d_p_carousel_image
+    data:
+      langcode: en
+      status: true
+      dependencies: {  }
+      name: d_p_carousel_image
+      label: 'Carousel image'
+      effects:
+        dea76dec-2009-4fa2-821c-2c2dab5754ea:
+          uuid: dea76dec-2009-4fa2-821c-2c2dab5754ea
+          id: image_scale
+          weight: 1
+          data:
+            width: null
+            height: 200
+            upscale: false
+      _core:
+        default_config_hash: Dp00IP9ioJSuEpe9IUsV03ma-L-mM0xLt7_DdODaib4
+  -
+    collection: ''
+    name: paragraphs.paragraphs_type.d_p_carousel
+    data:
+      langcode: en
+      status: true
+      dependencies: {  }
+      id: d_p_carousel
+      label: Carousel
+      icon_uuid: null
+      icon_default: null
+      description: 'Items scrolled by Slick library.'
+      behavior_plugins: {  }
+      _core:
+        default_config_hash: 8Cmm-iHUqqsLwToxX_avna5TjmVgZ5jPrW-A_TKtddg
+  -
+    collection: ''
+    name: paragraphs.paragraphs_type.d_p_carousel_item
+    data:
+      langcode: en
+      status: true
+      dependencies: {  }
+      id: d_p_carousel_item
+      label: 'Carousel item'
+      icon_uuid: null
+      icon_default: null
+      description: 'Item of the Carousel paragraph.'
+      behavior_plugins: {  }
+      _core:
+        default_config_hash: inAnZJbXR7RiuMd5kQDFr-7SDRm0g-P07iKr-yfTCjM

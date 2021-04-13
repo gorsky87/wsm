@@ -1,0 +1,12 @@
+uuid: 9fbeb728-35b9-4937-8d35-7e39be2fd177
+langcode: pl
+status: true
+dependencies:
+  module:
+    - taxonomy
+_core:
+  default_config_hash: '-PPKjsNQPvoIDjOuUAvlLocYD976MNjb9Zpgyz5_BWE'
+id: taxonomy_term.full
+label: 'Strona terminów kategorii'
+targetEntityType: taxonomy_term
+cache: true

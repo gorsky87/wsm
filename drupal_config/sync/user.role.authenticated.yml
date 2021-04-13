@@ -1,0 +1,21 @@
+uuid: d6641dbf-4a8d-4f9a-85ef-71429606ef1c
+langcode: pl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: _fwB1fYnatJOXVdX0EVunrUmqJF86LXUUJ_R4DDN0fY
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access content'
+  - 'create track content'
+  - 'display eu cookie compliance popup'
+  - 'edit own track content'
+  - 'search content'
+  - 'use moderation_tracks transition create_new_draft'
+  - 'use moderation_tracks transition ready_to_check'
+  - 'use moderation_tracks transition ready_to_publish'
+  - 'view any unpublished content'
+  - 'view media'

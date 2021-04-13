@@ -1,0 +1,25 @@
+uuid: fcecb179-f15b-4fae-8787-651286375dd0
+langcode: pl
+status: true
+dependencies:
+  content:
+    - 'block_content:content_block:bbb0d731-0931-473c-a09a-fe2f58a48ff3'
+  module:
+    - block_content
+  theme:
+    - droopler_subtheme
+id: adres
+theme: droopler_subtheme
+region: footer_first
+weight: 0
+provider: null
+plugin: 'block_content:bbb0d731-0931-473c-a09a-fe2f58a48ff3'
+settings:
+  id: 'block_content:bbb0d731-0931-473c-a09a-fe2f58a48ff3'
+  label: ADRES
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

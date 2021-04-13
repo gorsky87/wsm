@@ -1,0 +1,21 @@
+uuid: d7f3b812-af29-4805-bf0c-59640dbb4902
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_partner_contact
+    - node.type.discounts
+  module:
+    - text
+id: node.discounts.field_partner_contact
+field_name: field_partner_contact
+entity_type: node
+bundle: discounts
+label: Kontakt
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

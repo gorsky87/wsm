@@ -1,0 +1,12 @@
+uuid: bd9203c8-3baa-4ac0-9a12-e2b15001823c
+langcode: pl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: mzJSTRm3dA_p8wWa2rlYUS9Ur_XDzIqsKVqnF7701BU
+id: d_p_form
+label: Formularz
+icon_uuid: null
+icon_default: null
+description: 'A Drupal form embedded in a paragraph.'
+behavior_plugins: {  }

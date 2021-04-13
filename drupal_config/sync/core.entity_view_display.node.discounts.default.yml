@@ -1,0 +1,78 @@
+uuid: 534d36fe-2227-4d09-ad48-53285ac02d2b
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.field.node.discounts.field_discount_category
+    - field.field.node.discounts.field_discount_info
+    - field.field.node.discounts.field_partner_contact
+    - field.field.node.discounts.field_partner_link
+    - field.field.node.discounts.field_partner_logo
+    - image.style.max_325x325
+    - node.type.discounts
+  module:
+    - lazy
+    - link
+    - svg_image
+    - text
+    - user
+id: node.discounts.default
+targetEntityType: node
+bundle: discounts
+mode: default
+content:
+  field_discount_category:
+    weight: 0
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_discount_info:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_partner_contact:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_partner_link:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_partner_logo:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: max_325x325
+      image_link: ''
+      svg_render_as_image: true
+      svg_attributes:
+        width: null
+        height: null
+    third_party_settings:
+      lazy:
+        placeholder_style: ''
+        lazy_image: '0'
+        data_uri: false
+    type: image
+    region: content
+hidden:
+  langcode: true
+  links: true
+  search_api_excerpt: true

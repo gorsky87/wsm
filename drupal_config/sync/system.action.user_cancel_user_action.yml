@@ -1,0 +1,13 @@
+uuid: f4573ef2-f8d5-46e9-8fb7-26cfa14cb98d
+langcode: pl
+status: true
+dependencies:
+  module:
+    - user
+_core:
+  default_config_hash: nvrL9bFilzBvm2bjO9rQnFDpBA7dBBUjShSSt6NS-DU
+id: user_cancel_user_action
+label: 'Anuluj wybrane konto użytkownika(ów)'
+type: user
+plugin: user_cancel_user_action
+configuration: {  }

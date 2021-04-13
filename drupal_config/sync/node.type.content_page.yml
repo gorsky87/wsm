@@ -1,0 +1,23 @@
+uuid: 723e11c2-5fff-425f-808d-e12758cfea3e
+langcode: pl
+status: true
+dependencies:
+  module:
+    - content_translation
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  content_translation:
+    enabled: true
+_core:
+  default_config_hash: akpKKRKlUsJ-GquVupwV9IntkGtihDIj01xWAjw4SDQ
+name: 'Content Page'
+type: content_page
+description: 'Simple page with paragraphs'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

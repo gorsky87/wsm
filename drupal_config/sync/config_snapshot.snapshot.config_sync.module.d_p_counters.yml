@@ -1,0 +1,963 @@
+uuid: 517d9496-9872-4d79-9d40-a7ef1359a6e6
+langcode: pl
+status: true
+dependencies:
+  module:
+    - d_p_counters
+id: config_sync.module.d_p_counters
+snapshotSet: config_sync
+extensionType: module
+extensionName: d_p_counters
+items:
+  -
+    collection: ''
+    name: core.entity_form_display.paragraph.d_p_group_of_counters.default
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.field.paragraph.d_p_group_of_counters.field_d_counter_reference
+          - field.field.paragraph.d_p_group_of_counters.field_d_cta_link
+          - field.field.paragraph.d_p_group_of_counters.field_d_long_text
+          - field.field.paragraph.d_p_group_of_counters.field_d_main_title
+          - field.field.paragraph.d_p_group_of_counters.field_d_media_background
+          - field.field.paragraph.d_p_group_of_counters.field_d_media_icon
+          - field.field.paragraph.d_p_group_of_counters.field_d_settings
+          - paragraphs.paragraphs_type.d_p_group_of_counters
+        module:
+          - d_p
+          - field_group
+          - link_attributes
+          - media_library
+          - paragraphs
+          - text
+      third_party_settings:
+        field_group:
+          group_tabs:
+            children:
+              - group_basic
+              - group_i
+              - group_set
+            parent_name: ''
+            weight: 0
+            format_type: tabs
+            region: content
+            format_settings:
+              id: ''
+              classes: ''
+              direction: horizontal
+            label: Tabs
+          group_basic:
+            children:
+              - field_d_main_title
+              - field_d_media_background
+              - field_d_media_icon
+              - field_d_long_text
+              - field_d_cta_link
+            parent_name: group_tabs
+            weight: 10
+            format_type: tab
+            region: content
+            format_settings:
+              id: ''
+              classes: ''
+              description: ''
+              formatter: open
+              required_fields: true
+            label: Basic
+          group_i:
+            children:
+              - field_d_counter_reference
+            parent_name: group_tabs
+            weight: 11
+            format_type: tab
+            region: content
+            format_settings:
+              id: ''
+              classes: ''
+              description: ''
+              formatter: closed
+              required_fields: true
+            label: Items
+          group_set:
+            children:
+              - field_d_settings
+            parent_name: group_tabs
+            weight: 12
+            format_type: tab
+            region: content
+            format_settings:
+              id: ''
+              classes: ''
+              description: ''
+              formatter: closed
+              required_fields: true
+            label: Settings
+      id: paragraph.d_p_group_of_counters.default
+      targetEntityType: paragraph
+      bundle: d_p_group_of_counters
+      mode: default
+      content:
+        field_d_counter_reference:
+          type: entity_reference_paragraphs
+          weight: 5
+          settings:
+            title: Counter
+            title_plural: Counters
+            edit_mode: closed
+            add_mode: dropdown
+            form_display_mode: default
+            default_paragraph_type: d_p_single_counter
+          third_party_settings: {  }
+          region: content
+        field_d_cta_link:
+          weight: 6
+          settings:
+            placeholder_url: ''
+            placeholder_title: ''
+            enabled_attributes:
+              id: true
+              name: true
+              target: true
+              rel: true
+              class: true
+              accesskey: true
+              aria-label: false
+              title: false
+          third_party_settings: {  }
+          type: link_attributes
+          region: content
+        field_d_long_text:
+          weight: 5
+          settings:
+            rows: 5
+            placeholder: ''
+          third_party_settings: {  }
+          type: text_textarea
+          region: content
+        field_d_main_title:
+          weight: 2
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: string_textfield
+          region: content
+        field_d_media_background:
+          weight: 3
+          settings:
+            media_types: {  }
+          third_party_settings: {  }
+          type: media_library_widget
+          region: content
+        field_d_media_icon:
+          weight: 4
+          settings:
+            media_types: {  }
+          third_party_settings: {  }
+          type: media_library_widget
+          region: content
+        field_d_settings:
+          weight: 6
+          settings:
+            filter_mode: '1'
+            allowed_settings:
+              heading_type:
+                status: '1'
+              column_count_tablet:
+                status: '1'
+              column_count_mobile:
+                status: '1'
+              custom_class:
+                status: '1'
+                modifiers:
+                  padding-bottom:
+                    status: '1'
+                  paragraph-theme:
+                    status: '1'
+                  margin-bottom:
+                    status: '1'
+                  margin-top:
+                    status: '1'
+                  padding-top:
+                    status: '1'
+                  stripe-sidebar:
+                    status: 0
+                  tile:
+                    status: 0
+                  with-divider:
+                    status: 0
+                  with-tiles:
+                    status: 0
+                  half-transparent:
+                    status: 0
+                  with-grid:
+                    status: 0
+                  with-price:
+                    status: 0
+                  header-into-columns:
+                    status: 0
+                  full-width:
+                    status: 0
+              column_count:
+                status: '1'
+              side_image_layout:
+                status: 0
+              form_layout:
+                status: 0
+              side_tiles_layout:
+                status: 0
+              featured_images:
+                status: 0
+              embed_layout:
+                status: 0
+          third_party_settings: {  }
+          type: field_d_p_set_settings
+          region: content
+      hidden:
+        created: true
+        status: true
+        uid: true
+      _core:
+        default_config_hash: 9UKt7iEkJ8XxzV_XSH4bObpDWRsTewjxvrzpcjnuiHs
+  -
+    collection: ''
+    name: core.entity_form_display.paragraph.d_p_single_counter.default
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.field.paragraph.d_p_single_counter.field_d_main_title
+          - field.field.paragraph.d_p_single_counter.field_d_media_icon
+          - field.field.paragraph.d_p_single_counter.field_d_number
+          - field.field.paragraph.d_p_single_counter.field_d_settings
+          - paragraphs.paragraphs_type.d_p_single_counter
+        module:
+          - d_p
+          - field_group
+          - media_library
+      third_party_settings:
+        field_group:
+          group_tabs:
+            children:
+              - group_basic
+              - group_settings
+            parent_name: ''
+            weight: 0
+            format_type: tabs
+            region: content
+            format_settings:
+              id: ''
+              classes: ''
+              direction: horizontal
+            label: Tabs
+          group_basic:
+            children:
+              - field_d_number
+              - field_d_main_title
+              - field_d_media_icon
+            parent_name: group_tabs
+            weight: 7
+            format_type: tab
+            region: content
+            format_settings:
+              id: ''
+              classes: ''
+              description: ''
+              formatter: open
+              required_fields: true
+            label: Basic
+          group_settings:
+            children:
+              - field_d_settings
+            parent_name: group_tabs
+            weight: 8
+            format_type: tab
+            region: content
+            format_settings:
+              id: ''
+              classes: ''
+              description: ''
+              formatter: closed
+              required_fields: true
+            label: Settings
+      id: paragraph.d_p_single_counter.default
+      targetEntityType: paragraph
+      bundle: d_p_single_counter
+      mode: default
+      content:
+        field_d_main_title:
+          weight: 2
+          settings:
+            size: 60
+            placeholder: 'ie. Clients this year'
+          third_party_settings: {  }
+          type: string_textfield
+          region: content
+        field_d_media_icon:
+          weight: 3
+          settings:
+            media_types: {  }
+          third_party_settings: {  }
+          type: media_library_widget
+          region: content
+        field_d_number:
+          weight: 1
+          settings:
+            placeholder: ''
+          third_party_settings: {  }
+          type: number
+          region: content
+        field_d_settings:
+          weight: 3
+          settings:
+            filter_mode: '1'
+            allowed_settings:
+              custom_class:
+                status: '1'
+                modifiers:
+                  paragraph-theme:
+                    status: '1'
+                  padding-bottom:
+                    status: 0
+                  stripe-sidebar:
+                    status: 0
+                  tile:
+                    status: 0
+                  with-divider:
+                    status: 0
+                  with-tiles:
+                    status: 0
+                  half-transparent:
+                    status: 0
+                  margin-bottom:
+                    status: 0
+                  margin-top:
+                    status: 0
+                  with-grid:
+                    status: 0
+                  padding-top:
+                    status: 0
+                  with-price:
+                    status: 0
+                  header-into-columns:
+                    status: 0
+                  full-width:
+                    status: 0
+              heading_type:
+                status: 0
+              side_image_layout:
+                status: 0
+              column_count_tablet:
+                status: 0
+              form_layout:
+                status: 0
+              side_tiles_layout:
+                status: 0
+              featured_images:
+                status: 0
+              column_count_mobile:
+                status: 0
+              embed_layout:
+                status: 0
+              column_count:
+                status: 0
+          third_party_settings: {  }
+          type: field_d_p_set_settings
+          region: content
+      hidden:
+        created: true
+        status: true
+        uid: true
+      _core:
+        default_config_hash: ECstArp6Hr1H0d5cQW8UmzfWeLtU41MW7axxRKVuTcE
+  -
+    collection: ''
+    name: core.entity_view_display.paragraph.d_p_group_of_counters.default
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.field.paragraph.d_p_group_of_counters.field_d_counter_reference
+          - field.field.paragraph.d_p_group_of_counters.field_d_cta_link
+          - field.field.paragraph.d_p_group_of_counters.field_d_long_text
+          - field.field.paragraph.d_p_group_of_counters.field_d_main_title
+          - field.field.paragraph.d_p_group_of_counters.field_d_media_background
+          - field.field.paragraph.d_p_group_of_counters.field_d_media_icon
+          - field.field.paragraph.d_p_group_of_counters.field_d_settings
+          - paragraphs.paragraphs_type.d_p_group_of_counters
+        module:
+          - entity_reference_revisions
+          - field_group
+          - link
+          - text
+      third_party_settings:
+        field_group:
+          group_d_counters_content:
+            children:
+              - field_d_media_icon
+              - field_d_main_title
+              - field_d_long_text
+              - field_d_counter_reference
+              - field_d_cta_link
+            parent_name: ''
+            weight: 1
+            format_type: html_element
+            region: content
+            format_settings:
+              id: ''
+              classes: ''
+              element: '<none>'
+              show_label: false
+              label_element: h3
+              label_element_classes: ''
+              attributes: ''
+              effect: none
+              speed: fast
+            label: 'Counters content'
+          group_d_counters_background:
+            children:
+              - field_d_media_background
+            parent_name: ''
+            weight: 0
+            format_type: html_element
+            region: content
+            format_settings:
+              id: ''
+              classes: ''
+              element: '<none>'
+              show_label: false
+              label_element: h3
+              label_element_classes: ''
+              attributes: ''
+              effect: none
+              speed: fast
+            label: 'Counters background'
+      id: paragraph.d_p_group_of_counters.default
+      targetEntityType: paragraph
+      bundle: d_p_group_of_counters
+      mode: default
+      content:
+        field_d_counter_reference:
+          type: entity_reference_revisions_entity_view
+          weight: 8
+          label: hidden
+          settings:
+            view_mode: default
+            link: ''
+          third_party_settings: {  }
+          region: content
+        field_d_cta_link:
+          weight: 9
+          label: hidden
+          settings:
+            trim_length: 80
+            url_only: false
+            url_plain: false
+            rel: ''
+            target: ''
+          third_party_settings: {  }
+          type: link
+          region: content
+        field_d_long_text:
+          weight: 7
+          label: hidden
+          settings: {  }
+          third_party_settings: {  }
+          type: text_default
+          region: content
+        field_d_main_title:
+          weight: 6
+          label: hidden
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          type: string
+          region: content
+        field_d_media_background:
+          type: entity_reference_entity_view
+          weight: 4
+          region: content
+          label: hidden
+          settings:
+            view_mode: counter
+            link: false
+          third_party_settings: {  }
+        field_d_media_icon:
+          weight: 5
+          label: hidden
+          settings:
+            view_mode: d_icon
+            link: false
+          third_party_settings: {  }
+          type: entity_reference_entity_view
+          region: content
+      hidden:
+        field_d_settings: true
+        search_api_excerpt: true
+      _core:
+        default_config_hash: 3twssC7-oOlQWOquIWAoiUVcgCO_qzTR1HMLoMY_yKc
+  -
+    collection: ''
+    name: core.entity_view_display.paragraph.d_p_single_counter.default
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.field.paragraph.d_p_single_counter.field_d_main_title
+          - field.field.paragraph.d_p_single_counter.field_d_media_icon
+          - field.field.paragraph.d_p_single_counter.field_d_number
+          - field.field.paragraph.d_p_single_counter.field_d_settings
+          - paragraphs.paragraphs_type.d_p_single_counter
+      id: paragraph.d_p_single_counter.default
+      targetEntityType: paragraph
+      bundle: d_p_single_counter
+      mode: default
+      content:
+        field_d_main_title:
+          weight: 2
+          label: hidden
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          type: string
+          region: content
+        field_d_media_icon:
+          weight: 0
+          label: hidden
+          settings:
+            view_mode: d_icon
+            link: false
+          third_party_settings: {  }
+          type: entity_reference_entity_view
+          region: content
+        field_d_number:
+          weight: 1
+          label: hidden
+          settings:
+            thousand_separator: ''
+            prefix_suffix: true
+          third_party_settings: {  }
+          type: number_integer
+          region: content
+      hidden:
+        field_d_settings: true
+        search_api_excerpt: true
+      _core:
+        default_config_hash: hjj__ldaCHy5as2ILfiETwHTP3cLkSpwEKi-hsV5tMg
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_group_of_counters.field_d_counter_reference
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_counter_reference
+          - paragraphs.paragraphs_type.d_p_group_of_counters
+          - paragraphs.paragraphs_type.d_p_single_counter
+        module:
+          - entity_reference_revisions
+      id: paragraph.d_p_group_of_counters.field_d_counter_reference
+      field_name: field_d_counter_reference
+      entity_type: paragraph
+      bundle: d_p_group_of_counters
+      label: Counters
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        handler: 'default:paragraph'
+        handler_settings:
+          negate: 0
+          target_bundles:
+            d_p_single_counter: d_p_single_counter
+          target_bundles_drag_drop:
+            d_p_group_of_counters:
+              weight: 12
+              enabled: false
+            d_p_banner:
+              weight: 13
+              enabled: false
+            d_p_form:
+              weight: 14
+              enabled: false
+            d_p_group_of_text_blocks:
+              weight: 15
+              enabled: false
+            d_p_side_image:
+              weight: 16
+              enabled: false
+            d_p_single_text_block:
+              weight: 17
+              enabled: false
+            d_p_subscribe_file:
+              weight: 18
+              enabled: false
+            d_p_text_paged:
+              weight: 19
+              enabled: false
+            d_p_text_with_bckg:
+              weight: 20
+              enabled: false
+            d_p_single_counter:
+              enabled: true
+              weight: 22
+      field_type: entity_reference_revisions
+      _core:
+        default_config_hash: A87qliOnId_Inr6dDLRKkyK4-HLbqK6-wyyUgC0MISE
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_group_of_counters.field_d_cta_link
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_cta_link
+          - paragraphs.paragraphs_type.d_p_group_of_counters
+        module:
+          - link
+      id: paragraph.d_p_group_of_counters.field_d_cta_link
+      field_name: field_d_cta_link
+      entity_type: paragraph
+      bundle: d_p_group_of_counters
+      label: 'Call To Action'
+      description: ''
+      required: false
+      translatable: true
+      default_value:
+        -
+          options:
+            attributes:
+              class: 'btn btn-secondary'
+      default_value_callback: ''
+      settings:
+        link_type: 17
+        title: 1
+      field_type: link
+      _core:
+        default_config_hash: vPX5AaEIuQYbhdDuXfVrd9PlXdVOJzBk6S3E7C6e4O4
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_group_of_counters.field_d_long_text
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_long_text
+          - paragraphs.paragraphs_type.d_p_group_of_counters
+        module:
+          - text
+      id: paragraph.d_p_group_of_counters.field_d_long_text
+      field_name: field_d_long_text
+      entity_type: paragraph
+      bundle: d_p_group_of_counters
+      label: 'Long text'
+      description: ''
+      required: false
+      translatable: true
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: text_long
+      _core:
+        default_config_hash: Ow2mSv3RphcZGSXcYW-s0_bmupE8nwAVFZwFvKuMulE
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_group_of_counters.field_d_main_title
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_main_title
+          - paragraphs.paragraphs_type.d_p_group_of_counters
+      id: paragraph.d_p_group_of_counters.field_d_main_title
+      field_name: field_d_main_title
+      entity_type: paragraph
+      bundle: d_p_group_of_counters
+      label: 'Main title'
+      description: ''
+      required: false
+      translatable: true
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: string
+      _core:
+        default_config_hash: hcRT19ikmYUMsVb7_kraNQon-RaTWons2Jn50VotU2g
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_group_of_counters.field_d_media_background
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_media_background
+          - media.type.d_image
+          - media.type.d_video
+          - paragraphs.paragraphs_type.d_p_group_of_counters
+      id: paragraph.d_p_group_of_counters.field_d_media_background
+      field_name: field_d_media_background
+      entity_type: paragraph
+      bundle: d_p_group_of_counters
+      label: 'Background image'
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        handler: 'default:media'
+        handler_settings:
+          target_bundles:
+            d_image: d_image
+            d_video: d_video
+          sort:
+            field: revision_created
+            direction: DESC
+          auto_create: false
+          auto_create_bundle: d_image
+      field_type: entity_reference
+      _core:
+        default_config_hash: 124bKBDiNgEpgRFQeKGYHoYNAwLzidVAYwPyUGEAv94
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_group_of_counters.field_d_media_icon
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_media_icon
+          - media.type.d_image
+          - paragraphs.paragraphs_type.d_p_group_of_counters
+      id: paragraph.d_p_group_of_counters.field_d_media_icon
+      field_name: field_d_media_icon
+      entity_type: paragraph
+      bundle: d_p_group_of_counters
+      label: Icon
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        handler: 'default:media'
+        handler_settings:
+          target_bundles:
+            d_image: d_image
+          sort:
+            field: revision_created
+            direction: DESC
+          auto_create: false
+          auto_create_bundle: ''
+      field_type: entity_reference
+      _core:
+        default_config_hash: 99R0JMl0cCgKyv0mpaaEcnJwjNXtWMSny87TylrO-m4
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_group_of_counters.field_d_settings
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_settings
+          - paragraphs.paragraphs_type.d_p_group_of_counters
+        module:
+          - d_p
+      id: paragraph.d_p_group_of_counters.field_d_settings
+      field_name: field_d_settings
+      entity_type: paragraph
+      bundle: d_p_group_of_counters
+      label: 'Paragraph settings'
+      description: ''
+      required: false
+      translatable: true
+      default_value:
+        -
+          value: '{"custom_class":"","heading_type":"h2"}'
+      default_value_callback: ''
+      settings: {  }
+      field_type: field_p_configuration_storage
+      _core:
+        default_config_hash: j-RDR6y9YWfBaYDnY5ePa7P7gwYl8_LX9PJIoOy_Eqo
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_single_counter.field_d_main_title
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_main_title
+          - paragraphs.paragraphs_type.d_p_single_counter
+      id: paragraph.d_p_single_counter.field_d_main_title
+      field_name: field_d_main_title
+      entity_type: paragraph
+      bundle: d_p_single_counter
+      label: 'Counter text'
+      description: 'This will be shown below number.'
+      required: true
+      translatable: true
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: string
+      _core:
+        default_config_hash: h0llNwilTyQd1vrKwYlsoIME3zWVDk4JVc-peL88sq0
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_single_counter.field_d_media_icon
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_media_icon
+          - media.type.d_image
+          - paragraphs.paragraphs_type.d_p_single_counter
+      id: paragraph.d_p_single_counter.field_d_media_icon
+      field_name: field_d_media_icon
+      entity_type: paragraph
+      bundle: d_p_single_counter
+      label: Icon
+      description: ''
+      required: false
+      translatable: true
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        handler: 'default:media'
+        handler_settings:
+          target_bundles:
+            d_image: d_image
+          sort:
+            field: revision_created
+            direction: DESC
+          auto_create: false
+          auto_create_bundle: ''
+      field_type: entity_reference
+      _core:
+        default_config_hash: _McRlkjup_gPxTbh35S1y-Bn1LNOoUt2MMnivr0bA2U
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_single_counter.field_d_number
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_number
+          - paragraphs.paragraphs_type.d_p_single_counter
+      id: paragraph.d_p_single_counter.field_d_number
+      field_name: field_d_number
+      entity_type: paragraph
+      bundle: d_p_single_counter
+      label: Number
+      description: 'Enter number to count to.'
+      required: true
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        min: 1
+        max: null
+        prefix: ''
+        suffix: ''
+      field_type: integer
+      _core:
+        default_config_hash: 9OJdjJuodbmyxAjcKYMnADexuh0khUPC2AEQWSBc2uU
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_single_counter.field_d_settings
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_settings
+          - paragraphs.paragraphs_type.d_p_single_counter
+        module:
+          - d_p
+      id: paragraph.d_p_single_counter.field_d_settings
+      field_name: field_d_settings
+      entity_type: paragraph
+      bundle: d_p_single_counter
+      label: 'Paragraph settings'
+      description: ''
+      required: false
+      translatable: true
+      default_value:
+        -
+          value: '{"custom_class":""}'
+      default_value_callback: ''
+      settings: {  }
+      field_type: field_p_configuration_storage
+      _core:
+        default_config_hash: Cm3nsGQWamG975_rKcsMJcGgKqdNa9Hg8JQmIdGo4d4
+  -
+    collection: ''
+    name: field.storage.paragraph.field_d_counter_reference
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - entity_reference_revisions
+          - paragraphs
+      id: paragraph.field_d_counter_reference
+      field_name: field_d_counter_reference
+      entity_type: paragraph
+      type: entity_reference_revisions
+      settings:
+        target_type: paragraph
+      module: entity_reference_revisions
+      locked: false
+      cardinality: -1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+      _core:
+        default_config_hash: bHAEd4RUFJb6L69sMAtovWvaHO83feoqGqDSKPOAlSk
+  -
+    collection: ''
+    name: paragraphs.paragraphs_type.d_p_group_of_counters
+    data:
+      langcode: en
+      status: true
+      dependencies: {  }
+      id: d_p_group_of_counters
+      label: 'Group of counters'
+      icon_uuid: null
+      icon_default: null
+      description: 'Group of single counters.'
+      behavior_plugins: {  }
+      _core:
+        default_config_hash: mAx7b1adJ3p_9imPEgLzWQgu4LzxpfkFpA2eri00csQ
+  -
+    collection: ''
+    name: paragraphs.paragraphs_type.d_p_single_counter
+    data:
+      langcode: en
+      status: true
+      dependencies: {  }
+      id: d_p_single_counter
+      label: 'Single counter'
+      icon_uuid: null
+      icon_default: null
+      description: 'Single counter block used in "Counters" paragraph.'
+      behavior_plugins: {  }
+      _core:
+        default_config_hash: p7cFH2kc801eeBJj0pgQUmDc1HS33uX2OQdUi3bVqB8

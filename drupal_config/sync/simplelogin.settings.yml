@@ -1,0 +1,8 @@
+background_active: 1
+background_image:
+  - '48'
+background_color: '#66757a'
+background_opacity: 0
+wrapper_width: '550'
+unset_active_css: 0
+unset_css: ''

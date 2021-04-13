@@ -1,0 +1,11 @@
+uuid: aafe4c93-a24c-4173-9f7a-8b284193f45c
+langcode: pl
+status: true
+dependencies:
+  config:
+    - node.type.discounts
+id: node.discounts
+target_entity_type_id: node
+target_bundle: discounts
+default_langcode: site_default
+language_alterable: false

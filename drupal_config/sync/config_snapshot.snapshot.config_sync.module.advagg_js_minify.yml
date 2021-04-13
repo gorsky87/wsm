@@ -1,0 +1,21 @@
+uuid: f66fa4aa-dd23-4389-b835-d396386d2218
+langcode: pl
+status: true
+dependencies:
+  module:
+    - advagg_js_minify
+id: config_sync.module.advagg_js_minify
+snapshotSet: config_sync
+extensionType: module
+extensionName: advagg_js_minify
+items:
+  -
+    collection: ''
+    name: advagg_js_minify.settings
+    data:
+      add_license: false
+      minifier: 4
+      ratio_max: 0.9
+      ratio_min: 0.1
+      _core:
+        default_config_hash: CADjQwWE8PurffFxRdWpZWhYexkZwsYytEZLgjfbyf0

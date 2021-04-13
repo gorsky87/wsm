@@ -1,0 +1,13 @@
+uuid: 25dc46f1-f9a7-4dc1-ac86-3057e8049acc
+langcode: pl
+status: true
+dependencies: {  }
+id: whole_site
+label: 'Whole site'
+enabled: true
+keep: 30
+period: 172800
+cron: null
+source_id: entire_site
+destination_id: private_files
+settings_profile_id: null

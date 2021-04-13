@@ -1,0 +1,12 @@
+uuid: 097b35c4-c8ab-4533-8275-5e4c5b277b03
+langcode: pl
+status: true
+dependencies:
+  module:
+    - menu_link_content
+_core:
+  default_config_hash: TTHbJnnmzx02KP2FNkAlzqP_BFdKZwAVb8hfUbRbxuk
+id: menu_link_content.token
+label: Wzorzec
+targetEntityType: menu_link_content
+cache: true

@@ -1,0 +1,11 @@
+uuid: 57520fbe-8643-4cf5-b518-572ce9614eaa
+langcode: pl
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.track_tags
+id: taxonomy_term.track_tags
+target_entity_type_id: taxonomy_term
+target_bundle: track_tags
+default_langcode: site_default
+language_alterable: false

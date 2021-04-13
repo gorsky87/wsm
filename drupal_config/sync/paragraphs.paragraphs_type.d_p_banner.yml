@@ -1,0 +1,12 @@
+uuid: 803deace-116d-47c1-b73e-a9150de38ac0
+langcode: pl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: UR51eRfdmDJZnbIVC4ta2yCtW9xDuy93EX0VubHtC4A
+id: d_p_banner
+label: Baner
+icon_uuid: null
+icon_default: null
+description: 'A banner with background, icon, text and CTA.'
+behavior_plugins: {  }

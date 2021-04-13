@@ -1,0 +1,25 @@
+uuid: bbbb627b-a2f8-4178-bba0-967c9dae613d
+langcode: pl
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - droopler_subtheme
+id: menukontauzytkownika
+theme: droopler_subtheme
+region: secondary_menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'Menu konta użytkownika'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

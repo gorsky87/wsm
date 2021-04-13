@@ -1,0 +1,16 @@
+uuid: 12dbdf64-9355-45d7-9322-2a59bef1c057
+langcode: pl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: HqWcQ95GiuBxR_8Hx_eRv1ZLOvMGfO2mjsSgBr5vHOw
+id: d_document
+label: Dokument
+description: 'Document added from file.'
+source: file
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_file
+field_map:
+  name: field_media_file

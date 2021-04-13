@@ -1,0 +1,29 @@
+uuid: 144df7b0-1b2a-4987-a277-f8221dc02fb6
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_track_tags
+    - node.type.track
+    - taxonomy.vocabulary.track_tags
+id: node.track.field_track_tags
+field_name: field_track_tags
+entity_type: node
+bundle: track
+label: Tags
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      track_tags: track_tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

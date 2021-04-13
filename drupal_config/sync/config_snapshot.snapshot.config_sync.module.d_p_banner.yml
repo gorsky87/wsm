@@ -1,0 +1,573 @@
+uuid: d0f61913-f971-48ae-8a1d-38f26ef174dc
+langcode: pl
+status: true
+dependencies:
+  module:
+    - d_p_banner
+id: config_sync.module.d_p_banner
+snapshotSet: config_sync
+extensionType: module
+extensionName: d_p_banner
+items:
+  -
+    collection: ''
+    name: core.entity_form_display.paragraph.d_p_banner.default
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.field.paragraph.d_p_banner.field_d_cta_link
+          - field.field.paragraph.d_p_banner.field_d_long_text
+          - field.field.paragraph.d_p_banner.field_d_main_title
+          - field.field.paragraph.d_p_banner.field_d_media_background
+          - field.field.paragraph.d_p_banner.field_d_media_icon
+          - field.field.paragraph.d_p_banner.field_d_settings
+          - field.field.paragraph.d_p_banner.field_d_subtitle
+          - paragraphs.paragraphs_type.d_p_banner
+        module:
+          - d_p
+          - field_group
+          - link_attributes
+          - media_library
+          - text
+      third_party_settings:
+        field_group:
+          group_tabs:
+            children:
+              - group_basic
+              - group_settings
+            parent_name: ''
+            weight: 0
+            format_type: tabs
+            region: content
+            format_settings:
+              id: ''
+              classes: ''
+              direction: horizontal
+            label: Tabs
+          group_basic:
+            children:
+              - field_d_main_title
+              - field_d_subtitle
+              - field_d_media_background
+              - field_d_media_icon
+              - field_d_long_text
+              - field_d_cta_link
+              - translation
+            parent_name: group_tabs
+            weight: 11
+            format_type: tab
+            region: content
+            format_settings:
+              id: ''
+              classes: ''
+              description: ''
+              formatter: open
+              required_fields: true
+            label: Basic
+          group_settings:
+            children:
+              - field_d_settings
+            parent_name: group_tabs
+            weight: 12
+            format_type: tab
+            region: content
+            format_settings:
+              id: ''
+              classes: ''
+              description: ''
+              formatter: closed
+              required_fields: true
+            label: Settings
+      id: paragraph.d_p_banner.default
+      targetEntityType: paragraph
+      bundle: d_p_banner
+      mode: default
+      content:
+        field_d_cta_link:
+          weight: 6
+          settings:
+            placeholder_url: ''
+            placeholder_title: ''
+            enabled_attributes:
+              id: true
+              name: true
+              target: true
+              rel: true
+              class: true
+              accesskey: true
+          third_party_settings: {  }
+          type: link_attributes
+          region: content
+        field_d_long_text:
+          weight: 5
+          settings:
+            rows: 5
+            placeholder: ''
+          third_party_settings: {  }
+          type: text_textarea
+          region: content
+        field_d_main_title:
+          weight: 1
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: string_textfield
+          region: content
+        field_d_media_background:
+          type: media_library_widget
+          weight: 3
+          settings:
+            media_types: {  }
+          third_party_settings: {  }
+          region: content
+        field_d_media_icon:
+          type: media_library_widget
+          weight: 4
+          settings:
+            media_types: {  }
+          third_party_settings: {  }
+          region: content
+        field_d_settings:
+          weight: 8
+          settings:
+            filter_mode: '1'
+            allowed_settings:
+              heading_type:
+                status: '1'
+              custom_class:
+                status: '1'
+                modifiers:
+                  padding-bottom:
+                    status: '1'
+                  paragraph-theme:
+                    status: '1'
+                  half-transparent:
+                    status: '1'
+                  margin-bottom:
+                    status: '1'
+                  margin-top:
+                    status: '1'
+                  padding-top:
+                    status: '1'
+                  stripe-sidebar:
+                    status: 0
+                  tile:
+                    status: 0
+                  with-divider:
+                    status: 0
+                  with-tiles:
+                    status: 0
+                  with-grid:
+                    status: 0
+                  with-price:
+                    status: 0
+                  header-into-columns:
+                    status: 0
+                  full-width:
+                    status: 0
+              side_image_layout:
+                status: 0
+              column_count_tablet:
+                status: 0
+              form_layout:
+                status: 0
+              side_tiles_layout:
+                status: 0
+              featured_images:
+                status: 0
+              column_count_mobile:
+                status: 0
+              embed_layout:
+                status: 0
+              column_count:
+                status: 0
+          third_party_settings: {  }
+          type: field_d_p_set_settings
+          region: content
+        field_d_subtitle:
+          weight: 2
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: string_textfield
+          region: content
+        translation:
+          weight: 7
+          region: content
+          settings: {  }
+          third_party_settings: {  }
+      hidden:
+        created: true
+        status: true
+        uid: true
+      _core:
+        default_config_hash: eK95aqI3jk4w_-BPoGeYjasT5j5wlEBGMFLIPHOkND8
+  -
+    collection: ''
+    name: core.entity_view_display.paragraph.d_p_banner.default
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.field.paragraph.d_p_banner.field_d_cta_link
+          - field.field.paragraph.d_p_banner.field_d_long_text
+          - field.field.paragraph.d_p_banner.field_d_main_title
+          - field.field.paragraph.d_p_banner.field_d_media_background
+          - field.field.paragraph.d_p_banner.field_d_media_icon
+          - field.field.paragraph.d_p_banner.field_d_settings
+          - field.field.paragraph.d_p_banner.field_d_subtitle
+          - paragraphs.paragraphs_type.d_p_banner
+        module:
+          - field_group
+          - link
+          - text
+      third_party_settings:
+        field_group:
+          group_d_banner_content:
+            children:
+              - field_d_media_icon
+              - field_d_main_title
+              - field_d_subtitle
+              - field_d_long_text
+              - field_d_cta_link
+            parent_name: ''
+            weight: 1
+            format_type: html_element
+            region: content
+            format_settings:
+              element: '<none>'
+              show_label: false
+              label_element: h3
+              label_element_classes: ''
+              attributes: ''
+              effect: none
+              speed: fast
+              id: ''
+              classes: ''
+            label: 'Banner content'
+          group_d_banner_background:
+            children:
+              - field_d_media_background
+            parent_name: ''
+            weight: 0
+            format_type: html_element
+            region: content
+            format_settings:
+              id: ''
+              classes: ''
+              element: '<none>'
+              show_label: false
+              label_element: h3
+              label_element_classes: ''
+              attributes: ''
+              effect: none
+              speed: fast
+            label: 'Banner background'
+      id: paragraph.d_p_banner.default
+      targetEntityType: paragraph
+      bundle: d_p_banner
+      mode: default
+      content:
+        field_d_cta_link:
+          weight: 7
+          label: hidden
+          settings:
+            trim_length: 80
+            url_only: false
+            url_plain: false
+            rel: ''
+            target: ''
+          third_party_settings: {  }
+          type: link
+          region: content
+        field_d_long_text:
+          weight: 6
+          label: hidden
+          settings: {  }
+          third_party_settings: {  }
+          type: text_default
+          region: content
+        field_d_main_title:
+          weight: 4
+          label: hidden
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          type: string
+          region: content
+        field_d_media_background:
+          type: entity_reference_entity_view
+          weight: 2
+          region: content
+          label: hidden
+          settings:
+            view_mode: d_banner
+            link: false
+          third_party_settings: {  }
+        field_d_media_icon:
+          type: entity_reference_entity_view
+          weight: 3
+          label: hidden
+          settings:
+            view_mode: d_icon
+            link: false
+          third_party_settings: {  }
+          region: content
+        field_d_subtitle:
+          weight: 5
+          label: hidden
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          type: string
+          region: content
+      hidden:
+        field_d_settings: true
+        search_api_excerpt: true
+      _core:
+        default_config_hash: 2t-u6WdcuDrfyBr010U3aGrcMfRv3LwLuSHJCoSCR90
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_banner.field_d_cta_link
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_cta_link
+          - paragraphs.paragraphs_type.d_p_banner
+        module:
+          - link
+      id: paragraph.d_p_banner.field_d_cta_link
+      field_name: field_d_cta_link
+      entity_type: paragraph
+      bundle: d_p_banner
+      label: 'Call To Action'
+      description: ''
+      required: false
+      translatable: true
+      default_value:
+        -
+          options:
+            attributes:
+              class: 'btn btn-primary'
+      default_value_callback: ''
+      settings:
+        link_type: 17
+        title: 1
+      field_type: link
+      _core:
+        default_config_hash: XVQzbGV4eeARmyP8ykKxmyWwhTCrqqxNi4GX3-i5AhQ
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_banner.field_d_long_text
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_long_text
+          - paragraphs.paragraphs_type.d_p_banner
+        module:
+          - text
+      id: paragraph.d_p_banner.field_d_long_text
+      field_name: field_d_long_text
+      entity_type: paragraph
+      bundle: d_p_banner
+      label: 'Long text'
+      description: ''
+      required: false
+      translatable: true
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: text_long
+      _core:
+        default_config_hash: bWwz79LfkrkNC7V1kfdUf5K11lXsgNEqmDzpjTy8Da0
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_banner.field_d_main_title
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_main_title
+          - paragraphs.paragraphs_type.d_p_banner
+      id: paragraph.d_p_banner.field_d_main_title
+      field_name: field_d_main_title
+      entity_type: paragraph
+      bundle: d_p_banner
+      label: 'Main title'
+      description: ''
+      required: false
+      translatable: true
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: string
+      _core:
+        default_config_hash: HrymVZJjBgNi_9uizRSGCusBiYY07pRPk3IENPukcvM
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_banner.field_d_media_background
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_media_background
+          - media.type.d_image
+          - media.type.d_video
+          - paragraphs.paragraphs_type.d_p_banner
+      id: paragraph.d_p_banner.field_d_media_background
+      field_name: field_d_media_background
+      entity_type: paragraph
+      bundle: d_p_banner
+      label: 'Background image'
+      description: 'The image that spans 100% width under the Paragraph.'
+      required: true
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        handler: 'default:media'
+        handler_settings:
+          target_bundles:
+            d_image: d_image
+            d_video: d_video
+          sort:
+            field: revision_created
+            direction: DESC
+          auto_create: false
+          auto_create_bundle: d_image
+      field_type: entity_reference
+      _core:
+        default_config_hash: d9l4Wy7yQqH3BxKp1_H9qOhmADAMY2GW2Buxt7OOMsQ
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_banner.field_d_media_icon
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_media_icon
+          - media.type.d_image
+          - paragraphs.paragraphs_type.d_p_banner
+      id: paragraph.d_p_banner.field_d_media_icon
+      field_name: field_d_media_icon
+      entity_type: paragraph
+      bundle: d_p_banner
+      label: Icon
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        handler: 'default:media'
+        handler_settings:
+          target_bundles:
+            d_image: d_image
+          sort:
+            field: revision_created
+            direction: DESC
+          auto_create: false
+          auto_create_bundle: ''
+      field_type: entity_reference
+      _core:
+        default_config_hash: 4bLDRq7WJ1zmKQhzmVv0sTrmmOSJSa69PnArxB8XHk4
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_banner.field_d_settings
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_settings
+          - paragraphs.paragraphs_type.d_p_banner
+        module:
+          - d_p
+      id: paragraph.d_p_banner.field_d_settings
+      field_name: field_d_settings
+      entity_type: paragraph
+      bundle: d_p_banner
+      label: 'Paragraph settings'
+      description: ''
+      required: false
+      translatable: false
+      default_value:
+        -
+          value: '{"custom_class":"","heading_type":"h2"}'
+      default_value_callback: ''
+      settings: {  }
+      field_type: field_p_configuration_storage
+      _core:
+        default_config_hash: Lbc6Z2XCmekSIPddqAeyNMW8dzfI5lXPu4b4RZLsYhU
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_banner.field_d_subtitle
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_subtitle
+          - paragraphs.paragraphs_type.d_p_banner
+      id: paragraph.d_p_banner.field_d_subtitle
+      field_name: field_d_subtitle
+      entity_type: paragraph
+      bundle: d_p_banner
+      label: Subtitle
+      description: ''
+      required: false
+      translatable: true
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: string
+      _core:
+        default_config_hash: V8XdLQ2omKsTH_cXbkZUncKj_o68gQQMZbGwR71TFd0
+  -
+    collection: ''
+    name: language.content_settings.paragraph.d_p_banner
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - paragraphs.paragraphs_type.d_p_banner
+        module:
+          - content_translation
+      third_party_settings:
+        content_translation:
+          enabled: true
+      id: paragraph.d_p_banner
+      target_entity_type_id: paragraph
+      target_bundle: d_p_banner
+      default_langcode: site_default
+      language_alterable: true
+      _core:
+        default_config_hash: wRst685y6ORikjCxE1kump2SLu03vHrTiSZvv41_2_o
+  -
+    collection: ''
+    name: paragraphs.paragraphs_type.d_p_banner
+    data:
+      langcode: en
+      status: true
+      dependencies: {  }
+      id: d_p_banner
+      label: Banner
+      icon_uuid: null
+      icon_default: null
+      description: 'A banner with background, icon, text and CTA.'
+      behavior_plugins: {  }
+      _core:
+        default_config_hash: UR51eRfdmDJZnbIVC4ta2yCtW9xDuy93EX0VubHtC4A

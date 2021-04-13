@@ -1,0 +1,12 @@
+uuid: 447b2956-3be3-4a66-a468-698686ce3fdc
+langcode: pl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: _Cjim2u9nV3JbNNdrlgtqrxZJfBt495SSOIgeMa1ADc
+id: d_p_node
+label: Węzeł
+icon_uuid: null
+icon_default: null
+description: 'A node reference paragraph to use with "List of text blocks" and "Side by side".'
+behavior_plugins: {  }

@@ -1,0 +1,23 @@
+uuid: 5d1b4f55-4770-4f1f-82d7-ced4e23cf9c8
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_track_long
+    - node.type.track
+id: node.track.field_track_long
+field_name: field_track_long
+entity_type: node
+bundle: track
+label: Długość
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: null
+  prefix: ''
+  suffix: km
+field_type: integer

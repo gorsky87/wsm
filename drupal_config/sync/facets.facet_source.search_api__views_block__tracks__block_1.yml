@@ -1,0 +1,12 @@
+uuid: 4efbd91a-6762-46da-a1c9-f9e01b0961d7
+langcode: pl
+status: true
+dependencies: {  }
+id: search_api__views_block__tracks__block_1
+name: 'search_api:views_block__tracks__block_1'
+filter_key: ''
+url_processor: query_string
+breadcrumb:
+  active: true
+  before: true
+  group: false

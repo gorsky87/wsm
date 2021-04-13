@@ -1,0 +1,17 @@
+uuid: 2361adf9-2d63-455e-8680-e9bf1b5181a2
+langcode: pl
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Trasa
+type: track
+description: "Odkrywaj z nami trasy motocyklowe na \r\nDolnym Śląsku!"
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: true

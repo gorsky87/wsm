@@ -1,0 +1,1431 @@
+uuid: a8b4dc05-8999-4689-a945-bc5195987d54
+langcode: pl
+status: true
+dependencies:
+  module:
+    - d_p_subscribe_file
+id: config_sync.module.d_p_subscribe_file
+snapshotSet: config_sync
+extensionType: module
+extensionName: d_p_subscribe_file
+items:
+  -
+    collection: ''
+    name: core.entity_form_display.paragraph.d_p_subscribe_file.default
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.field.paragraph.d_p_subscribe_file.field_d_long_text
+          - field.field.paragraph.d_p_subscribe_file.field_d_main_title
+          - field.field.paragraph.d_p_subscribe_file.field_d_media_background
+          - field.field.paragraph.d_p_subscribe_file.field_d_media_icon
+          - field.field.paragraph.d_p_subscribe_file.field_d_p_sf_additional_info
+          - field.field.paragraph.d_p_subscribe_file.field_d_p_sf_consent
+          - field.field.paragraph.d_p_subscribe_file.field_d_p_sf_download_button
+          - field.field.paragraph.d_p_subscribe_file.field_d_p_sf_download_page
+          - field.field.paragraph.d_p_subscribe_file.field_d_p_sf_mail_body
+          - field.field.paragraph.d_p_subscribe_file.field_d_settings
+          - field.field.paragraph.d_p_subscribe_file.field_file_download
+          - paragraphs.paragraphs_type.d_p_subscribe_file
+        module:
+          - d_p
+          - field_group
+          - file
+          - media_library
+          - text
+      third_party_settings:
+        field_group:
+          group_tabs:
+            children:
+              - group_basic
+              - group_form_messages
+              - group_settings
+            parent_name: ''
+            weight: 0
+            format_type: tabs
+            region: content
+            format_settings:
+              id: ''
+              classes: ''
+              direction: horizontal
+            label: Tabs
+          group_basic:
+            children:
+              - field_d_main_title
+              - field_d_media_background
+              - field_d_media_icon
+              - field_d_long_text
+              - field_d_p_sf_additional_info
+              - translation
+            parent_name: group_tabs
+            weight: 20
+            format_type: tab
+            region: content
+            format_settings:
+              id: ''
+              classes: ''
+              description: ''
+              formatter: open
+              required_fields: true
+            label: Basic
+          group_form_messages:
+            children:
+              - field_file_download
+              - field_d_p_sf_consent
+              - field_d_p_sf_download_button
+              - field_d_p_sf_download_page
+              - field_d_p_sf_mail_body
+            parent_name: group_tabs
+            weight: 21
+            format_type: tab
+            region: content
+            format_settings:
+              id: ''
+              classes: ''
+              description: ''
+              formatter: closed
+              required_fields: true
+            label: 'Form & Messages'
+          group_settings:
+            children:
+              - field_d_settings
+            parent_name: group_tabs
+            weight: 22
+            format_type: tab
+            region: content
+            format_settings:
+              id: ''
+              classes: ''
+              description: ''
+              formatter: closed
+              required_fields: true
+            label: Settings
+      id: paragraph.d_p_subscribe_file.default
+      targetEntityType: paragraph
+      bundle: d_p_subscribe_file
+      mode: default
+      content:
+        field_d_long_text:
+          weight: 4
+          settings:
+            rows: 5
+            placeholder: ''
+          third_party_settings: {  }
+          type: text_textarea
+          region: content
+        field_d_main_title:
+          weight: 1
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: string_textfield
+          region: content
+        field_d_media_background:
+          type: media_library_widget
+          weight: 2
+          region: content
+          settings:
+            media_types: {  }
+          third_party_settings: {  }
+        field_d_media_icon:
+          type: media_library_widget
+          weight: 3
+          region: content
+          settings:
+            media_types: {  }
+          third_party_settings: {  }
+        field_d_p_sf_additional_info:
+          weight: 5
+          settings:
+            rows: 5
+            placeholder: ''
+          third_party_settings: {  }
+          type: text_textarea
+          region: content
+        field_d_p_sf_consent:
+          weight: 6
+          settings:
+            size: 60
+            placeholder: 'Enter consent label (HTML is allowed).'
+          third_party_settings: {  }
+          type: text_textfield
+          region: content
+        field_d_p_sf_download_button:
+          weight: 7
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: string_textfield
+          region: content
+        field_d_p_sf_download_page:
+          weight: 8
+          settings:
+            rows: 5
+            placeholder: ''
+          third_party_settings: {  }
+          type: text_textarea
+          region: content
+        field_d_p_sf_mail_body:
+          weight: 9
+          settings:
+            rows: 5
+            placeholder: ''
+          third_party_settings: {  }
+          type: text_textarea
+          region: content
+        field_d_settings:
+          type: field_d_p_set_settings
+          weight: 11
+          region: content
+          settings:
+            filter_mode: '1'
+            allowed_settings:
+              heading_type:
+                status: '1'
+              custom_class:
+                status: '1'
+                modifiers:
+                  padding-bottom:
+                    status: '1'
+                  paragraph-theme:
+                    status: '1'
+                  margin-bottom:
+                    status: '1'
+                  margin-top:
+                    status: '1'
+                  padding-top:
+                    status: '1'
+                  stripe-sidebar:
+                    status: 0
+                  tile:
+                    status: 0
+                  with-divider:
+                    status: 0
+                  with-tiles:
+                    status: 0
+                  half-transparent:
+                    status: 0
+                  with-grid:
+                    status: 0
+                  with-price:
+                    status: 0
+                  header-into-columns:
+                    status: 0
+                  full-width:
+                    status: 0
+              side_image_layout:
+                status: 0
+              column_count_tablet:
+                status: 0
+              form_layout:
+                status: 0
+              side_tiles_layout:
+                status: 0
+              featured_images:
+                status: 0
+              column_count_mobile:
+                status: 0
+              embed_layout:
+                status: 0
+              column_count:
+                status: 0
+          third_party_settings: {  }
+        field_file_download:
+          weight: 5
+          settings:
+            progress_indicator: throbber
+          third_party_settings: {  }
+          type: file_generic
+          region: content
+        translation:
+          weight: 6
+          region: content
+          settings: {  }
+          third_party_settings: {  }
+      hidden:
+        created: true
+        status: true
+        uid: true
+      _core:
+        default_config_hash: '-vPozboW-e4smWLQjwFrJBbhnEmKQsoWjHeBXOWdBc0'
+  -
+    collection: ''
+    name: core.entity_view_display.paragraph.d_p_subscribe_file.default
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.field.paragraph.d_p_subscribe_file.field_d_long_text
+          - field.field.paragraph.d_p_subscribe_file.field_d_main_title
+          - field.field.paragraph.d_p_subscribe_file.field_d_media_background
+          - field.field.paragraph.d_p_subscribe_file.field_d_media_icon
+          - field.field.paragraph.d_p_subscribe_file.field_d_p_sf_additional_info
+          - field.field.paragraph.d_p_subscribe_file.field_d_p_sf_consent
+          - field.field.paragraph.d_p_subscribe_file.field_d_p_sf_download_button
+          - field.field.paragraph.d_p_subscribe_file.field_d_p_sf_download_page
+          - field.field.paragraph.d_p_subscribe_file.field_d_p_sf_mail_body
+          - field.field.paragraph.d_p_subscribe_file.field_d_settings
+          - field.field.paragraph.d_p_subscribe_file.field_file_download
+          - paragraphs.paragraphs_type.d_p_subscribe_file
+        module:
+          - field_group
+          - text
+      third_party_settings:
+        field_group:
+          group_d_subscribe_background:
+            children:
+              - field_d_media_background
+            parent_name: ''
+            weight: 0
+            format_type: html_element
+            region: content
+            format_settings:
+              id: ''
+              classes: ''
+              element: '<none>'
+              show_label: false
+              label_element: h3
+              label_element_classes: ''
+              attributes: ''
+              effect: none
+              speed: fast
+            label: 'Subscribe background'
+          group_d_subscribe_content:
+            children:
+              - field_d_media_icon
+              - field_d_main_title
+              - field_d_long_text
+            parent_name: ''
+            weight: 1
+            format_type: html_element
+            region: content
+            format_settings:
+              id: ''
+              classes: ''
+              element: '<none>'
+              show_label: false
+              label_element: h3
+              label_element_classes: ''
+              attributes: ''
+              effect: none
+              speed: fast
+            label: 'Subscribe content'
+          group_d_subscribe_info:
+            children:
+              - field_d_p_sf_additional_info
+            parent_name: ''
+            weight: 2
+            format_type: html_element
+            region: content
+            format_settings:
+              id: ''
+              classes: ''
+              element: '<none>'
+              show_label: false
+              label_element: h3
+              label_element_classes: ''
+              attributes: ''
+              effect: none
+              speed: fast
+            label: 'Subscribe info'
+      id: paragraph.d_p_subscribe_file.default
+      targetEntityType: paragraph
+      bundle: d_p_subscribe_file
+      mode: default
+      content:
+        field_d_long_text:
+          weight: 4
+          label: visually_hidden
+          settings: {  }
+          third_party_settings: {  }
+          type: text_default
+          region: content
+        field_d_main_title:
+          weight: 3
+          label: visually_hidden
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          type: string
+          region: content
+        field_d_media_background:
+          type: entity_reference_entity_view
+          weight: 6
+          region: content
+          label: hidden
+          settings:
+            view_mode: d_banner
+            link: false
+          third_party_settings: {  }
+        field_d_media_icon:
+          type: entity_reference_entity_view
+          weight: 2
+          region: content
+          label: hidden
+          settings:
+            view_mode: d_icon
+            link: false
+          third_party_settings: {  }
+        field_d_p_sf_additional_info:
+          weight: 5
+          label: visually_hidden
+          settings: {  }
+          third_party_settings: {  }
+          type: text_default
+          region: content
+      hidden:
+        field_d_p_sf_consent: true
+        field_d_p_sf_download_button: true
+        field_d_p_sf_download_page: true
+        field_d_p_sf_mail_body: true
+        field_d_settings: true
+        field_file_download: true
+        search_api_excerpt: true
+      _core:
+        default_config_hash: VAN5Ux2f2x8Ls6GnXTnJGlqx_9fbdqS6OcEVioJXZzI
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_subscribe_file.field_d_long_text
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_long_text
+          - paragraphs.paragraphs_type.d_p_subscribe_file
+        module:
+          - text
+      id: paragraph.d_p_subscribe_file.field_d_long_text
+      field_name: field_d_long_text
+      entity_type: paragraph
+      bundle: d_p_subscribe_file
+      label: 'Long text'
+      description: ''
+      required: false
+      translatable: true
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: text_long
+      _core:
+        default_config_hash: 7QCb1tVBYwwM4p7u2nBa8QieFCxdq7junc8sFZLCSg8
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_subscribe_file.field_d_main_title
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_main_title
+          - paragraphs.paragraphs_type.d_p_subscribe_file
+      id: paragraph.d_p_subscribe_file.field_d_main_title
+      field_name: field_d_main_title
+      entity_type: paragraph
+      bundle: d_p_subscribe_file
+      label: 'Main title'
+      description: ''
+      required: false
+      translatable: true
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: string
+      _core:
+        default_config_hash: x3VRMbHf-Uhs2C8mBlMekLAXi4imGoAt-Efehr14Rho
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_subscribe_file.field_d_media_background
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_media_background
+          - media.type.d_image
+          - media.type.d_video
+          - paragraphs.paragraphs_type.d_p_subscribe_file
+      id: paragraph.d_p_subscribe_file.field_d_media_background
+      field_name: field_d_media_background
+      entity_type: paragraph
+      bundle: d_p_subscribe_file
+      label: 'Background image'
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        handler: 'default:media'
+        handler_settings:
+          target_bundles:
+            d_image: d_image
+            d_video: d_video
+          sort:
+            field: revision_created
+            direction: DESC
+          auto_create: false
+          auto_create_bundle: d_image
+      field_type: entity_reference
+      _core:
+        default_config_hash: yEjtoaVMWa59M289gOqT9ndxcvHKPEh_qqsy8xyeAnY
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_subscribe_file.field_d_media_icon
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_media_icon
+          - media.type.d_image
+          - paragraphs.paragraphs_type.d_p_subscribe_file
+      id: paragraph.d_p_subscribe_file.field_d_media_icon
+      field_name: field_d_media_icon
+      entity_type: paragraph
+      bundle: d_p_subscribe_file
+      label: Icon
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        handler: 'default:media'
+        handler_settings:
+          target_bundles:
+            d_image: d_image
+          sort:
+            field: revision_created
+            direction: DESC
+          auto_create: false
+          auto_create_bundle: ''
+      field_type: entity_reference
+      _core:
+        default_config_hash: XspvvPR90f_cLDZ9pb9cALLUawxkbsJN5yuIdhMboR8
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_subscribe_file.field_d_p_sf_additional_info
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_p_sf_additional_info
+          - paragraphs.paragraphs_type.d_p_subscribe_file
+        module:
+          - text
+      id: paragraph.d_p_subscribe_file.field_d_p_sf_additional_info
+      field_name: field_d_p_sf_additional_info
+      entity_type: paragraph
+      bundle: d_p_subscribe_file
+      label: 'Additional download info'
+      description: ''
+      required: false
+      translatable: true
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: text_long
+      _core:
+        default_config_hash: qHNFS8R86pf70Qn-VVGYJiaRN_AdSbbZ6hyfP4rSurk
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_subscribe_file.field_d_p_sf_consent
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_p_sf_consent
+          - paragraphs.paragraphs_type.d_p_subscribe_file
+        module:
+          - text
+      id: paragraph.d_p_subscribe_file.field_d_p_sf_consent
+      field_name: field_d_p_sf_consent
+      entity_type: paragraph
+      bundle: d_p_subscribe_file
+      label: Consents
+      description: 'You can add some personal data consents here. Droopler will display them as required checkboxes.'
+      required: false
+      translatable: true
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: text
+      _core:
+        default_config_hash: h2Bf4nyheYX8i9-zuM185w6IDWwQByLK0StVjDjzCB0
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_subscribe_file.field_d_p_sf_download_button
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_p_sf_download_button
+          - paragraphs.paragraphs_type.d_p_subscribe_file
+      id: paragraph.d_p_subscribe_file.field_d_p_sf_download_button
+      field_name: field_d_p_sf_download_button
+      entity_type: paragraph
+      bundle: d_p_subscribe_file
+      label: 'Download button text'
+      description: ''
+      required: true
+      translatable: true
+      default_value:
+        -
+          value: Download!
+      default_value_callback: ''
+      settings: {  }
+      field_type: string
+      _core:
+        default_config_hash: 3dXnMVpAn7KEUOQcjlOirfYkCGps0i7XqWN0LDwaZe0
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_subscribe_file.field_d_p_sf_download_page
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_p_sf_download_page
+          - paragraphs.paragraphs_type.d_p_subscribe_file
+        module:
+          - text
+      id: paragraph.d_p_subscribe_file.field_d_p_sf_download_page
+      field_name: field_d_p_sf_download_page
+      entity_type: paragraph
+      bundle: d_p_subscribe_file
+      label: 'Download page message'
+      description: 'Use [download-button] to render download button.'
+      required: true
+      translatable: true
+      default_value:
+        -
+          value: "<h2>Enjoy Droopler!</h2>\r\n\r\n<p>[download-button]</p>\r\n\r\n<p class=\"additional\">More info how use it on <a href=\"https://droopler.pl/doc\">https://droopler.pl/doc</a>.</p>\r\n"
+          format: full_html
+      default_value_callback: ''
+      settings: {  }
+      field_type: text_long
+      _core:
+        default_config_hash: aqvpelHAv-7YUTPtabSgTPWb5stIZUGuUW9VOmA_ZDk
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_subscribe_file.field_d_p_sf_mail_body
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_p_sf_mail_body
+          - paragraphs.paragraphs_type.d_p_subscribe_file
+        module:
+          - text
+      id: paragraph.d_p_subscribe_file.field_d_p_sf_mail_body
+      field_name: field_d_p_sf_mail_body
+      entity_type: paragraph
+      bundle: d_p_subscribe_file
+      label: 'E-mail body'
+      description: "Use [download-button] to render download button.\r\n\r\n"
+      required: true
+      translatable: true
+      default_value:
+        -
+          value: "<p>Hi, this is your download link</p>\r\n\r\n<p>The link will be active 24h from now</p>\r\n\r\n<p>[download-button]</p>\r\n\r\n<p>Droopler Team</p>\r\n"
+          format: full_html
+      default_value_callback: ''
+      settings: {  }
+      field_type: text_long
+      _core:
+        default_config_hash: TNW_eX01pnNGTDdIxVQ2vtHxnU61Y-GYq9rQrhLmdGw
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_subscribe_file.field_d_settings
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_settings
+          - paragraphs.paragraphs_type.d_p_subscribe_file
+        module:
+          - d_p
+      id: paragraph.d_p_subscribe_file.field_d_settings
+      field_name: field_d_settings
+      entity_type: paragraph
+      bundle: d_p_subscribe_file
+      label: 'Paragraph settings'
+      description: ''
+      required: false
+      translatable: true
+      default_value:
+        -
+          value: '{"custom_class":"","heading_type":"h2"}'
+      default_value_callback: ''
+      settings: {  }
+      field_type: field_p_configuration_storage
+      _core:
+        default_config_hash: DUgxq-fnJwg3Q8dtxOfd4JlDOoZKXubDYn-26brfE0w
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_subscribe_file.field_file_download
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_file_download
+          - paragraphs.paragraphs_type.d_p_subscribe_file
+        module:
+          - file
+      id: paragraph.d_p_subscribe_file.field_file_download
+      field_name: field_file_download
+      entity_type: paragraph
+      bundle: d_p_subscribe_file
+      label: 'File download'
+      description: ''
+      required: true
+      translatable: true
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        file_directory: '[date:custom:Y]-[date:custom:m]'
+        file_extensions: 'txt zip pdf doc'
+        max_filesize: ''
+        description_field: false
+        handler: 'default:file'
+        handler_settings: {  }
+      field_type: file
+      _core:
+        default_config_hash: LpGG-2X-q4cuINvANTgMUc_Xb6_PMJQcUwWZoKGuuRE
+  -
+    collection: ''
+    name: field.storage.paragraph.field_d_p_sf_additional_info
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - paragraphs
+          - text
+      id: paragraph.field_d_p_sf_additional_info
+      field_name: field_d_p_sf_additional_info
+      entity_type: paragraph
+      type: text_long
+      settings: {  }
+      module: text
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+      _core:
+        default_config_hash: hS4wOhTkT4djMzKtPPjn_zdng9-QmRVOtBmJSDwlU3k
+  -
+    collection: ''
+    name: field.storage.paragraph.field_d_p_sf_consent
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - paragraphs
+          - text
+      id: paragraph.field_d_p_sf_consent
+      field_name: field_d_p_sf_consent
+      entity_type: paragraph
+      type: text
+      settings:
+        max_length: 512
+      module: text
+      locked: false
+      cardinality: -1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+      _core:
+        default_config_hash: 2AJDeA_CYvG-o13bB9oInDJmRvWef4BNCUoUY-bnUbc
+  -
+    collection: ''
+    name: field.storage.paragraph.field_d_p_sf_download_button
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - paragraphs
+      id: paragraph.field_d_p_sf_download_button
+      field_name: field_d_p_sf_download_button
+      entity_type: paragraph
+      type: string
+      settings:
+        max_length: 50
+        is_ascii: false
+        case_sensitive: false
+      module: core
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+      _core:
+        default_config_hash: YHUmsEW4iZ8uJ5ks1h6AziSmP2FThccwbGPj9lD0wfQ
+  -
+    collection: ''
+    name: field.storage.paragraph.field_d_p_sf_download_page
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - paragraphs
+          - text
+      id: paragraph.field_d_p_sf_download_page
+      field_name: field_d_p_sf_download_page
+      entity_type: paragraph
+      type: text_long
+      settings: {  }
+      module: text
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+      _core:
+        default_config_hash: SNADmnBKSVIeeVWN5fgpO6Mvm9dOJA_nFcrEicT3gls
+  -
+    collection: ''
+    name: field.storage.paragraph.field_d_p_sf_mail_body
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - paragraphs
+          - text
+      id: paragraph.field_d_p_sf_mail_body
+      field_name: field_d_p_sf_mail_body
+      entity_type: paragraph
+      type: text_long
+      settings: {  }
+      module: text
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+      _core:
+        default_config_hash: z3R-Rja_dSoZC9LyV9HGwY4yoP3wKacOF1UhR0T90_w
+  -
+    collection: ''
+    name: field.storage.paragraph.field_file_download
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - file
+          - paragraphs
+      id: paragraph.field_file_download
+      field_name: field_file_download
+      entity_type: paragraph
+      type: file
+      settings:
+        display_field: false
+        display_default: false
+        uri_scheme: private
+        target_type: file
+      module: file
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+      _core:
+        default_config_hash: UdP5Dp8F5Ep_f5YXu91fcKqsnPxqoThjzy3GoGMj-b8
+  -
+    collection: ''
+    name: language.content_settings.paragraph.d_p_subscribe_file
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - paragraphs.paragraphs_type.d_p_subscribe_file
+        module:
+          - content_translation
+      third_party_settings:
+        content_translation:
+          enabled: true
+      id: paragraph.d_p_subscribe_file
+      target_entity_type_id: paragraph
+      target_bundle: d_p_subscribe_file
+      default_langcode: site_default
+      language_alterable: true
+      _core:
+        default_config_hash: QaA2OBsv4KCpCWCzlGCSZ43mKzx8TGGRhP4TprkfwnY
+  -
+    collection: ''
+    name: paragraphs.paragraphs_type.d_p_subscribe_file
+    data:
+      langcode: en
+      status: true
+      dependencies: {  }
+      id: d_p_subscribe_file
+      label: 'Subscribe for file'
+      icon_uuid: null
+      icon_default: null
+      description: 'A form that allows users to sign up for a file.'
+      behavior_plugins: {  }
+      _core:
+        default_config_hash: u9dszNrGY1riKsabdzWm9R3IYk66coH0o-NcBaQX_AQ
+  -
+    collection: ''
+    name: views.view.subscribe_file_paragraph
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - system.menu.admin
+        module:
+          - d_p_subscribe_file
+          - user
+      id: subscribe_file_paragraph
+      label: 'Subscribe file paragraph'
+      module: views
+      description: ''
+      tag: ''
+      base_table: d_p_subscribe_file
+      base_field: id
+      display:
+        default:
+          display_plugin: default
+          id: default
+          display_title: Master
+          position: 0
+          display_options:
+            access:
+              type: perm
+              options:
+                perm: 'administer d p subscribe file view'
+            cache:
+              type: tag
+              options: {  }
+            query:
+              type: views_query
+              options:
+                disable_sql_rewrite: false
+                distinct: false
+                replica: false
+                query_comment: ''
+                query_tags: {  }
+            exposed_form:
+              type: basic
+              options:
+                submit_button: Apply
+                reset_button: false
+                reset_button_label: Reset
+                exposed_sorts_label: 'Sort by'
+                expose_sort_order: true
+                sort_asc_label: Asc
+                sort_desc_label: Desc
+            pager:
+              type: mini
+              options:
+                items_per_page: 10
+                offset: 0
+                id: 0
+                total_pages: null
+                expose:
+                  items_per_page: false
+                  items_per_page_label: 'Items per page'
+                  items_per_page_options: '5, 10, 25, 50'
+                  items_per_page_options_all: false
+                  items_per_page_options_all_label: '- All -'
+                  offset: false
+                  offset_label: Offset
+                tags:
+                  previous: ‹‹
+                  next: ››
+            style:
+              type: table
+              options:
+                grouping: {  }
+                row_class: ''
+                default_row_class: true
+                override: true
+                sticky: true
+                caption: ''
+                summary: ''
+                description: ''
+                columns:
+                  id: id
+                  name: name
+                  mail: mail
+                  created: created
+                info:
+                  id:
+                    sortable: true
+                    default_sort_order: asc
+                    align: ''
+                    separator: ''
+                    empty_column: false
+                    responsive: ''
+                  name:
+                    sortable: true
+                    default_sort_order: asc
+                    align: ''
+                    separator: ''
+                    empty_column: false
+                    responsive: ''
+                  mail:
+                    sortable: true
+                    default_sort_order: asc
+                    align: ''
+                    separator: ''
+                    empty_column: false
+                    responsive: ''
+                  created:
+                    sortable: true
+                    default_sort_order: asc
+                    align: ''
+                    separator: ''
+                    empty_column: false
+                    responsive: ''
+                default: id
+                empty_table: false
+            row:
+              type: fields
+            fields:
+              id:
+                id: id
+                table: d_p_subscribe_file
+                field: id
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: ID
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: false
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: number_integer
+                settings:
+                  thousand_separator: ''
+                  prefix_suffix: true
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                entity_type: SubscribeFileEntity
+                entity_field: id
+                plugin_id: field
+              name:
+                id: name
+                table: d_p_subscribe_file
+                field: name
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: Name
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: false
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: string
+                settings:
+                  link_to_entity: false
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                entity_type: SubscribeFileEntity
+                entity_field: name
+                plugin_id: field
+              mail:
+                id: mail
+                table: d_p_subscribe_file
+                field: mail
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: Mail
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: false
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: string
+                settings:
+                  link_to_entity: false
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                entity_type: SubscribeFileEntity
+                entity_field: mail
+                plugin_id: field
+              created:
+                id: created
+                table: d_p_subscribe_file
+                field: created
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: Created
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: false
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: timestamp
+                settings:
+                  date_format: medium
+                  custom_date_format: ''
+                  timezone: ''
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                entity_type: SubscribeFileEntity
+                entity_field: created
+                plugin_id: field
+            filters:
+              mail:
+                id: mail
+                table: d_p_subscribe_file
+                field: mail
+                relationship: none
+                group_type: group
+                admin_label: ''
+                operator: '='
+                value: ''
+                group: 1
+                exposed: true
+                expose:
+                  operator_id: mail_op
+                  label: Mail
+                  description: ''
+                  use_operator: false
+                  operator: mail_op
+                  identifier: mail
+                  required: false
+                  remember: false
+                  multiple: false
+                  remember_roles:
+                    authenticated: authenticated
+                    anonymous: '0'
+                    administrator: '0'
+                    d_editor: '0'
+                  placeholder: ''
+                  operator_limit_selection: false
+                  operator_list: {  }
+                is_grouped: false
+                group_info:
+                  label: ''
+                  description: ''
+                  identifier: ''
+                  optional: true
+                  widget: select
+                  multiple: false
+                  remember: false
+                  default_group: All
+                  default_group_multiple: {  }
+                  group_items: {  }
+                entity_type: SubscribeFileEntity
+                entity_field: mail
+                plugin_id: string
+              name:
+                id: name
+                table: d_p_subscribe_file
+                field: name
+                relationship: none
+                group_type: group
+                admin_label: ''
+                operator: '='
+                value: ''
+                group: 1
+                exposed: true
+                expose:
+                  operator_id: name_op
+                  label: Name
+                  description: ''
+                  use_operator: false
+                  operator: name_op
+                  identifier: name
+                  required: false
+                  remember: false
+                  multiple: false
+                  remember_roles:
+                    authenticated: authenticated
+                    anonymous: '0'
+                    administrator: '0'
+                    d_editor: '0'
+                  placeholder: ''
+                  operator_limit_selection: false
+                  operator_list: {  }
+                is_grouped: false
+                group_info:
+                  label: ''
+                  description: ''
+                  identifier: ''
+                  optional: true
+                  widget: select
+                  multiple: false
+                  remember: false
+                  default_group: All
+                  default_group_multiple: {  }
+                  group_items: {  }
+                entity_type: SubscribeFileEntity
+                entity_field: name
+                plugin_id: string
+            sorts: {  }
+            title: 'File subscriptions'
+            header:
+              area_text_custom:
+                admin_label: ''
+                content: 'This is the list of all file subscriptions.'
+                empty: true
+                field: area_text_custom
+                group_type: group
+                id: area_text_custom
+                plugin_id: text_custom
+                relationship: none
+                table: views
+                tokenize: false
+            footer: {  }
+            empty:
+              area_text_custom:
+                id: area_text_custom
+                table: views
+                field: area_text_custom
+                relationship: none
+                group_type: group
+                admin_label: ''
+                empty: true
+                tokenize: false
+                content: 'No subscribed users yet.'
+                plugin_id: text_custom
+            relationships: {  }
+            arguments: {  }
+            display_extenders: {  }
+          cache_metadata:
+            max-age: -1
+            contexts:
+              - 'languages:language_content'
+              - 'languages:language_interface'
+              - url
+              - url.query_args
+              - user.permissions
+            tags: {  }
+        page_1:
+          display_plugin: page
+          id: page_1
+          display_title: Page
+          position: 1
+          display_options:
+            display_extenders: {  }
+            path: admin/config/subscribe-file-paragraph
+            menu:
+              type: normal
+              title: 'Subscribe file paragraph'
+              description: 'Subscribe file paragraph'
+              expanded: false
+              parent: system.admin_config
+              weight: 0
+              context: '0'
+              menu_name: admin
+          cache_metadata:
+            max-age: -1
+            contexts:
+              - 'languages:language_content'
+              - 'languages:language_interface'
+              - url
+              - url.query_args
+              - user.permissions
+            tags: {  }
+      _core:
+        default_config_hash: j46VjvDVysi1G3N3uy_tKKZj6NDcQHB4ql8bfIpmSO4

@@ -1,0 +1,521 @@
+uuid: 10d039c3-0557-45b8-9e01-43549844507d
+langcode: pl
+status: true
+dependencies:
+  module:
+    - d_p_side_embed
+id: config_sync.module.d_p_side_embed
+snapshotSet: config_sync
+extensionType: module
+extensionName: d_p_side_embed
+items:
+  -
+    collection: ''
+    name: core.entity_form_display.paragraph.d_p_side_embed.default
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.field.paragraph.d_p_side_embed.field_d_cta_link
+          - field.field.paragraph.d_p_side_embed.field_d_embed
+          - field.field.paragraph.d_p_side_embed.field_d_long_text
+          - field.field.paragraph.d_p_side_embed.field_d_main_title
+          - field.field.paragraph.d_p_side_embed.field_d_media_icon
+          - field.field.paragraph.d_p_side_embed.field_d_settings
+          - paragraphs.paragraphs_type.d_p_side_embed
+        module:
+          - d_p
+          - field_group
+          - link_attributes
+          - media_library
+          - text
+      third_party_settings:
+        field_group:
+          group_tabs:
+            children:
+              - group_basic
+              - group_settings
+            parent_name: ''
+            weight: 0
+            format_type: tabs
+            region: content
+            format_settings:
+              direction: horizontal
+              id: ''
+              classes: ''
+            label: Tabs
+          group_basic:
+            children:
+              - field_d_main_title
+              - field_d_media_icon
+              - field_d_long_text
+              - field_d_embed
+              - field_d_cta_link
+              - translation
+            parent_name: group_tabs
+            weight: 1
+            format_type: tab
+            region: content
+            format_settings:
+              description: ''
+              formatter: open
+              required_fields: true
+              id: ''
+              classes: ''
+            label: Basic
+          group_settings:
+            children:
+              - field_d_settings
+            parent_name: group_tabs
+            weight: 2
+            format_type: tab
+            region: content
+            format_settings:
+              id: ''
+              classes: ''
+              description: ''
+              formatter: closed
+              required_fields: true
+            label: Settings
+      id: paragraph.d_p_side_embed.default
+      targetEntityType: paragraph
+      bundle: d_p_side_embed
+      mode: default
+      content:
+        field_d_cta_link:
+          weight: 6
+          settings:
+            placeholder_url: ''
+            placeholder_title: ''
+            enabled_attributes:
+              id: true
+              name: true
+              target: true
+              rel: true
+              class: true
+              accesskey: true
+          third_party_settings: {  }
+          type: link_attributes
+          region: content
+        field_d_embed:
+          weight: 5
+          settings:
+            rows: 5
+            placeholder: ''
+          third_party_settings: {  }
+          type: string_textarea
+          region: content
+        field_d_long_text:
+          weight: 4
+          settings:
+            rows: 5
+            placeholder: ''
+          third_party_settings: {  }
+          type: text_textarea
+          region: content
+        field_d_main_title:
+          weight: 2
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: string_textfield
+          region: content
+        field_d_media_icon:
+          weight: 3
+          settings:
+            media_types: {  }
+          third_party_settings: {  }
+          type: media_library_widget
+          region: content
+        field_d_settings:
+          weight: 9
+          settings:
+            filter_mode: '1'
+            allowed_settings:
+              heading_type:
+                status: '1'
+              custom_class:
+                status: '1'
+                modifiers:
+                  padding-bottom:
+                    status: '1'
+                  paragraph-theme:
+                    status: '1'
+                  margin-bottom:
+                    status: '1'
+                  margin-top:
+                    status: '1'
+                  padding-top:
+                    status: '1'
+                  stripe-sidebar:
+                    status: 0
+                  tile:
+                    status: 0
+                  with-divider:
+                    status: 0
+                  with-tiles:
+                    status: 0
+                  half-transparent:
+                    status: 0
+                  with-grid:
+                    status: 0
+                  with-price:
+                    status: 0
+                  header-into-columns:
+                    status: 0
+                  full-width:
+                    status: 0
+              embed_layout:
+                status: '1'
+              side_image_layout:
+                status: 0
+              column_count_tablet:
+                status: 0
+              form_layout:
+                status: 0
+              side_tiles_layout:
+                status: 0
+              featured_images:
+                status: 0
+              column_count_mobile:
+                status: 0
+              column_count:
+                status: 0
+          third_party_settings: {  }
+          type: field_d_p_set_settings
+          region: content
+        field_d_subtitle:
+          weight: 1
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: string_textfield
+          region: content
+        translation:
+          weight: 7
+          region: content
+          settings: {  }
+          third_party_settings: {  }
+      hidden:
+        created: true
+        status: true
+        uid: true
+      _core:
+        default_config_hash: HjSp09K_AY-kojxc1sfRUVLqay9kjrJ5UZhjqt0D0zE
+  -
+    collection: ''
+    name: core.entity_view_display.paragraph.d_p_side_embed.default
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.field.paragraph.d_p_side_embed.field_d_cta_link
+          - field.field.paragraph.d_p_side_embed.field_d_embed
+          - field.field.paragraph.d_p_side_embed.field_d_long_text
+          - field.field.paragraph.d_p_side_embed.field_d_main_title
+          - field.field.paragraph.d_p_side_embed.field_d_media_icon
+          - field.field.paragraph.d_p_side_embed.field_d_settings
+          - paragraphs.paragraphs_type.d_p_side_embed
+        module:
+          - d_p
+          - link
+          - text
+      id: paragraph.d_p_side_embed.default
+      targetEntityType: paragraph
+      bundle: d_p_side_embed
+      mode: default
+      content:
+        field_d_cta_link:
+          weight: 4
+          label: hidden
+          settings:
+            trim_length: 80
+            url_only: false
+            url_plain: false
+            rel: ''
+            target: ''
+          third_party_settings: {  }
+          type: link
+          region: content
+        field_d_embed:
+          weight: 5
+          label: hidden
+          settings: {  }
+          third_party_settings: {  }
+          type: basic_string
+          region: content
+        field_d_long_text:
+          weight: 3
+          label: hidden
+          settings: {  }
+          third_party_settings: {  }
+          type: text_default
+          region: content
+        field_d_main_title:
+          weight: 2
+          label: hidden
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          type: string
+          region: content
+        field_d_media_icon:
+          weight: 1
+          label: hidden
+          settings:
+            view_mode: d_icon
+            link: false
+          third_party_settings: {  }
+          type: entity_reference_entity_view
+          region: content
+        field_d_settings:
+          weight: 6
+          label: hidden
+          settings: {  }
+          third_party_settings: {  }
+          type: field_configuration_formatter
+          region: content
+        field_d_subtitle:
+          weight: 1
+          label: hidden
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          type: string
+          region: content
+      hidden:
+        search_api_excerpt: true
+      _core:
+        default_config_hash: iqjI_tAP480YU8ARTOOzUXLA8Nh370UiKZisDbxl_pw
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_side_embed.field_d_cta_link
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_cta_link
+          - paragraphs.paragraphs_type.d_p_side_embed
+        module:
+          - link
+      id: paragraph.d_p_side_embed.field_d_cta_link
+      field_name: field_d_cta_link
+      entity_type: paragraph
+      bundle: d_p_side_embed
+      label: 'Call To Action'
+      description: ''
+      required: false
+      translatable: true
+      default_value:
+        -
+          options:
+            attributes:
+              class: 'btn btn-secondary'
+      default_value_callback: ''
+      settings:
+        link_type: 17
+        title: 1
+      field_type: link
+      _core:
+        default_config_hash: ElxLFClUs7DWvA_gNN0OYG2ZPmdkAYGaqQ7yzTPkc1A
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_side_embed.field_d_embed
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_embed
+          - paragraphs.paragraphs_type.d_p_side_embed
+      id: paragraph.d_p_side_embed.field_d_embed
+      field_name: field_d_embed
+      entity_type: paragraph
+      bundle: d_p_side_embed
+      label: 'Embed code'
+      description: 'Paste your embed code here. Avoid setting fixed width.'
+      required: true
+      translatable: true
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: string_long
+      _core:
+        default_config_hash: qUexEiyCniZ3MAH61YuUaXcciZgkXSOjogtYjoJrCgo
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_side_embed.field_d_long_text
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_long_text
+          - paragraphs.paragraphs_type.d_p_side_embed
+        module:
+          - text
+      id: paragraph.d_p_side_embed.field_d_long_text
+      field_name: field_d_long_text
+      entity_type: paragraph
+      bundle: d_p_side_embed
+      label: 'Long text'
+      description: ''
+      required: false
+      translatable: true
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: text_long
+      _core:
+        default_config_hash: LR0M6-DGWGti9OZkHet9Mf-2vfayOk0uK_zQMfNIggE
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_side_embed.field_d_main_title
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_main_title
+          - paragraphs.paragraphs_type.d_p_side_embed
+      id: paragraph.d_p_side_embed.field_d_main_title
+      field_name: field_d_main_title
+      entity_type: paragraph
+      bundle: d_p_side_embed
+      label: 'Main title'
+      description: ''
+      required: false
+      translatable: true
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: string
+      _core:
+        default_config_hash: zgwh8LsxgOPVb6FzMGBpDP40ZP4R91vGxVZ3AzZX9fU
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_side_embed.field_d_media_icon
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_media_icon
+          - media.type.d_image
+          - paragraphs.paragraphs_type.d_p_side_embed
+      id: paragraph.d_p_side_embed.field_d_media_icon
+      field_name: field_d_media_icon
+      entity_type: paragraph
+      bundle: d_p_side_embed
+      label: Icon
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        handler: 'default:media'
+        handler_settings:
+          target_bundles:
+            d_image: d_image
+          sort:
+            field: revision_created
+            direction: DESC
+          auto_create: false
+          auto_create_bundle: ''
+      field_type: entity_reference
+      _core:
+        default_config_hash: YuWMbj7AnuosNEXJpYOMcsc_EynHdoZxu6sH_qqC3pA
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_side_embed.field_d_settings
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_settings
+          - paragraphs.paragraphs_type.d_p_side_embed
+        module:
+          - d_p
+      id: paragraph.d_p_side_embed.field_d_settings
+      field_name: field_d_settings
+      entity_type: paragraph
+      bundle: d_p_side_embed
+      label: 'Paragraph settings'
+      description: ''
+      required: false
+      translatable: true
+      default_value:
+        -
+          value: '{"custom_class":"","heading_type":"h2"}'
+      default_value_callback: ''
+      settings: {  }
+      field_type: field_p_configuration_storage
+      _core:
+        default_config_hash: LmdAquwdQ1hpsW3YfdDSGauywIJLOPoXex5oG2v7W7Y
+  -
+    collection: ''
+    name: field.storage.paragraph.field_d_embed
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - paragraphs
+      id: paragraph.field_d_embed
+      field_name: field_d_embed
+      entity_type: paragraph
+      type: string_long
+      settings:
+        case_sensitive: false
+      module: core
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+      _core:
+        default_config_hash: HXjTllg-0jRyAuPfCDsvzjo8O0IxbwQPznIlL19ZPe4
+  -
+    collection: ''
+    name: language.content_settings.paragraph.d_p_side_embed
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - paragraphs.paragraphs_type.d_p_side_embed
+        module:
+          - content_translation
+      third_party_settings:
+        content_translation:
+          enabled: true
+      id: paragraph.d_p_side_embed
+      target_entity_type_id: paragraph
+      target_bundle: d_p_side_embed
+      default_langcode: site_default
+      language_alterable: true
+      _core:
+        default_config_hash: DuXONftK3TXNq7eR1F_PRBee2cTf7kW7nIYn5KrUR1k
+  -
+    collection: ''
+    name: paragraphs.paragraphs_type.d_p_side_embed
+    data:
+      langcode: en
+      status: true
+      dependencies: {  }
+      id: d_p_side_embed
+      label: 'Sidebar embed'
+      icon_uuid: null
+      icon_default: null
+      description: 'Embed on one side, text on the other side.'
+      behavior_plugins: {  }
+      _core:
+        default_config_hash: CoJmP4BFSvf-Ne2uOKBzCXSiZ7nfMKbCSMea8cyOPHc

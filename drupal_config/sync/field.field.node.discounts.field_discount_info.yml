@@ -1,0 +1,19 @@
+uuid: b6612537-9b2e-4659-9a85-f25df6b26580
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_discount_info
+    - node.type.discounts
+id: node.discounts.field_discount_info
+field_name: field_discount_info
+entity_type: node
+bundle: discounts
+label: Rabat
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

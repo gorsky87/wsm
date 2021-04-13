@@ -1,0 +1,22 @@
+uuid: 116b5379-a9a9-453e-bca0-cb23c4b4b7bc
+langcode: pl
+status: true
+dependencies:
+  config:
+    - node.type.discounts
+id: node.discounts.status
+field_name: status
+entity_type: node
+bundle: discounts
+label: Opublikowane
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

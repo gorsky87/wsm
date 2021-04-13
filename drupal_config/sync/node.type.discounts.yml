@@ -1,0 +1,17 @@
+uuid: 94dc4d19-98e6-44f6-aca4-24d8d1fc7dff
+langcode: pl
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Rabaty
+type: discounts
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

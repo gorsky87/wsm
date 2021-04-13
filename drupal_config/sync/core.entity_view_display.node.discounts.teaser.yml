@@ -1,0 +1,32 @@
+uuid: 84b3d407-53e2-4341-afcc-0214f841f2ca
+langcode: pl
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.discounts.field_discount_category
+    - field.field.node.discounts.field_discount_info
+    - field.field.node.discounts.field_partner_contact
+    - field.field.node.discounts.field_partner_link
+    - field.field.node.discounts.field_partner_logo
+    - node.type.discounts
+  module:
+    - user
+id: node.discounts.teaser
+targetEntityType: node
+bundle: discounts
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_discount_category: true
+  field_discount_info: true
+  field_partner_contact: true
+  field_partner_link: true
+  field_partner_logo: true
+  langcode: true
+  search_api_excerpt: true

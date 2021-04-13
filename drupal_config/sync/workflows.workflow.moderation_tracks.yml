@@ -1,0 +1,55 @@
+uuid: 25c5e54a-7f7c-418a-a7b0-24f16e8b4da2
+langcode: pl
+status: true
+dependencies:
+  config:
+    - node.type.track
+  module:
+    - content_moderation
+id: moderation_tracks
+label: 'Moderacja Tras'
+type: content_moderation
+type_settings:
+  states:
+    draft:
+      published: false
+      default_revision: false
+      label: 'Szkic (do poźniejszej edycji)'
+      weight: 0
+    published:
+      published: true
+      default_revision: true
+      label: Opublikowany
+      weight: 1
+    ready_to_publish:
+      published: false
+      default_revision: false
+      label: 'Gotowe do publikacji'
+      weight: 2
+  transitions:
+    create_new_draft:
+      label: 'Utwórz nowy szkic'
+      to: draft
+      weight: 0
+      from:
+        - draft
+        - published
+    publish:
+      label: Opublikuj
+      to: published
+      weight: 1
+      from:
+        - draft
+        - published
+        - ready_to_publish
+    ready_to_publish:
+      label: 'Gotowe do publikacji'
+      from:
+        - draft
+        - ready_to_publish
+      to: ready_to_publish
+      weight: 2
+  entity_types:
+    node:
+      - track
+  default_moderation_state: ready_to_publish

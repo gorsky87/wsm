@@ -1,0 +1,12 @@
+uuid: d0c1ccf3-eada-46f4-91b6-4948b244fdec
+langcode: pl
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: Zy8W_v5hcVkm_IHGbJjooCTugwG8vdjqQFWatnWJHSQ
+id: node.d_header
+label: Nagłówek
+targetEntityType: node
+cache: true

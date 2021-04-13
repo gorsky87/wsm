@@ -1,0 +1,13 @@
+uuid: 3d10c5f8-2632-41a1-bc8a-c61f7eb03a19
+langcode: pl
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: VVyUA6PIaVeGtcIbgEWqJ6SYDiJdReBeojFswURFpKs
+id: media_save_action
+label: 'Zapisz media'
+type: media
+plugin: 'entity:save_action:media'
+configuration: {  }

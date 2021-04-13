@@ -1,0 +1,22 @@
+uuid: 161522a4-9901-4ceb-9562-0fbd5c10d8a3
+langcode: pl
+status: true
+dependencies:
+  module:
+    - node
+id: tracks
+label: Tracks
+type: 'canonical_entities:node'
+pattern: 'trasy/[node:title]'
+selection_criteria:
+  8da4beab-b963-450e-92c2-c6accee4561a:
+    id: node_type
+    bundles:
+      track: track
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 8da4beab-b963-450e-92c2-c6accee4561a
+selection_logic: and
+weight: -5
+relationships: {  }

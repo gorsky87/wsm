@@ -1,0 +1,7 @@
+entity_type:
+  node: node
+  taxonomy: taxonomy
+  user: user
+url: /
+pages: "/user/login\r\n/user/register"
+langcode: pl

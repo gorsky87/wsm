@@ -1,0 +1,177 @@
+uuid: 5fcd7d0f-9c9d-4027-80e3-e4e1ccde3946
+langcode: pl
+status: true
+dependencies:
+  theme:
+    - droopler_theme
+id: config_sync.theme.droopler_theme
+snapshotSet: config_sync
+extensionType: theme
+extensionName: droopler_theme
+items:
+  -
+    collection: ''
+    name: block.block.languageswitcher
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - language
+        theme:
+          - droopler_theme
+      id: languageswitcher
+      theme: droopler_theme
+      region: lang_menu
+      weight: -1
+      provider: null
+      plugin: 'language_block:language_interface'
+      settings:
+        id: 'language_block:language_interface'
+        label: 'Language switcher'
+        provider: language
+        label_display: '0'
+      visibility: {  }
+      _core:
+        default_config_hash: e74lnXlDohaFlEMsPYM0jfiHACshE9gAUaJWtBQ-KxQ
+  -
+    collection: ''
+    name: block.block.mainnavigation
+    data:
+      langcode: en
+      status: false
+      dependencies:
+        config:
+          - system.menu.main
+        module:
+          - system
+        theme:
+          - droopler_theme
+      id: mainnavigation
+      theme: droopler_theme
+      region: primary_menu
+      weight: 0
+      provider: null
+      plugin: 'system_menu_block:main'
+      settings:
+        id: 'system_menu_block:main'
+        label: 'Main navigation'
+        provider: system
+        label_display: '0'
+        level: 1
+        depth: 0
+        expand_all_items: false
+      visibility: {  }
+      _core:
+        default_config_hash: EtUSpmYM8J3XwpRW_rshvM-aEPwqBK6hHW6XBf8GCVk
+  -
+    collection: ''
+    name: block.block.mainnavigation_2
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - we_megamenu
+        theme:
+          - droopler_theme
+      id: mainnavigation_2
+      theme: droopler_theme
+      region: primary_menu
+      weight: 0
+      provider: null
+      plugin: 'we_megamenu_block:main'
+      settings:
+        id: 'we_megamenu_block:main'
+        label: 'MegaMenu Main navigation'
+        provider: we_megamenu
+        label_display: '0'
+      visibility: {  }
+      _core:
+        default_config_hash: x63iAYw83VaAiwkgBhoeBcpGENMfMU5Ma8pziCtiruk
+  -
+    collection: ''
+    name: block.block.pagetitle
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - ctools
+        theme:
+          - droopler_theme
+      id: pagetitle
+      theme: droopler_theme
+      region: content
+      weight: -2
+      provider: null
+      plugin: page_title_block
+      settings:
+        id: page_title_block
+        label: 'Page title'
+        provider: core
+        label_display: '0'
+      visibility:
+        'entity_bundle:node':
+          id: 'entity_bundle:node'
+          bundles: {  }
+          negate: false
+          context_mapping:
+            node: '@node.node_route_context:node'
+      _core:
+        default_config_hash: SgkWQaEfrYQcRQIrp6D5ZlZG9I05sv8xypakOwoHmuU
+  -
+    collection: ''
+    name: block.block.sitebranding
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - system
+        theme:
+          - droopler_theme
+      id: sitebranding
+      theme: droopler_theme
+      region: header
+      weight: 0
+      provider: null
+      plugin: system_branding_block
+      settings:
+        id: system_branding_block
+        label: 'Site branding'
+        provider: system
+        label_display: '0'
+        use_site_logo: true
+        use_site_name: true
+        use_site_slogan: false
+      visibility: {  }
+      _core:
+        default_config_hash: EeWG6y6XarAOlypjBz2NbcdhA8yEPF2O4op_LIKpFEo
+  -
+    collection: ''
+    name: block.block.tabs
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - system
+        theme:
+          - droopler_theme
+      id: tabs
+      theme: droopler_theme
+      region: admin_tabs
+      weight: 0
+      provider: null
+      plugin: local_tasks_block
+      settings:
+        id: local_tasks_block
+        label: Tabs
+        provider: core
+        label_display: '0'
+        primary: true
+        secondary: true
+      visibility: {  }
+      _core:
+        default_config_hash: GvzD97rZ73rxmKcG4XH6khzox_rRUpf8L0WBJAIrtk8

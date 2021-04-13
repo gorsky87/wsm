@@ -1,0 +1,23 @@
+uuid: 6b953858-e093-466f-8201-1bfcdae6a8bb
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_partner_link
+    - node.type.discounts
+  module:
+    - link
+id: node.discounts.field_partner_link
+field_name: field_partner_link
+entity_type: node
+bundle: discounts
+label: 'Link do strony partnera'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

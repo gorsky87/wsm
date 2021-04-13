@@ -1,0 +1,13 @@
+uuid: 8ff3910d-fc18-4a12-af55-9144d0937f0a
+langcode: pl
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: lDM9mvIGAu8Sw8rt-uCO4Sr7yX5VPrDPxYcawkbKd6k
+id: node_make_unsticky_action
+label: 'Odklej wpis'
+type: node
+plugin: node_make_unsticky_action
+configuration: {  }

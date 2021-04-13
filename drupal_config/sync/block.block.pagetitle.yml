@@ -1,0 +1,20 @@
+uuid: b19a5afd-fbce-4d58-9f1a-1a3e8c4fef73
+langcode: pl
+status: true
+dependencies:
+  theme:
+    - droopler_theme
+_core:
+  default_config_hash: SgkWQaEfrYQcRQIrp6D5ZlZG9I05sv8xypakOwoHmuU
+id: pagetitle
+theme: droopler_theme
+region: content
+weight: -2
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Tytuł strony'
+  provider: core
+  label_display: '0'
+visibility: {  }

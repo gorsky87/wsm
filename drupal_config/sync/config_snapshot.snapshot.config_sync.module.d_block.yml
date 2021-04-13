@@ -1,0 +1,551 @@
+uuid: b1b36051-b986-4c32-8cb2-84c561f1c8d3
+langcode: pl
+status: true
+dependencies:
+  module:
+    - d_block
+id: config_sync.module.d_block
+snapshotSet: config_sync
+extensionType: module
+extensionName: d_block
+items:
+  -
+    collection: ''
+    name: block_content.type.d_paragraph_block
+    data:
+      langcode: en
+      status: true
+      dependencies: {  }
+      id: d_paragraph_block
+      label: 'Paragraph block'
+      revision: 0
+      description: 'Block type with ability to add paragraphs as content.'
+      _core:
+        default_config_hash: hXfaesS_m1Kd6I9AmrSEpoELdnJSRsNe8yDxSGRP64c
+  -
+    collection: ''
+    name: core.entity_form_display.block_content.d_paragraph_block.default
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - block_content.type.d_paragraph_block
+          - field.field.block_content.d_paragraph_block.field_paragraphs
+        module:
+          - paragraphs
+      id: block_content.d_paragraph_block.default
+      targetEntityType: block_content
+      bundle: d_paragraph_block
+      mode: default
+      content:
+        field_paragraphs:
+          type: entity_reference_paragraphs
+          weight: 26
+          settings:
+            title: Paragraph
+            title_plural: Paragraphs
+            edit_mode: open
+            add_mode: dropdown
+            form_display_mode: default
+            default_paragraph_type: ''
+          third_party_settings: {  }
+          region: content
+        info:
+          type: string_textfield
+          weight: -5
+          region: content
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+        langcode:
+          type: language_select
+          weight: 2
+          region: content
+          settings:
+            include_locked: true
+          third_party_settings: {  }
+      hidden: {  }
+      _core:
+        default_config_hash: s0xXrEsSSUuJ_Vh1lUhIsXHoz22A5C5ysmAOsWxK3Ec
+  -
+    collection: ''
+    name: core.entity_form_display.paragraph.d_p_block.default
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.field.paragraph.d_p_block.field_block
+          - field.field.paragraph.d_p_block.field_d_settings
+          - paragraphs.paragraphs_type.d_p_block
+        module:
+          - d_block_field
+          - d_p
+          - field_group
+      third_party_settings:
+        field_group:
+          group_tabs:
+            children:
+              - group_basic
+              - group_settings
+            parent_name: ''
+            weight: 0
+            format_type: tabs
+            region: content
+            format_settings:
+              id: ''
+              classes: ''
+              direction: horizontal
+            label: Tabs
+          group_basic:
+            children:
+              - field_block
+            parent_name: group_tabs
+            weight: 5
+            format_type: tab
+            region: content
+            format_settings:
+              id: ''
+              classes: ''
+              description: ''
+              formatter: open
+              required_fields: true
+            label: Basic
+          group_settings:
+            children:
+              - field_d_settings
+            parent_name: group_tabs
+            weight: 6
+            format_type: tab
+            region: content
+            format_settings:
+              id: ''
+              classes: ''
+              description: ''
+              formatter: closed
+              required_fields: true
+            label: Settings
+      id: paragraph.d_p_block.default
+      targetEntityType: paragraph
+      bundle: d_p_block
+      mode: default
+      content:
+        field_block:
+          weight: 1
+          settings:
+            plugin_id: ''
+            settings: {  }
+            configuration_form: full
+          third_party_settings: {  }
+          type: d_block_field_default
+          region: content
+        field_d_settings:
+          weight: 7
+          settings:
+            filter_mode: '1'
+            allowed_settings:
+              custom_class:
+                status: '1'
+                modifiers:
+                  full-width:
+                    status: '1'
+                  padding-bottom:
+                    status: '1'
+                  paragraph-theme:
+                    status: '1'
+                  margin-bottom:
+                    status: '1'
+                  margin-top:
+                    status: '1'
+                  padding-top:
+                    status: '1'
+                  half-transparent:
+                    status: 0
+                  stripe-sidebar:
+                    status: 0
+                  tile:
+                    status: 0
+                  with-divider:
+                    status: 0
+                  with-tiles:
+                    status: 0
+                  with-grid:
+                    status: 0
+                  with-price:
+                    status: 0
+                  header-into-columns:
+                    status: 0
+              heading_type:
+                status: 0
+              side_image_layout:
+                status: 0
+              column_count_tablet:
+                status: 0
+              form_layout:
+                status: 0
+              side_tiles_layout:
+                status: 0
+              featured_images:
+                status: 0
+              column_count_mobile:
+                status: 0
+              embed_layout:
+                status: 0
+              column_count:
+                status: 0
+          third_party_settings: {  }
+          type: field_d_p_set_settings
+          region: content
+      hidden:
+        created: true
+        status: true
+      _core:
+        default_config_hash: _yQTkmC9g15CBC8BQR5dRO2WiavdNoraE8ailAKLwOQ
+  -
+    collection: ''
+    name: core.entity_view_display.block_content.d_paragraph_block.default
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - block_content.type.d_paragraph_block
+          - field.field.block_content.d_paragraph_block.field_paragraphs
+        module:
+          - entity_reference_revisions
+      id: block_content.d_paragraph_block.default
+      targetEntityType: block_content
+      bundle: d_paragraph_block
+      mode: default
+      content:
+        field_paragraphs:
+          type: entity_reference_revisions_entity_view
+          weight: 0
+          label: hidden
+          settings:
+            view_mode: default
+            link: ''
+          third_party_settings: {  }
+          region: content
+      hidden:
+        langcode: true
+        search_api_excerpt: true
+      _core:
+        default_config_hash: VqifFHaZ7s1t2ubhDot2v0iYkPv-gP8h8WWjmyNHtys
+  -
+    collection: ''
+    name: core.entity_view_display.paragraph.d_p_block.default
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.field.paragraph.d_p_block.field_block
+          - field.field.paragraph.d_p_block.field_d_settings
+          - paragraphs.paragraphs_type.d_p_block
+        module:
+          - d_block_field
+      id: paragraph.d_p_block.default
+      targetEntityType: paragraph
+      bundle: d_p_block
+      mode: default
+      content:
+        field_block:
+          weight: 0
+          label: hidden
+          settings: {  }
+          third_party_settings: {  }
+          type: d_block_field
+          region: content
+        field_d_settings:
+          weight: 1
+          label: above
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          type: string
+          region: content
+      hidden:
+        search_api_excerpt: true
+      _core:
+        default_config_hash: FoQGHGqCxbYTTrXwcmQ2f29-NE6nljjK54IXv1MHRKg
+  -
+    collection: ''
+    name: core.entity_view_mode.block.token
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - block
+      id: block.token
+      label: Token
+      targetEntityType: block
+      cache: true
+      _core:
+        default_config_hash: AJ4KPUipTz1VsDPfMT_D9pamgbfXUJBgvYVel4P1DHE
+  -
+    collection: ''
+    name: field.field.block_content.d_paragraph_block.field_paragraphs
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - block_content.type.d_paragraph_block
+          - field.storage.block_content.field_paragraphs
+          - paragraphs.paragraphs_type.d_p_banner
+          - paragraphs.paragraphs_type.d_p_carousel
+          - paragraphs.paragraphs_type.d_p_form
+          - paragraphs.paragraphs_type.d_p_gallery
+          - paragraphs.paragraphs_type.d_p_group_of_counters
+          - paragraphs.paragraphs_type.d_p_group_of_text_blocks
+          - paragraphs.paragraphs_type.d_p_reference_content
+          - paragraphs.paragraphs_type.d_p_side_by_side
+          - paragraphs.paragraphs_type.d_p_side_embed
+          - paragraphs.paragraphs_type.d_p_side_image
+          - paragraphs.paragraphs_type.d_p_side_tiles
+          - paragraphs.paragraphs_type.d_p_subscribe_file
+          - paragraphs.paragraphs_type.d_p_text_paged
+          - paragraphs.paragraphs_type.d_p_text_with_bckg
+          - paragraphs.paragraphs_type.d_p_tiles
+        module:
+          - entity_reference_revisions
+      id: block_content.d_paragraph_block.field_paragraphs
+      field_name: field_paragraphs
+      entity_type: block_content
+      bundle: d_paragraph_block
+      label: Paragraphs
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        handler: 'default:paragraph'
+        handler_settings:
+          negate: 0
+          target_bundles:
+            d_p_banner: d_p_banner
+            d_p_form: d_p_form
+            d_p_group_of_counters: d_p_group_of_counters
+            d_p_carousel: d_p_carousel
+            d_p_gallery: d_p_gallery
+            d_p_group_of_text_blocks: d_p_group_of_text_blocks
+            d_p_side_image: d_p_side_image
+            d_p_reference_content: d_p_reference_content
+            d_p_subscribe_file: d_p_subscribe_file
+            d_p_text_paged: d_p_text_paged
+            d_p_text_with_bckg: d_p_text_with_bckg
+            d_p_side_embed: d_p_side_embed
+            d_p_side_tiles: d_p_side_tiles
+            d_p_side_by_side: d_p_side_by_side
+            d_p_tiles: d_p_tiles
+          target_bundles_drag_drop:
+            block_paragraph:
+              weight: -45
+              enabled: false
+            d_p_banner:
+              enabled: true
+              weight: -44
+            d_p_form:
+              enabled: true
+              weight: -43
+            d_p_group_of_counters:
+              enabled: true
+              weight: -42
+            d_p_carousel:
+              enabled: true
+              weight: -41
+            d_p_gallery:
+              enabled: true
+              weight: -40
+            d_p_group_of_text_blocks:
+              enabled: true
+              weight: -39
+            d_p_side_image:
+              enabled: true
+              weight: -38
+            d_p_reference_content:
+              enabled: true
+              weight: -37
+            d_p_subscribe_file:
+              enabled: true
+              weight: -36
+            d_p_text_paged:
+              enabled: true
+              weight: -35
+            d_p_text_with_bckg:
+              enabled: true
+              weight: -34
+            d_p_side_embed:
+              enabled: true
+              weight: -33
+            d_p_side_tiles:
+              enabled: true
+              weight: -32
+            d_p_side_by_side:
+              enabled: true
+              weight: -31
+            d_p_blog_image:
+              weight: -30
+              enabled: false
+            d_p_blog_text:
+              weight: -29
+              enabled: false
+            d_p_carousel_item:
+              weight: -28
+              enabled: false
+            d_p_node:
+              weight: -27
+              enabled: false
+            d_p_single_counter:
+              weight: -26
+              enabled: false
+            d_p_single_text_block:
+              weight: -25
+              enabled: false
+            d_p_tiles:
+              enabled: true
+              weight: -24
+      field_type: entity_reference_revisions
+      _core:
+        default_config_hash: PPS-_yJm6wnsJhsGI7chtX10lzm7mszQDCp5tERULLw
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_block.field_block
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_block
+          - paragraphs.paragraphs_type.d_p_block
+        module:
+          - d_block_field
+      id: paragraph.d_p_block.field_block
+      field_name: field_block
+      entity_type: paragraph
+      bundle: d_p_block
+      label: Block
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        plugin_ids: {  }
+      field_type: d_block_field
+      _core:
+        default_config_hash: 9x_TZQx6N8nqsM2lOZnnvy6uu3yl2R3sSQh6SRKxVT8
+  -
+    collection: ''
+    name: field.field.paragraph.d_p_block.field_d_settings
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_settings
+          - paragraphs.paragraphs_type.d_p_block
+        module:
+          - d_p
+      id: paragraph.d_p_block.field_d_settings
+      field_name: field_d_settings
+      entity_type: paragraph
+      bundle: d_p_block
+      label: 'Paragraph settings'
+      description: ''
+      required: false
+      translatable: true
+      default_value:
+        -
+          value: '{"custom_class":""}'
+      default_value_callback: ''
+      settings: {  }
+      field_type: field_p_configuration_storage
+      _core:
+        default_config_hash: f-NCfRQvlysEhJADMsBOyj9pZGydspbwWER3ELHkhqI
+  -
+    collection: ''
+    name: field.storage.block_content.field_paragraphs
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - block_content
+          - entity_reference_revisions
+          - paragraphs
+      id: block_content.field_paragraphs
+      field_name: field_paragraphs
+      entity_type: block_content
+      type: entity_reference_revisions
+      settings:
+        target_type: paragraph
+      module: entity_reference_revisions
+      locked: false
+      cardinality: -1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+      _core:
+        default_config_hash: _hYzZoud-qEpb2Qn1yO9YoEOQep0njRt4k4YGvZiu58
+  -
+    collection: ''
+    name: field.storage.paragraph.field_block
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - d_block_field
+          - paragraphs
+      id: paragraph.field_block
+      field_name: field_block
+      entity_type: paragraph
+      type: d_block_field
+      settings: {  }
+      module: d_block_field
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+      _core:
+        default_config_hash: fTocYgo36Y7hoNOm8XZEjaNp-CPM2yJ2tN0dq9adS04
+  -
+    collection: ''
+    name: language.content_settings.block_content.d_paragraph_block
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - block_content.type.d_paragraph_block
+      id: block_content.d_paragraph_block
+      target_entity_type_id: block_content
+      target_bundle: d_paragraph_block
+      default_langcode: site_default
+      language_alterable: false
+      _core:
+        default_config_hash: EcakqDx5ecirEapEpdwhmUk0pqOqyKPka_lyc6Ls14s
+  -
+    collection: ''
+    name: paragraphs.paragraphs_type.d_p_block
+    data:
+      langcode: en
+      status: true
+      dependencies: {  }
+      id: d_p_block
+      label: 'Block paragraph'
+      icon_uuid: null
+      icon_default: null
+      description: ''
+      behavior_plugins: {  }
+      _core:
+        default_config_hash: xnGYYerCR7c78zdXOlveGCxtjwq9tiWEbOdjcPVXs6Q

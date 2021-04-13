@@ -1,0 +1,25 @@
+uuid: f4fbebaf-39c2-4d73-b833-00b827b8060f
+langcode: pl
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - droopler_subtheme
+id: glownanawigacja
+theme: droopler_subtheme
+region: footer_second
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Główna nawigacja'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

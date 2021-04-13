@@ -1,0 +1,16 @@
+uuid: eacbcf9a-de7c-4e69-8509-9225f286df98
+langcode: pl
+status: true
+dependencies:
+  enforced:
+    module:
+      - redirect
+  module:
+    - redirect
+_core:
+  default_config_hash: vcnRZRvBqTbK3nZ2M4_lKPlEGc8GjPzgaqapYUfyX8M
+id: redirect_delete_action
+label: 'Usuń przekierowanie'
+type: redirect
+plugin: redirect_delete_action
+configuration: {  }

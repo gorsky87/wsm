@@ -1,0 +1,15 @@
+uuid: dccf85cd-3efe-4572-9550-eeb239a3e084
+name: 'Wrocławskie Stowarzyszenie Motocyklistów'
+mail: wsm@gorskipawel.pl
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node/3
+admin_compact_mode: false
+weight_select_max: 100
+langcode: pl
+default_langcode: pl
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
+mail_notification: ''
