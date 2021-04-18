@@ -48,18 +48,17 @@
   label_display == 'visually_hidden' ? 'visually-hidden',
 ] %}
 
-
 {% block content %}
   {% if label_hidden %}
     {% if multiple %}
       <div{{ attributes.addClass(classes, 'field__items') }}>
         {% for item in items %}
-          <div{{ item.attributes.addClass('badge badge-primary') }}>{{ item.content }}</div>
+          <div{{ item.attributes.addClass('field__item') }}> </i><a class="btn btn-info btn-sm " target='_blank' href="{{ item.content['#url'] }}"><i class="bi bi-window"></i>{{ 'www' | t }}</a></div>
         {% endfor %}
       </div>
     {% else %}
       {% for item in items %}
-        <div{{ attributes.addClass(classes, 'badge badge-primary') }}>{{ item.content }}</div>
+        <div{{ attributes.addClass(classes, 'field__item') }}> <a class="btn btn-info btn-sm" target='_blank' href="{{ item.content['#url'] }}"><i class="bi bi-window"></i>{{ 'www' | t }}</a></div>
       {% endfor %}
     {% endif %}
   {% else %}
@@ -69,7 +68,7 @@
       <div class='field__items'>
         {% endif %}
         {% for item in items %}
-          <div{{ item.attributes.addClass('badge badge-primary') }}>{{ item.content }}</div>
+          <div{{ item.attributes.addClass('field__item') }}>  <a class="btn btn-info btn-sm" target='_blank' href="{{ item.content['#url'] }}"><i class="bi bi-window"></i>{{ 'www' | t }}</a></div>
         {% endfor %}
         {% if multiple %}
       </div>
@@ -77,3 +76,4 @@
     </div>
   {% endif %}
 {% endblock %}
+

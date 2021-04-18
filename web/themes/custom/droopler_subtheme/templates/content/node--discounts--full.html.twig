@@ -60,8 +60,7 @@
  */
 #}
 
-{%
-  set classes = [
+{% set classes = [
   'card',
   'node',
   'node--type-' ~ node.bundle|clean_class,
@@ -70,8 +69,7 @@
   not node.isPublished() ? 'node--unpublished',
   view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
   'clearfix',
-]
-%}
+] %}
 <article{{ attributes.addClass(classes) }}>
   <header>
     {{ title_prefix }}
@@ -79,10 +77,20 @@
       <h2{{ title_attributes.addClass('node__title') }}>
         {{ label }}
       </h2>
+      {{ content.field_discount_category }}
     {% endif %}
     {{ title_suffix }}
   </header>
   <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
-    {{ content }}
+    {{ content | without('field_discount_category', 'field_partner_link', 'field_partner_fb') }}
+
+    <div class="buttons-wrapper">
+      <div class="button">
+        {{ content.field_partner_link }}
+      </div>
+      <div class="button">
+        {{ content.field_partner_fb }}
+      </div>
+    </div>
   </div>
 </article>

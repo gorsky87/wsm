@@ -42,7 +42,7 @@ display:
       exposed_form:
         type: bef
         options:
-          submit_button: Apply
+          submit_button: Szukaj
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
@@ -54,9 +54,9 @@ display:
           bef:
             general:
               autosubmit: true
-              autosubmit_exclude_textfield: false
+              autosubmit_exclude_textfield: true
               autosubmit_textfield_delay: 500
-              autosubmit_hide: true
+              autosubmit_hide: false
               input_required: false
               allow_secondary: false
               secondary_label: 'Zaawansowane ustawienia'
@@ -589,7 +589,7 @@ display:
           automatic_width: 0
           alignment: horizontal
           col_class_default: 0
-          col_class_custom: 'col-12 col-md-3'
+          col_class_custom: 'col-12 col-md-3 item'
           row_class_default: 0
           row_class_custom: row
       defaults:

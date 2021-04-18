@@ -1,4 +1,8 @@
 .view-discounts {
+  .view-content {
+    background: #f1f1f1;
+  }
+
   .view-filters {
     display: flex;
     justify-content: space-around;
@@ -6,13 +10,14 @@
     border-radius: 5px;
     border: #dedede 1px solid;
     margin: 10px auto;
-    position:-webkit-sticky;
-    position:sticky;
+    position: -webkit-sticky;
+    position: sticky;
     top: 0;
+    z-index: 3;
 
     .form-group {
       margin-bottom: 0;
-      display: -webkit-inline-box;
+      padding-left: 10px;
       display: -ms-inline-flexbox;
       display: inline-flex;
       -webkit-box-align: center;
@@ -27,30 +32,179 @@
       flex-wrap: wrap;
     }
   }
+
   .views-view-responsive-grid.horizontal {
-    padding: 1rem;
+    padding: 0.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    overflow: hidden;
+
+    .item {
+      margin-bottom: 1rem;
+    }
   }
 }
 
+.view-id-discounts .views-exposed-form {
+  padding: 15px;
+  overflow: hidden;
+
+  .form-control {
+    padding: 0.25rem 0.5rem;
+    height: calc(1.0em + 1.5rem + 2px);
+  }
+
+  .form--inline {
+    display: inline-flex;
+    overflow: hidden;
+    @include media-breakpoint-down(sm) {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      display: -ms-inline-flexbox;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
+  }
+
+  div.form-actions {
+    display: flex;
+    align-items: flex-end;
+    align-content: flex-end;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    .btn {
+      height: calc(1.0em + 1.5rem + 6px);
+      margin: 0;
+      font-size: 12px;
+      padding: 0.25rem 2rem;
+      @include media-breakpoint-down(sm) {
+        margin-top: 1rem;
+      }
+    }
+  }
+}
 
 .node--type-discounts {
   &.node--view-mode-full {
-    .node__title {
-      text-transform: uppercase;
-      font-size: 1.25rem;
-      padding: 1rem;
-
+    i.bi {
+      font-size: 1rem;
+      padding: 0.5rem;
     }
+    header {
+      background: $color-agamemnon;
+
+      .field--name-field-discount-category {
+        margin: 0;
+        padding: 0 1rem 0.25rem;
+        color: #cacaca;
+        font-weight: bold;
+        font-size: 75%;
+      }
+
+      .field--type-entity-reference {
+        margin: 0;
+      }
+
+      .node__title {
+        color: $color-odysseus;
+        margin: 0;
+        text-transform: uppercase;
+        font-size: 1.25rem;
+        padding: 0.5rem 1rem 0;
+      }
+    }
+
     .node__content {
+      padding: 0.5rem;
 
-    }
-    .field--type-entity-reference {
-      margin: 0;
-    }
-    .field--type-image {
-      float: none;
-      margin: 0;
+      .field--name-field-rabat-short {
+        text-align: center;
+
+        .field__item {
+          font-size: 1.75rem;
+          font-weight: bold;
+          color: $color-nestor;
+        }
+      }
+
+      .field--name-field-partner-logo img {
+        margin: 0 auto;
+        display: block;
+      }
+
+      .field--name-field-partner-contact p {
+        display:inline-block;
+      }
+
+      .field.field--name-field-discount-info {
+        margin: 0 -0.5rem 0.5rem;
+        background: #ededed;
+        padding: 0.5rem;
+      }
+
+      .field--type-image {
+        float: none;
+        margin: 0;
+      }
+
+      @include media-breakpoint-down(sm) {
+        .field.field--name-field-partner-logo {
+          width: 35%;
+          margin: auto;
+        }
+      }
     }
   }
 }
 
+@include media-breakpoint-down(sm) {
+  span.filter-resize {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+  }
+
+  .views-exposed-form.full {
+    padding: 0;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  span.filter-resize {
+    display: none !important;
+  }
+  .form--inline {
+    height: auto !important;
+  }
+}
+
+.buttons-wrapper {
+  margin: -0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  .button {
+    width: 50%;
+    a {
+      width: 100%;
+    }
+  }
+}

@@ -59,7 +59,7 @@ content:
       url_only: false
       url_plain: false
     third_party_settings: {  }
-    type: link
+    type: link_separate
     region: content
   field_partner_link:
     weight: 7
@@ -71,7 +71,7 @@ content:
       url_only: false
       url_plain: false
     third_party_settings: {  }
-    type: link
+    type: link_separate
     region: content
   field_partner_logo:
     weight: 2

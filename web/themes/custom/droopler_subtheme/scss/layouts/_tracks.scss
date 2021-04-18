@@ -48,6 +48,19 @@
     }
   }
 }
+.view-tracks {
+  .views-row {
+    overflow: hidden;
+  }
+  .view-header {
+    position: sticky;
+    display: block;
+    top: 0;
+    z-index: 2;
+  }
+}
+
+
 .tags-filter {
   background: #eee;
   border-radius: 5px;

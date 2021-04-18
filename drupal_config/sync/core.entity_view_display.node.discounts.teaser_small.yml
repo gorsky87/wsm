@@ -19,6 +19,7 @@ dependencies:
     - lazy
     - link
     - svg_image
+    - telephone
     - text
     - user
 id: node.discounts.teaser_small
@@ -58,7 +59,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    type: link_separate
     region: content
   field_partner_link:
     weight: 3
@@ -92,9 +93,10 @@ content:
   field_partner_phone:
     weight: 6
     label: above
-    settings: {  }
+    settings:
+      title: ''
     third_party_settings: {  }
-    type: basic_string
+    type: telephone_link
     region: content
   field_rabat_short:
     weight: 5
