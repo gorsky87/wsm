@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * @file
+ * Contains wsm_tracks.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function wsm_tracks_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the wsm_tracks module.
+    case 'help.page.wsm_tracks':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Module tracks') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function wsm_tracks_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+}

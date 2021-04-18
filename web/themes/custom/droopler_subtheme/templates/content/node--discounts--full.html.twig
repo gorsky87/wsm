@@ -60,7 +60,9 @@
  */
 #}
 
-{% set classes = [
+{%
+  set classes = [
+  'card',
   'node',
   'node--type-' ~ node.bundle|clean_class,
   node.isPromoted() ? 'node--promoted',
@@ -68,32 +70,19 @@
   not node.isPublished() ? 'node--unpublished',
   view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
   'clearfix',
-] %}
-
-{% set embed_code = {
-  '#type': 'processed_text',
-  '#text': content.field_embed_map[0]['#context']['value'],
-  '#format': 'full_html',
-} %}
-
+]
+%}
 <article{{ attributes.addClass(classes) }}>
-  {# <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
+  <header>
+    {{ title_prefix }}
+    {% if not page %}
+      <h2{{ title_attributes.addClass('node__title') }}>
+        {{ label }}
+      </h2>
+    {% endif %}
+    {{ title_suffix }}
+  </header>
+  <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
     {{ content }}
-  </div> #}
-  <div class="row">
-    <div class="col-12 responsive-embed shadow-sm">
-      {{ content.field_track_tags }}
-      {{ content.field_track_long }}
-      {{ embed_code }}
-    </div>
-    <div class="col-12">
-      {{ content.field_track_gallery }}
-    </div>
-    <div class="col-9">
-      {{ content.body }}
-    </div>
-
-
-
   </div>
 </article>

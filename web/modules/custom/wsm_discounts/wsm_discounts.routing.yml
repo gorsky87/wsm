@@ -1,0 +1,9 @@
+wsm_discounts.import_json:
+  path: '/admin/config/wsm_discounts/importjson'
+  defaults:
+    _form: '\Drupal\wsm_discounts\Form\ImportJson'
+    _title: 'ImportJson'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE

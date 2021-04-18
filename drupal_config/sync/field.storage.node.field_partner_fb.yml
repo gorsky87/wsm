@@ -1,0 +1,19 @@
+uuid: adcf04ea-9349-4515-aa07-e6e79ff8180a
+langcode: pl
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_partner_fb
+field_name: field_partner_fb
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

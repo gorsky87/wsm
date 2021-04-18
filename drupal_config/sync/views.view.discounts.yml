@@ -4,10 +4,13 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_discount_category
+    - field.storage.node.field_geolocation
     - search_api.index.discounts
     - taxonomy.vocabulary.discount_category
   module:
     - better_exposed_filters
+    - geofield_map
+    - media
     - responsive_views_grid
     - search_api
 id: discounts
@@ -74,39 +77,226 @@ display:
                   collapsible: false
                   is_secondary: false
       pager:
-        type: some
+        type: none
         options:
-          items_per_page: 5
           offset: 0
       style:
-        type: responsive_grid
+        type: geofield_google_map
         options:
-          uses_fields: false
-          columns: '4'
-          automatic_width: 0
-          alignment: horizontal
-          col_class_default: 0
-          col_class_custom: 'col-12 col-md-3'
-          row_class_default: 1
-          row_class_custom: row
+          data_source: field_geolocation
+          entity_source: __base_table
+          map_dimensions:
+            width: 100%
+            height: 450px
+          map_empty:
+            empty_behaviour: '0'
+          map_center:
+            lat: '52.279986'
+            lon: '17.3522939'
+            center_force: 0
+            geocode: 'Znajdź moją lokalizację'
+          map_zoom_and_pan:
+            zoom:
+              initial: '6'
+              force: 0
+              min: '1'
+              max: '22'
+              finer: '0'
+            gestureHandling: auto
+            scrollwheel: '1'
+            draggable: '1'
+            map_reset: 0
+            map_reset_position: TOP_RIGHT
+          map_controls:
+            disable_default_ui: 0
+            zoom_control: 1
+            map_type_id: roadmap
+            map_type_control: 1
+            map_type_control_options_type_ids:
+              roadmap: roadmap
+              satellite: satellite
+              hybrid: hybrid
+              terrain: terrain
+            scale_control: 1
+            street_view_control: 1
+            fullscreen_control: 1
+          map_marker_and_infowindow:
+            icon_image_path: ''
+            infowindow_field: '#rendered_entity'
+            multivalue_split: 0
+            view_mode: teaser_small
+            tooltip_field: ''
+            theming:
+              plugin_id: geofieldmap_taxonomy_term_url
+              geofieldmap_taxonomy_term_url:
+                id: geofieldmap_taxonomy_term_url
+                values:
+                  taxonomy_field: field_discount_category
+                  fields:
+                    field_discount_category:
+                      terms:
+                        9:
+                          weight: '0'
+                          label_alias: ''
+                          icon_file: 'public://geofieldmap_icons/restaurants.png'
+                          label: Gastronomia
+                          legend_exclude: 0
+                        8:
+                          weight: '2'
+                          label_alias: ''
+                          icon_file: 'public://geofieldmap_icons/tires-accessories.png'
+                          label: Motoryzacja
+                          legend_exclude: 0
+                        12:
+                          weight: '3'
+                          label_alias: ''
+                          icon_file: 'public://geofieldmap_icons/default.png'
+                          label: Pozostałe
+                          legend_exclude: 0
+                        11:
+                          weight: '4'
+                          label_alias: ''
+                          icon_file: 'public://geofieldmap_icons/karaoke.png'
+                          label: Rozrywka
+                          legend_exclude: 0
+                        13:
+                          weight: '5'
+                          label_alias: ''
+                          icon_file: 'public://geofieldmap_icons/places.png'
+                          label: Turystyka
+                          legend_exclude: 0
+                        15:
+                          weight: '5'
+                          label_alias: ''
+                          icon_file: 'public://geofieldmap_icons/cake-shop.png'
+                          label: Cafe/Bistro
+                          legend_exclude: 0
+                        __default_value__:
+                          weight: '6'
+                          label_alias: ''
+                          icon_file: 'public://geofieldmap_icons/default.png'
+                          label: '- Default Value - '
+                          legend_exclude: 0
+                description: "This Geofield Map Themer allows the Image Selection of\n * different Marker Icons based on Taxonomy Terms reference field in View."
+              plugins_descriptions:
+                table: ''
+          map_additional_options: ''
+          map_additional_libraries:
+            places: 0
+            drawing: 0
+            geometry: 0
+            visualization: 0
+          map_geometries_options: '{"strokeColor":"black","strokeOpacity":"0.8","strokeWeight":2,"fillColor":"blue","fillOpacity":"0.1","clickable":false}'
+          map_oms:
+            map_oms_control: 1
+            map_oms_options: '{"markersWontMove":"true","markersWontHide":"true","basicFormatEvents":"true","nearbyDistance":3}'
+          custom_style_map:
+            custom_style_control: 0
+            custom_style_name: ''
+            custom_style_options: ''
+            custom_style_default: 0
+          map_markercluster:
+            markercluster_control: 0
+            markercluster_additional_options: '{"maxZoom":12,"gridSize":50}'
+          map_lazy_load:
+            lazy_load: 1
       row:
         type: search_api
         options:
           view_modes:
             'entity:node':
-              discounts: default
+              discounts: teaser_small
       fields:
         field_discount_category:
+          id: field_discount_category
           table: search_api_index_discounts
           field: field_discount_category
-          id: field_discount_category
-          entity_type: null
-          entity_field: null
-          plugin_id: search_api_field
           relationship: none
           group_type: group
           admin_label: ''
           label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: media_thumbnail
+          settings:
+            link: 1
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api_entity
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+            display_methods:
+              blog_posts_category:
+                display_method: label
+                view_mode: default
+              discount_category:
+                display_method: label
+              tags:
+                display_method: label
+              track_tags:
+                display_method: label
+          entity_type: null
+          entity_field: null
+          plugin_id: search_api_field
+        field_geolocation:
+          id: field_geolocation
+          table: search_api_datasource_discounts_entity_node
+          field: field_geolocation
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: geolocation
           exclude: false
           alter:
             alter_text: false
@@ -147,10 +337,82 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings: {  }
-          group_column: target_id
+          click_sort_column: value
+          type: geofield_google_map
+          settings:
+            map_dimensions:
+              width: 100%
+              height: 450px
+            map_empty:
+              empty_behaviour: '0'
+              empty_message: 'No Geofield Value entered for this field'
+            map_center:
+              center_force: '1'
+              lat: '52.279986'
+              lon: '17.3522939'
+              geocode: 'Znajdź moją lokalizację'
+            map_zoom_and_pan:
+              zoom:
+                initial: '6'
+                force: 0
+                min: '1'
+                max: '22'
+                finer: '0'
+              gestureHandling: auto
+              scrollwheel: '1'
+              draggable: '1'
+              map_reset: 0
+              map_reset_position: TOP_RIGHT
+            map_controls:
+              disable_default_ui: 0
+              zoom_control: 0
+              map_type_id: roadmap
+              map_type_control: 0
+              map_type_control_options_type_ids:
+                roadmap: 0
+                satellite: 0
+                hybrid: 0
+                terrain: 0
+              scale_control: 0
+              street_view_control: 0
+              fullscreen_control: 0
+            map_marker_and_infowindow:
+              icon_image_path: ''
+              infowindow_field: title
+              multivalue_split: 0
+              view_mode: full
+              tooltip_field: title
+              force_open: 0
+              icon_image_mode: icon_file
+              icon_file_wrapper:
+                icon_file:
+                  fids: {  }
+                  upload_button: 'Wyślij plik'
+                  remove_button: Usuń
+                  upload: ''
+                  is_svg: false
+                image_style: geofield_map_default_icon_style
+            map_additional_options: ''
+            map_additional_libraries:
+              places: 0
+              drawing: 0
+              geometry: 0
+              visualization: 0
+            map_geometries_options: '{"strokeColor":"black","strokeOpacity":"0.8","strokeWeight":2,"fillColor":"blue","fillOpacity":"0.1","clickable":false}'
+            map_oms:
+              map_oms_control: 0
+              map_oms_options: '{"markersWontMove":"true","markersWontHide":"true","basicFormatEvents":"true","nearbyDistance":3}'
+            custom_style_map:
+              custom_style_control: 0
+              custom_style_name: ''
+              custom_style_options: ''
+              custom_style_default: 0
+            map_markercluster:
+              markercluster_control: 0
+              markercluster_additional_options: '{"maxZoom":12,"gridSize":50}'
+            map_lazy_load:
+              lazy_load: 0
+          group_column: value
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -161,13 +423,14 @@ display:
           separator: ', '
           field_api_classes: false
           field_rendering: true
-          fallback_handler: search_api_entity
+          fallback_handler: search_api
           fallback_options:
             link_to_item: false
             use_highlighting: false
             multi_type: separator
             multi_separator: ', '
-            display_methods: {  }
+          entity_type: node
+          plugin_id: search_api_field
       filters:
         search_api_fulltext:
           id: search_api_fulltext
@@ -229,7 +492,7 @@ display:
           exposed: true
           expose:
             operator_id: field_discount_category_op
-            label: 'Discount Category'
+            label: Kategoria
             description: ''
             use_operator: false
             operator: field_discount_category_op
@@ -283,14 +546,22 @@ display:
         - 'user.node_grants:view'
       tags:
         - 'config:field.storage.node.field_discount_category'
+        - 'config:field.storage.node.field_geolocation'
         - 'config:search_api.index.discounts'
-  block_1:
-    display_plugin: block
-    id: block_1
-    display_title: Block
-    position: 1
+  attachment_1:
+    display_plugin: attachment
+    id: attachment_1
+    display_title: Załącznik
+    position: 4
     display_options:
       display_extenders: {  }
+      displays:
+        block_1: block_1
+      inherit_exposed_filters: true
+      pager:
+        type: none
+        options:
+          offset: 0
     cache_metadata:
       max-age: -1
       contexts:
@@ -301,4 +572,44 @@ display:
         - 'user.node_grants:view'
       tags:
         - 'config:field.storage.node.field_discount_category'
+        - 'config:field.storage.node.field_geolocation'
+        - 'config:search_api.index.discounts'
+  block_1:
+    display_plugin: block
+    id: block_1
+    display_title: Block
+    position: 1
+    display_options:
+      display_extenders: {  }
+      style:
+        type: responsive_grid
+        options:
+          uses_fields: false
+          columns: '4'
+          automatic_width: 0
+          alignment: horizontal
+          col_class_default: 0
+          col_class_custom: 'col-12 col-md-3'
+          row_class_default: 0
+          row_class_custom: row
+      defaults:
+        style: false
+        row: false
+      row:
+        type: search_api
+        options:
+          view_modes:
+            'entity:node':
+              discounts: full
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - user
+        - 'user.node_grants:view'
+      tags:
+        - 'config:field.storage.node.field_discount_category'
+        - 'config:field.storage.node.field_geolocation'
         - 'config:search_api.index.discounts'

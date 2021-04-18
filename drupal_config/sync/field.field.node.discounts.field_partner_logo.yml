@@ -13,7 +13,7 @@ entity_type: node
 bundle: discounts
 label: Logo
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
@@ -28,11 +28,11 @@ settings:
   title_field: false
   title_field_required: false
   default_image:
-    uuid: ''
-    alt: ''
+    uuid: c3b09ea4-e9dc-468d-8fcd-794d820f40a2
+    alt: nologo
     title: ''
-    width: null
-    height: null
+    width: 200
+    height: 200
   handler: 'default:file'
   handler_settings: {  }
 field_type: image

@@ -1,0 +1,76 @@
+<?php
+
+/**
+ * @file
+ * Contains wsm_tracks.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function wsm_discounts_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the wsm_tracks module.
+    case 'help.page.wsm_discounts':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Module discounts') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function wsm_discounts_import_json() {
+
+  $result = \Drupal::entityQuery('node')
+    ->condition('type', 'discounts')
+    ->execute();
+  entity_delete_multiple('node', $result);
+
+  $string = file_get_contents("private://csv.json");
+  $jsons = json_decode($string, TRUE);
+
+  foreach ($jsons as $key => $json) {
+    $node = \Drupal\node\Entity\Node::create(['type' => 'discounts']);
+    $node->uid = 1;
+    $node->title = $json["name"];
+
+
+    $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')
+      ->loadByProperties([
+        'name' => $json["cat"],
+        'vid' => 'discount_category',
+      ]);
+    $term = array_key_first($term);
+    $term_id = $term ?? 12;
+
+    $node->set('field_discount_category', ['target_id' => $term_id]);
+    $node->set('field_discount_info', ['value' => $json["desc"]]);
+
+    $node->set('field_partner_contact', ['value' => $json["Adress"]]);
+    $node->set('field_partner_fb', ['uri' => $json["fb"]]);
+    $node->set('field_partner_link', ['uri' => $json["www"]]);
+    $node->set('field_partner_phone', ['value' => $json["phone"]]);
+    $node->set('field_partner_phone', ['value' => $json["phone"]]);
+    $node->set('field_rabat_short', ['value' => $json["rabat"]]);
+
+    $gsm = explode(',', $json["GPS"]);
+    if(!empty($gsm[1])) {
+      $point = [
+        'lat' => $gsm[1],
+        'lon' => $gsm[0],
+      ];
+      $value = \Drupal::service('geofield.wkt_generator')->WktBuildPoint($point);
+
+      $node->set('field_geolocation', $value);
+    }
+
+    $node->save();
+  }
+}

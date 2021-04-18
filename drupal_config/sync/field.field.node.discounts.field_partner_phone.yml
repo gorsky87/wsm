@@ -1,0 +1,21 @@
+uuid: 2213dfa8-28b1-4bfb-96ae-4577b57e457c
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_partner_phone
+    - node.type.discounts
+  module:
+    - telephone
+id: node.discounts.field_partner_phone
+field_name: field_partner_phone
+entity_type: node
+bundle: discounts
+label: Telefon
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

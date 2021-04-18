@@ -1,0 +1,5 @@
+name: 'wsm_tracks'
+type: module
+description: 'Module tracks'
+core: 8.x
+package: 'wsm'

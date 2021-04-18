@@ -1,0 +1,6 @@
+wsm_discounts.import_json:
+  title: 'Import Json'
+  route_name: wsm_discounts.import_json
+  description: 'A description for the menu entry'
+  parent: system.admin_config_system
+  weight: 99

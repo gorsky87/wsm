@@ -1,8 +1,9 @@
-uuid: 534d36fe-2227-4d09-ad48-53285ac02d2b
+uuid: 2886bc39-195f-471c-ba20-961cd265275e
 langcode: pl
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.teaser_small
     - field.field.node.discounts.field_discount_category
     - field.field.node.discounts.field_discount_info
     - field.field.node.discounts.field_geolocation
@@ -18,13 +19,12 @@ dependencies:
     - lazy
     - link
     - svg_image
-    - telephone
     - text
     - user
-id: node.discounts.default
+id: node.discounts.teaser_small
 targetEntityType: node
 bundle: discounts
-mode: default
+mode: teaser_small
 content:
   field_discount_category:
     weight: 0
@@ -92,10 +92,9 @@ content:
   field_partner_phone:
     weight: 6
     label: above
-    settings:
-      title: ''
+    settings: {  }
     third_party_settings: {  }
-    type: telephone_link
+    type: basic_string
     region: content
   field_rabat_short:
     weight: 5

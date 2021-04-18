@@ -5,16 +5,89 @@ dependencies:
   config:
     - field.field.node.discounts.field_discount_category
     - field.field.node.discounts.field_discount_info
+    - field.field.node.discounts.field_geolocation
     - field.field.node.discounts.field_partner_contact
+    - field.field.node.discounts.field_partner_fb
     - field.field.node.discounts.field_partner_link
     - field.field.node.discounts.field_partner_logo
+    - field.field.node.discounts.field_partner_phone
+    - field.field.node.discounts.field_rabat_short
     - image.style.thumbnail
     - node.type.discounts
   module:
+    - content_moderation
+    - field_group
+    - geofield_map
     - link
     - path
     - svg_image
+    - telephone
     - text
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_partner
+        - group_rabat
+        - group_mapa
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        direction: horizontal
+      label: Tabs
+    group_mapa:
+      children:
+        - field_geolocation
+      parent_name: group_tabs
+      weight: 22
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Mapa
+    group_rabat:
+      children:
+        - field_discount_category
+        - field_rabat_short
+        - field_discount_info
+      parent_name: group_tabs
+      weight: 21
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Rabat
+    group_partner:
+      children:
+        - title
+        - field_partner_phone
+        - field_partner_logo
+        - field_partner_contact
+        - field_partner_link
+        - field_partner_fb
+      parent_name: group_tabs
+      weight: 20
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Partner
 id: node.discounts.default
 targetEntityType: node
 bundle: discounts
@@ -22,34 +95,83 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
   field_discount_category:
-    weight: 122
+    weight: 10
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_discount_info:
-    weight: 124
+    weight: 12
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
     region: content
+  field_geolocation:
+    weight: 18
+    settings:
+      map_google_places:
+        places_control: true
+        places_additional_options: ''
+      map_library: gmap
+      map_type_google: roadmap
+      map_type_leaflet: OpenStreetMap_Mapnik
+      map_dimensions:
+        width: 100%
+        height: 600px
+      zoom:
+        start: 6
+        focus: 12
+        min: 0
+        max: 22
+      click_to_find_marker: true
+      click_to_place_marker: true
+      geoaddress_field:
+        field: '0'
+        disabled: true
+        hidden: false
+      html5_geolocation: true
+      default_value:
+        lat: !!float 0
+        lon: !!float 0
+      map_type_selector: false
+      hide_coordinates: false
+      map_google_api_key: ''
+      map_geocoder:
+        control: 0
+        settings:
+          providers: {  }
+          min_terms: 4
+          delay: 800
+          options: ''
+      zoom_level: 5
+    third_party_settings: {  }
+    type: geofield_map
+    region: content
   field_partner_contact:
-    weight: 126
+    weight: 3
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
     region: content
+  field_partner_fb:
+    weight: 5
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
   field_partner_link:
-    weight: 125
+    weight: 4
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -57,23 +179,44 @@ content:
     type: link_default
     region: content
   field_partner_logo:
-    weight: 123
+    weight: 2
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
     region: content
+  field_partner_phone:
+    weight: 1
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_rabat_short:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   langcode:
     type: language_select
-    weight: 2
+    weight: 1
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 8
+    settings: {  }
+    region: content
+    third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -81,26 +224,26 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 15
+    weight: 4
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 120
+    weight: 9
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 16
+    weight: 5
     region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: -5
+    weight: 0
     region: content
     settings:
       size: 60
@@ -108,7 +251,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 2
     settings:
       match_operator: CONTAINS
       size: 60
@@ -117,7 +260,7 @@ content:
     region: content
     third_party_settings: {  }
   url_redirects:
-    weight: 50
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }

@@ -1,0 +1,29 @@
+uuid: 0ee90804-9e3e-4593-8fb1-95767450c4ef
+langcode: pl
+status: true
+dependencies:
+  config:
+    - facets.facet.tags
+  module:
+    - facets
+    - system
+  theme:
+    - droopler_subtheme
+id: tags
+theme: droopler_subtheme
+region: page_bottom_content
+weight: -5
+provider: null
+plugin: 'facet_block:tags'
+settings:
+  id: 'facet_block:tags'
+  label: Tags
+  provider: facets
+  label_display: visible
+  block_id: tags
+visibility:
+  request_path:
+    id: request_path
+    pages: /trasy
+    negate: false
+    context_mapping: {  }

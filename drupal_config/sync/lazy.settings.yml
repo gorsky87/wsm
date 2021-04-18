@@ -1,6 +1,7 @@
 image_fields:
   node--track--field_track_gallery--teaser: '1'
   node--track--field_track_gallery--default: '1'
+  node--discounts--field_partner_logo--full: '1'
 alter_tag:
   img: img
   iframe: '0'

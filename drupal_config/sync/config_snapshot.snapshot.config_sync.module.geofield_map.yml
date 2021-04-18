@@ -1,0 +1,49 @@
+uuid: 8f4d8ccb-579e-497a-80bc-905ec288630b
+langcode: pl
+status: true
+dependencies:
+  module:
+    - geofield_map
+id: config_sync.module.geofield_map
+snapshotSet: config_sync
+extensionType: module
+extensionName: geofield_map
+items:
+  -
+    collection: ''
+    name: geofield_map.settings
+    data:
+      gmap_api_key: ''
+      gmap_api_localization: default
+      theming:
+        markers_location:
+          security: 'public://'
+          rel_path: geofieldmap_icons
+        additional_markers_location: ''
+        markers_extensions: 'gif png jpg jpeg'
+        markers_filesize: '250 KB'
+      geocoder:
+        caching:
+          clientside: session_storage
+      _core:
+        default_config_hash: 0cOpr1OyXWdffdvJFlXdoNQpPest7EYeepdwUe7U9pQ
+  -
+    collection: ''
+    name: image.style.geofield_map_default_icon_style
+    data:
+      uuid: 1017be4a-671b-439c-bb3d-dd54143bf44b
+      langcode: en
+      status: true
+      dependencies: {  }
+      name: geofield_map_default_icon_style
+      label: 'GeofieldMap Default Icon Style (34x34)'
+      effects:
+        5d91fbd4-b0f7-43e0-b7a4-21b19cec068c:
+          uuid: 5d91fbd4-b0f7-43e0-b7a4-21b19cec068c
+          id: image_resize
+          weight: 1
+          data:
+            width: 34
+            height: 34
+      _core:
+        default_config_hash: qeXmbpcOBZ_DUk5IscywhUBtP66NYnpVwP-HrtMT7CQ

@@ -1,8 +1,9 @@
-uuid: 534d36fe-2227-4d09-ad48-53285ac02d2b
+uuid: 9cf43d7d-51ef-4e49-b4b0-5c4c323f8dda
 langcode: pl
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.full
     - field.field.node.discounts.field_discount_category
     - field.field.node.discounts.field_discount_info
     - field.field.node.discounts.field_geolocation
@@ -21,10 +22,10 @@ dependencies:
     - telephone
     - text
     - user
-id: node.discounts.default
+id: node.discounts.full
 targetEntityType: node
 bundle: discounts
-mode: default
+mode: full
 content:
   field_discount_category:
     weight: 0
@@ -35,45 +36,45 @@ content:
     type: entity_reference_label
     region: content
   field_discount_info:
-    weight: 2
+    weight: 3
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_partner_contact:
-    weight: 4
+    weight: 5
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_partner_fb:
-    weight: 7
-    label: above
+    weight: 6
+    label: hidden
     settings:
       trim_length: 80
+      rel: nofollow
+      target: _blank
       url_only: false
       url_plain: false
-      rel: ''
-      target: ''
     third_party_settings: {  }
     type: link
     region: content
   field_partner_link:
-    weight: 3
+    weight: 7
     label: hidden
     settings:
       trim_length: 80
+      rel: nofollow
+      target: _blank
       url_only: false
       url_plain: false
-      rel: ''
-      target: ''
     third_party_settings: {  }
     type: link
     region: content
   field_partner_logo:
-    weight: 1
+    weight: 2
     label: hidden
     settings:
       image_style: max_325x325
@@ -84,22 +85,22 @@ content:
         height: null
     third_party_settings:
       lazy:
-        placeholder_style: ''
-        lazy_image: '0'
+        lazy_image: '1'
+        placeholder_style: thumbnail
         data_uri: false
     type: image
     region: content
   field_partner_phone:
-    weight: 6
-    label: above
+    weight: 4
+    label: hidden
     settings:
       title: ''
     third_party_settings: {  }
     type: telephone_link
     region: content
   field_rabat_short:
-    weight: 5
-    label: above
+    weight: 1
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
