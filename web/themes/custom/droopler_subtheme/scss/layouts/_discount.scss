@@ -39,8 +39,20 @@
     margin: 0 auto;
     overflow: hidden;
 
+    @include media-breakpoint-down(lg) {
+      article {
+        min-width: 50vw;
+      }
+    }
+
     .item {
       margin-bottom: 1rem;
+      @media (min-width: 1400px) {
+        padding: 15px;
+      }
+      @include media-breakpoint-up(sm) {
+        display: flex;
+      }
     }
   }
 }
@@ -100,9 +112,10 @@
   &.node--view-mode-full {
     i.bi {
       font-size: 1rem;
-      padding: 0.5rem;
+      padding: 0.25rem 0.2rem
     }
     header {
+      text-align: center;
       background: $color-agamemnon;
 
       .field--name-field-discount-category {
@@ -127,7 +140,7 @@
     }
 
     .node__content {
-      padding: 0.5rem;
+      padding: 1.5rem 2rem;
 
       .field--name-field-rabat-short {
         text-align: center;
@@ -139,19 +152,46 @@
         }
       }
 
+      .field--name-field-discount-info {
+        font-size: 80%;
+        text-align: center;
+        margin: 0.5rem;
+      }
+
+      .field--name-field-partner-contact {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+        i.bi {
+          font-size: 1.5rem;
+          padding: 0.5rem;
+          color: #dadada;
+        }
+      }
+
       .field--name-field-partner-logo img {
         margin: 0 auto;
         display: block;
+        @include media-breakpoint-up(md) {
+          height: 200px;
+          width: auto;
+        }
       }
 
       .field--name-field-partner-contact p {
-        display:inline-block;
+        display: inline-block;
+        margin: 0;
       }
 
-      .field.field--name-field-discount-info {
-        margin: 0 -0.5rem 0.5rem;
-        background: #ededed;
-        padding: 0.5rem;
+      .field--name-field-partner-phone {
+        margin: 1rem 0;
+        text-align: center;
+        font-size: 1.5rem;
+        i.bi {
+          font-size: 1.5rem;
+          color: #ad2e16;
+        }
       }
 
       .field--type-image {
@@ -169,7 +209,7 @@
   }
 }
 
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-down(md) {
   span.filter-resize {
     cursor: pointer;
     display: flex;
@@ -185,7 +225,7 @@
   }
 }
 
-@include media-breakpoint-up(sm) {
+@include media-breakpoint-up(md) {
   span.filter-resize {
     display: none !important;
   }
@@ -195,16 +235,33 @@
 }
 
 .buttons-wrapper {
-  margin: -0.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
-  flex-wrap: wrap;
+  width: 100%;
+  background: #e2e2e2;
+  bottom: 0;
   align-items: center;
+  flex-direction: row;
+  position: absolute;
+  display: flex;
   .button {
-    width: 50%;
+    width: calc(100% / 3);
+    padding: 3px;
     a {
       width: 100%;
+      font-size: 11px;
+      font-weight: bold;
+      padding: 0;
+      letter-spacing: 1px;
+      cursor: pointer;
+      margin: 0;
     }
+  }
+}
+
+.btn-fb {
+  background: #3b5998;
+  border-color: #3b5998;
+  &:hover {
+    background: darken(#3b5998, 5%);
+    border-color: darken(#3b5998, 1%);
   }
 }

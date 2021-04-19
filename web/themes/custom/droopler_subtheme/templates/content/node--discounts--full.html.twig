@@ -82,15 +82,20 @@
     {{ title_suffix }}
   </header>
   <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
-    {{ content | without('field_discount_category', 'field_partner_link', 'field_partner_fb') }}
-
-    <div class="buttons-wrapper">
-      <div class="button">
-        {{ content.field_partner_link }}
-      </div>
-      <div class="button">
-        {{ content.field_partner_fb }}
-      </div>
+    {{ content.field_rabat_short }}
+    {{ content.field_partner_logo }}
+    {{ content | without('field_discount_category', 'field_partner_link', 'field_partner_fb', 'field_geolocation', 'field_partner_logo', 'field_rabat_short') }}
+  </div>
+  <div class="buttons-wrapper">
+    <div class="button">
+      {{ content.field_geolocation }}
+    </div>
+    <div class="button">
+      {{ content.field_partner_link }}
+    </div>
+    <div class="button">
+      {{ content.field_partner_fb }}
     </div>
   </div>
+
 </article>
