@@ -445,7 +445,7 @@ display:
           exposed: true
           expose:
             operator_id: search_api_fulltext_op
-            label: 'Wyszukiwanie pełnotekstowe'
+            label: Wyszukiwanie
             description: ''
             use_operator: false
             operator: search_api_fulltext_op
@@ -476,8 +476,9 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           parse_mode: terms
-          min_length: null
-          fields: {  }
+          min_length: 3
+          fields:
+            - rendered_item
           plugin_id: search_api_fulltext
         field_discount_category:
           id: field_discount_category

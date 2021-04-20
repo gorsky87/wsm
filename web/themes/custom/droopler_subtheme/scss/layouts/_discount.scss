@@ -1,11 +1,10 @@
+$max-discount-width: 1400px;
 .view-discounts {
   .view-content {
     background: #f1f1f1;
   }
 
   .view-filters {
-    display: flex;
-    justify-content: space-around;
     background: #eee;
     border-radius: 5px;
     border: #dedede 1px solid;
@@ -35,22 +34,21 @@
 
   .views-view-responsive-grid.horizontal {
     padding: 0.5rem;
-    max-width: 1400px;
+    @extend .container;
+    @include media-breakpoint-up(xl) {
+      max-width: $max-discount-width;
+    }
     margin: 0 auto;
     overflow: hidden;
 
-    @include media-breakpoint-down(lg) {
-      article {
-        min-width: 50vw;
-      }
-    }
-
     .item {
       margin-bottom: 1rem;
-      @media (min-width: 1400px) {
+      padding-right: 20px;
+      padding-left: 20px;
+      @media (min-width: $max-discount-width) {
         padding: 15px;
       }
-      @include media-breakpoint-up(sm) {
+      @include media-breakpoint-up(xl) {
         display: flex;
       }
     }
@@ -211,13 +209,14 @@
 
 @include media-breakpoint-down(md) {
   span.filter-resize {
+    display: block;
     cursor: pointer;
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    margin: 1rem;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto 0;
+    background: #e8e8e8;
+    line-height: 3;
+    border-top: 1px solid #dadada;
   }
 
   .views-exposed-form.full {
@@ -226,6 +225,11 @@
 }
 
 @include media-breakpoint-up(md) {
+  #collapse-filter {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+  }
   span.filter-resize {
     display: none !important;
   }
@@ -247,7 +251,7 @@
     padding: 3px;
     a {
       width: 100%;
-      font-size: 11px;
+      font-size: 10px;
       font-weight: bold;
       padding: 0;
       letter-spacing: 1px;
