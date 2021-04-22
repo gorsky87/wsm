@@ -5,7 +5,12 @@
   Drupal.behaviors.droopler_subtheme = {
     attach: function (context, settings) {
 
-      //todo aattached to views not global.
+      $('a').click(function(){
+        $('html, body').animate({
+          scrollTop: $( $(this).attr('href') ).offset().top - 130
+        }, 500);
+        return false;
+      });
 
       $(".iframe-resize", context).on("click", function () {
         let ifheight;

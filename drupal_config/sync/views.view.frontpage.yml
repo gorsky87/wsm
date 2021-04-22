@@ -1,6 +1,6 @@
 uuid: 9ebf854a-053d-4e7e-bea1-9ee18fe0ebc0
 langcode: pl
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.rss

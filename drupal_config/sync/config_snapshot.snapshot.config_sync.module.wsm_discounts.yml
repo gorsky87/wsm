@@ -1,0 +1,18 @@
+uuid: adb89a9a-d251-41f9-8565-83143d70382b
+langcode: pl
+status: true
+dependencies:
+  module:
+    - wsm_discounts
+id: config_sync.module.wsm_discounts
+snapshotSet: config_sync
+extensionType: module
+extensionName: wsm_discounts
+items:
+  -
+    collection: ''
+    name: wsm_discounts.importjson
+    data:
+      wsm_discounts: null
+      _core:
+        default_config_hash: 5VhTRqglnQddTQvFzXPjKDc36oBicKKYmy5C0bHE3I0

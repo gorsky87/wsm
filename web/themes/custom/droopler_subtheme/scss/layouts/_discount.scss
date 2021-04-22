@@ -107,7 +107,68 @@ $max-discount-width: 1400px;
 }
 
 .node--type-discounts {
+  &.node--view-mode-teaser-small {
+    min-width: 300px;
+    .button-full {
+      margin: 0.5rem;
+    }
+
+    header {
+      text-align: center;
+      background: $color-agamemnon;
+      .field--name-field-discount-category {
+        margin: 0;
+        padding: 0 1rem 0.25rem;
+        color: #cacaca;
+        font-weight: bold;
+        font-size: 75%;
+      }
+      .field--type-entity-reference {
+        margin: 0;
+      }
+      .node__title {
+        color: $color-odysseus;
+        margin: 0;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        padding: 0.2rem 0.2rem 0;
+      }
+    }
+    .field--name-field-rabat-short {
+      .field__item {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: $color-nestor;
+      }
+    }
+    .buttons-wrapper {
+      position: relative;
+    }
+    .field--name-field-partner-phone {
+      font-size: 16px;
+      margin: 0.75rem;
+    }
+
+    .button-full .btn {
+      font-size: 12px;
+      padding: 0.1rem;
+      text-transform: capitalize;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      margin: 0 auto;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+    }
+  }
   &.node--view-mode-full {
+
+    &:hover,&:active,&:focus {
+      transform: scale(1.03);
+      box-shadow: 0px -3px 13px #afafaf;
+      z-index: 50;
+    }
     i.bi {
       font-size: 1rem;
       padding: 0.25rem 0.2rem
@@ -172,7 +233,7 @@ $max-discount-width: 1400px;
         margin: 0 auto;
         display: block;
         @include media-breakpoint-up(md) {
-          height: 200px;
+          max-height: 200px;
           width: auto;
         }
       }
@@ -267,5 +328,35 @@ $max-discount-width: 1400px;
   &:hover {
     background: darken(#3b5998, 5%);
     border-color: darken(#3b5998, 1%);
+  }
+}
+
+.back-to-map {
+  position: sticky;
+  bottom: 0px;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  background: $color-agamemnon;
+  width: 120px;
+  height: 40px;
+  border-radius: 100% 100% 0 0;
+  top: -200px;
+  color: #fff;
+  box-shadow: 0px 2px 7px #000;
+  font-weight: bold;
+  opacity: 0.7;
+  z-index: 70;
+  p {
+    margin: 0;
+    font-size: 0.7rem;
+  }
+  i.bi {
+    font-size: 1rem;
+  }
+  &:hover {
+    opacity: 1;
+    color: #fff;
+    background: darken($color-agamemnon,15%);
   }
 }

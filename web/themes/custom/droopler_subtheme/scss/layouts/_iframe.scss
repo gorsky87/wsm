@@ -1,7 +1,7 @@
 .responsive-embed {
   iframe {
     width: 100% !important;
-    max-height: 570px;
+    max-height: 600px;
     height: 100vh !important;
     @include media-breakpoint-down(md) {
       height: 50vh !important;

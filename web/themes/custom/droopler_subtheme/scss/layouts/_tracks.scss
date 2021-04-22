@@ -1,4 +1,17 @@
 .node--type-track {
+
+  .field--name-field-track-long {
+    .field__label {
+      font-weight: bold;
+    }
+    .field__item {
+      margin: 1rem 0;
+    }
+    i.bi {
+      color: #bdbdbd;
+    }
+  }
+
   &.node--view-mode-full {
     .field--name-field-track-gallery {
       .field__item {
@@ -9,20 +22,36 @@
   &.node--view-mode-teaser {
     margin-bottom: 0;
 
+    .node--view-mode-teaser h2 a {
+      color: $color-agamemnon;
+    }
+
     .field--name-field-track-gallery {
       .field__item {
         display: inline-flex;
       }
     }
 
+    .node-readmore.nav-link {
+      padding: 0;
+      a {
+        @extend .btn;
+        @extend .btn-sm;
+        @extend .btn-primary;
+      }
+    }
+
     .node__title {
       font-size: 2rem;
-      padding-top: 4rem;
+      padding-top: 1rem;
       @include media-breakpoint-down(md) {
         font-size: 1.5rem;
         padding-top: 0rem;
       }
     }
+  }
+  .field--name-field-track-gallery {
+    float: none;
   }
 }
 

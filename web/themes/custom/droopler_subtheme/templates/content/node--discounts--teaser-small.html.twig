@@ -70,25 +70,29 @@
   view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
   'clearfix',
 ] %}
-<article{{ attributes.addClass(classes) }} id="node-discount-{{ node.id }}">
-  <header>
-    {{ title_prefix }}
-    {% if not page %}
+{{ kint() }}
+<article{{ attributes.addClass(classes) }}>
+  <div class="main-info">
+    <header>
       <h2{{ title_attributes.addClass('node__title') }}>
         {{ label }}
       </h2>
       {{ content.field_discount_category }}
-    {% endif %}
-    {{ title_suffix }}
-  </header>
-  <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
-    {{ content.field_rabat_short }}
+    </header>
+  </div>
+  <div class="info">
     {{ content.field_partner_logo }}
-    {{ content | without('field_discount_category', 'field_partner_link', 'field_partner_fb', 'field_geolocation', 'field_partner_logo', 'field_rabat_short') }}
+    {{ content.field_rabat_short }}
+    <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
+      {{ content | without('field_discount_category', 'field_partner_link', 'field_partner_fb', 'field_geolocation', 'field_partner_logo', 'field_rabat_short') }}
+      <div class="button-full">
+        <a class='see-more btn btn-sm btn-primary' href="#node-discount-{{ node.id }}">{{ 'See more' | t }}</a>
+      </div>
+    </div>
   </div>
   <div class="buttons-wrapper">
     <div class="button">
-      {{ content.field_geolocation.0 }}
+      {{ content.field_geolocation }}
     </div>
     <div class="button">
       {{ content.field_partner_link }}
@@ -97,5 +101,6 @@
       {{ content.field_partner_fb }}
     </div>
   </div>
+
 
 </article>

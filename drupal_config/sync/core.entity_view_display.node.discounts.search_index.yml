@@ -1,9 +1,9 @@
-uuid: 2886bc39-195f-471c-ba20-961cd265275e
+uuid: 771c0fe9-f0af-4929-9b0b-d96a0c8d463e
 langcode: pl
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser_small
+    - core.entity_view_mode.node.search_index
     - field.field.node.discounts.field_discount_category
     - field.field.node.discounts.field_discount_info
     - field.field.node.discounts.field_geolocation
@@ -13,41 +13,54 @@ dependencies:
     - field.field.node.discounts.field_partner_logo
     - field.field.node.discounts.field_partner_phone
     - field.field.node.discounts.field_rabat_short
-    - image.style.thumbnail
+    - image.style.max_325x325
     - node.type.discounts
   module:
     - geofield
+    - image
     - lazy
     - link
-    - svg_image
-    - telephone
+    - text
     - user
-id: node.discounts.teaser_small
+id: node.discounts.search_index
 targetEntityType: node
 bundle: discounts
-mode: teaser_small
+mode: search_index
 content:
   field_discount_category:
     weight: 0
-    label: hidden
+    label: above
     settings:
       link: false
     third_party_settings: {  }
     type: entity_reference_label
     region: content
+  field_discount_info:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
   field_geolocation:
-    type: geofield_latlon
-    weight: 6
+    type: geofield_default
+    weight: 8
     region: content
-    label: hidden
+    label: above
     settings:
-      output_format: decimal
+      output_format: wkt
+      output_escape: true
     third_party_settings: {  }
-  field_partner_fb:
-    type: link
+  field_partner_contact:
     weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
     region: content
-    label: hidden
+  field_partner_fb:
+    weight: 7
+    label: above
     settings:
       trim_length: 80
       url_only: false
@@ -55,8 +68,10 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
+    type: link_separate
+    region: content
   field_partner_link:
-    weight: 5
+    weight: 3
     label: hidden
     settings:
       trim_length: 80
@@ -65,44 +80,41 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    type: link_separate
     region: content
   field_partner_logo:
     weight: 1
     label: hidden
     settings:
-      image_style: thumbnail
-      image_link: ''
-      svg_render_as_image: true
-      svg_attributes:
-        width: null
-        height: null
+      image_style: max_325x325
     third_party_settings:
       lazy:
         placeholder_style: ''
         lazy_image: '0'
         data_uri: false
-    type: image
+    type: image_url
     region: content
   field_partner_phone:
-    weight: 3
-    label: hidden
-    settings:
-      title: ''
-    third_party_settings: {  }
-    type: telephone_link
-    region: content
-  field_rabat_short:
-    type: string
-    weight: 2
-    region: content
-    label: inline
+    weight: 6
+    label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    type: string
+    region: content
+  field_rabat_short:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  search_api_excerpt:
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
-  field_discount_info: true
-  field_partner_contact: true
   langcode: true
   links: true
-  search_api_excerpt: true

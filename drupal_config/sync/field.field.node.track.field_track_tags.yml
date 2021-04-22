@@ -11,7 +11,7 @@ field_name: field_track_tags
 entity_type: node
 bundle: track
 label: Tags
-description: ''
+description: 'Tagi, nowe dodawaj po przecinku.'
 required: true
 translatable: false
 default_value: {  }
@@ -24,6 +24,6 @@ settings:
     sort:
       field: name
       direction: asc
-    auto_create: false
+    auto_create: true
     auto_create_bundle: ''
 field_type: entity_reference

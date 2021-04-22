@@ -2,17 +2,47 @@ uuid: 393699c3-778e-4b26-b167-bf7a774874e7
 langcode: pl
 status: true
 dependencies:
+  config:
+    - field.storage.node.field_discount_category
+    - field.storage.node.field_discount_info
+    - field.storage.node.field_partner_fb
+    - field.storage.node.field_partner_link
+    - field.storage.node.field_partner_phone
+    - field.storage.node.field_rabat_short
+    - search_api.server.default_index
+    - core.entity_view_mode.node.search_index
   module:
     - node
     - search_api
-  config:
-    - field.storage.node.field_discount_category
-    - search_api.server.default_index
 id: discounts
 name: discounts
 description: ''
 read_only: false
 field_settings:
+  aggregated_field:
+    label: 'Aggregated field'
+    property_path: aggregated_field
+    type: text
+    boost: !!float 2
+    configuration:
+      type: union
+      fields:
+        - 'entity:node/created'
+        - 'entity:node/default_langcode'
+        - 'entity:node/field_discount_category'
+        - 'entity:node/field_discount_info'
+        - 'entity:node/field_partner_contact'
+        - 'entity:node/field_partner_fb'
+        - 'entity:node/field_partner_link'
+        - 'entity:node/field_partner_logo'
+        - 'entity:node/field_partner_phone'
+        - 'entity:node/field_rabat_short'
+        - 'entity:node/metatag'
+        - 'entity:node/revision_default'
+        - 'entity:node/revision_timestamp'
+        - 'entity:node/title'
+        - 'entity:node/type'
+        - rendered_item
   field_discount_category:
     label: 'Discount Category'
     datasource_id: 'entity:node'
@@ -21,6 +51,46 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_discount_category
+  field_discount_info:
+    label: Rabat
+    datasource_id: 'entity:node'
+    property_path: field_discount_info
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_discount_info
+  field_partner_fb:
+    label: 'Link do profilu FB'
+    datasource_id: 'entity:node'
+    property_path: field_partner_fb
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_partner_fb
+  field_partner_link:
+    label: 'Link do strony partnera'
+    datasource_id: 'entity:node'
+    property_path: field_partner_link
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_partner_link
+  field_partner_phone:
+    label: Telefon
+    datasource_id: 'entity:node'
+    property_path: field_partner_phone
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_partner_phone
+  field_rabat_short:
+    label: Rabat
+    datasource_id: 'entity:node'
+    property_path: field_rabat_short
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_rabat_short
   node_grants:
     label: 'Informacje dostępu do węzła'
     property_path: search_api_node_grants
@@ -32,13 +102,13 @@ field_settings:
     label: 'Rendered HTML output'
     property_path: rendered_item
     type: text
-    boost: !!float 2
+    boost: !!float 3
     configuration:
       roles:
         anonymous: anonymous
       view_mode:
         'entity:node':
-          discounts: default
+          discounts: search_index
   status:
     label: status
     datasource_id: 'entity:node'
@@ -46,6 +116,14 @@ field_settings:
     type: boolean
     indexed_locked: true
     type_locked: true
+    dependencies:
+      module:
+        - node
+  title:
+    label: Tytuł
+    datasource_id: 'entity:node'
+    property_path: title
+    type: string
     dependencies:
       module:
         - node
@@ -73,13 +151,48 @@ processor_settings:
   aggregated_field: {  }
   content_access:
     weights:
-      preprocess_query: -30
+      preprocess_query: -50
   entity_status: {  }
-  ignore_character:
-    all_fields: false
+  hierarchy:
     fields:
+      field_discount_category: taxonomy_term-parent
+    weights:
+      preprocess_index: -45
+  html_filter:
+    all_fields: true
+    fields:
+      - aggregated_field
       - field_discount_category
+      - field_discount_info
+      - field_partner_fb
+      - field_partner_link
+      - field_partner_phone
+      - field_rabat_short
       - rendered_item
+      - title
+    title: true
+    alt: true
+    tags:
+      b: 2
+      h1: 5
+      h2: 3
+      h3: 2
+      strong: 2
+    weights:
+      preprocess_index: -48
+      preprocess_query: -48
+  ignore_character:
+    all_fields: true
+    fields:
+      - aggregated_field
+      - field_discount_category
+      - field_discount_info
+      - field_partner_fb
+      - field_partner_link
+      - field_partner_phone
+      - field_rabat_short
+      - rendered_item
+      - title
     ignorable: '[''¿¡!?,.:;]'
     ignorable_classes:
       - Pc
@@ -90,90 +203,62 @@ processor_settings:
       - Po
       - Ps
     weights:
-      preprocess_index: -10
-      preprocess_query: -10
+      preprocess_index: -49
+      preprocess_query: -47
   ignorecase:
-    all_fields: false
+    all_fields: true
     fields:
+      - aggregated_field
       - field_discount_category
+      - field_discount_info
+      - field_partner_fb
+      - field_partner_link
+      - field_partner_phone
+      - field_rabat_short
       - rendered_item
+      - title
     weights:
-      preprocess_index: -20
-      preprocess_query: -20
+      preprocess_index: -50
+      preprocess_query: -49
   language_with_fallback: {  }
   rendered_item: {  }
-  stemmer:
-    all_fields: false
-    fields:
-      - rendered_item
-    exceptions:
-      mexican: mexic
-      texan: texa
-    weights:
-      preprocess_index: 0
-      preprocess_query: 0
-  stopwords:
-    all_fields: false
-    fields:
-      - rendered_item
-    stopwords:
-      - a
-      - an
-      - and
-      - are
-      - as
-      - at
-      - be
-      - but
-      - by
-      - for
-      - if
-      - in
-      - into
-      - is
-      - it
-      - 'no'
-      - not
-      - of
-      - 'on'
-      - or
-      - s
-      - such
-      - t
-      - that
-      - the
-      - their
-      - then
-      - there
-      - these
-      - they
-      - this
-      - to
-      - was
-      - will
-      - with
-    weights:
-      preprocess_index: -5
-      preprocess_query: -2
+  reverse_entity_references: {  }
   tokenizer:
-    all_fields: false
+    all_fields: true
     fields:
+      - aggregated_field
+      - field_discount_info
       - rendered_item
     ignored: ._-
     spaces: ''
     overlap_cjk: 1
     minimum_word_size: '3'
     weights:
-      preprocess_index: -6
-      preprocess_query: -6
+      preprocess_index: -47
+      preprocess_query: -45
   transliteration:
-    all_fields: false
+    all_fields: true
     fields:
+      - aggregated_field
       - field_discount_category
+      - field_discount_info
+      - field_partner_fb
+      - field_partner_link
+      - field_partner_phone
+      - field_rabat_short
       - rendered_item
+      - title
     weights:
-      preprocess_index: -20
-      preprocess_query: -20
+      preprocess_index: -44
+      preprocess_query: -46
+  type_boost:
+    boosts:
+      'entity:node':
+        datasource_boost: !!float 1
+        bundle_boosts:
+          discounts: !!float 2
+    weights:
+      preprocess_index: -46
 tracker_settings:
   default:
     indexing_order: fifo

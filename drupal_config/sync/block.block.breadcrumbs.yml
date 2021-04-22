@@ -1,0 +1,28 @@
+uuid: eda08536-0ae8-4fc7-9d0a-11113533cd12
+langcode: pl
+status: true
+dependencies:
+  module:
+    - ctools
+    - system
+  theme:
+    - droopler_subtheme
+id: breadcrumbs
+theme: droopler_subtheme
+region: breadcrumb
+weight: -6
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      track: track
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

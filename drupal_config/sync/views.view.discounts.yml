@@ -122,10 +122,10 @@ display:
             fullscreen_control: 1
           map_marker_and_infowindow:
             icon_image_path: ''
-            infowindow_field: '#rendered_entity'
+            infowindow_field: '#rendered_entity_ajax'
             multivalue_split: 0
             view_mode: teaser_small
-            tooltip_field: ''
+            tooltip_field: field_discount_category
             theming:
               plugin_id: geofieldmap_taxonomy_term_url
               geofieldmap_taxonomy_term_url:
@@ -476,8 +476,10 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           parse_mode: terms
-          min_length: 3
+          min_length: 2
           fields:
+            - aggregated_field
+            - field_discount_info
             - rendered_item
           plugin_id: search_api_fulltext
         field_discount_category:
@@ -532,7 +534,20 @@ display:
       title: Discounts
       header: {  }
       footer: {  }
-      empty: {  }
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: 'Brak wyników, zmień filtry.'
+            format: full_html
+          plugin_id: text
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
