@@ -1,0 +1,44 @@
+uuid: d9512181-4cd5-40ea-bc11-22f9ac92f07a
+langcode: pl
+status: true
+dependencies:
+  module:
+    - content_moderation
+id: discounts_moderation
+label: 'Moderacja rabatów'
+type: content_moderation
+type_settings:
+  states:
+    draft:
+      label: Draft
+      published: false
+      default_revision: false
+      weight: -2
+    published:
+      label: Published
+      published: true
+      default_revision: true
+      weight: 0
+    ready_to_check_by_wsm:
+      published: false
+      default_revision: false
+      label: 'Do sprawdzenia przez WSM'
+      weight: -1
+  transitions:
+    create_new_draft:
+      label: 'Create New Draft'
+      to: draft
+      weight: 0
+      from:
+        - draft
+        - published
+    publish:
+      label: Publish
+      to: published
+      weight: 1
+      from:
+        - draft
+        - published
+        - ready_to_check_by_wsm
+  entity_types: {  }
+  default_moderation_state: ready_to_check_by_wsm

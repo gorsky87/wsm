@@ -10,8 +10,8 @@ dependencies:
     - droopler_subtheme
 id: footermenu
 theme: droopler_subtheme
-region: footer_third
-weight: 0
+region: footer_fifth
+weight: -6
 provider: null
 plugin: 'system_menu_block:footer-menu'
 settings:

@@ -12,7 +12,7 @@ field_name: field_geolocation
 entity_type: node
 bundle: discounts
 label: geolocation
-description: ''
+description: 'Jeżeli chcesz, aby rabat pojawił się na mapie Dodaj pineskę, gdzie znajduję się miejsce z rabatem.'
 required: false
 translatable: false
 default_value: {  }

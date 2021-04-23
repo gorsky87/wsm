@@ -10,7 +10,7 @@ field_name: field_discount_info
 entity_type: node
 bundle: discounts
 label: Rabat
-description: ''
+description: 'Tu wpisz pełną informację odnośnie rabatu.'
 required: false
 translatable: false
 default_value: {  }

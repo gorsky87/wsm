@@ -12,23 +12,23 @@ field_name: field_partner_logo
 entity_type: node
 bundle: discounts
 label: Logo
-description: ''
-required: false
+description: 'Dodaj logo, które będzie widoczne w strefie rabatów.'
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
   file_directory: 'logos/[date:custom:Y]-[date:custom:m]'
   file_extensions: 'png gif jpg jpeg'
-  max_filesize: ''
-  max_resolution: ''
-  min_resolution: ''
+  max_filesize: 5MB
+  max_resolution: 2000x2000
+  min_resolution: 100x100
   alt_field: false
   alt_field_required: true
   title_field: false
   title_field_required: false
   default_image:
-    uuid: c3b09ea4-e9dc-468d-8fcd-794d820f40a2
+    uuid: ''
     alt: nologo
     title: ''
     width: 200

@@ -13,7 +13,7 @@ dependencies:
     - field.field.node.discounts.field_partner_logo
     - field.field.node.discounts.field_partner_phone
     - field.field.node.discounts.field_rabat_short
-    - image.style.thumbnail
+    - image.style.max_325x325
     - node.type.discounts
   module:
     - geofield
@@ -71,7 +71,7 @@ content:
     weight: 1
     label: hidden
     settings:
-      image_style: thumbnail
+      image_style: max_325x325
       image_link: ''
       svg_render_as_image: true
       svg_attributes:

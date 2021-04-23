@@ -12,7 +12,7 @@ field_name: field_partner_phone
 entity_type: node
 bundle: discounts
 label: Telefon
-description: ''
+description: 'Dodaj telefon, który będzie widoczny publicznie w strefie rabatów.'
 required: false
 translatable: false
 default_value: {  }

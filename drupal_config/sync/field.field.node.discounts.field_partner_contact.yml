@@ -11,8 +11,8 @@ id: node.discounts.field_partner_contact
 field_name: field_partner_contact
 entity_type: node
 bundle: discounts
-label: Kontakt
-description: ''
+label: 'Adres i inne dane kontakowe.'
+description: 'Dodaj Dane kontaktowe, który będzie widoczny publicznie w strefie rabatów. '
 required: true
 translatable: false
 default_value: {  }

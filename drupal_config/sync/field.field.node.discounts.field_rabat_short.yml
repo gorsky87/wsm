@@ -10,7 +10,7 @@ field_name: field_rabat_short
 entity_type: node
 bundle: discounts
 label: Rabat
-description: 'Krótki opis'
+description: "Krótki opis, w stylu:\r\n10%,\r\n15%,\r\nDarmowy bilet"
 required: true
 translatable: false
 default_value: {  }

@@ -13,7 +13,7 @@ field_name: field_discount_category
 entity_type: node
 bundle: discounts
 label: 'Discount Category'
-description: ''
+description: 'Wybierz najlepiej pasująca kategorie.'
 required: true
 translatable: false
 default_value:
