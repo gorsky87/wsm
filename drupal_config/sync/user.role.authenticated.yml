@@ -18,6 +18,7 @@ permissions:
   - 'edit own track content'
   - 'search content'
   - 'use discounts_moderation transition create_new_draft'
+  - 'use discounts_moderation transition ready_to_check_wsm'
   - 'use moderation_tracks transition create_new_draft'
   - 'use moderation_tracks transition ready_to_check'
   - 'use moderation_tracks transition ready_to_publish'

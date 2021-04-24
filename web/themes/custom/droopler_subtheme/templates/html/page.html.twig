@@ -109,7 +109,7 @@
               {% if is_cta_header %}
                 {{ page.content.messages }}
                 <div class="position-relative">
-                  {% include '@droopler_subtheme/includes/header.html.twig' %}
+                  {% include '@droopler_theme/includes/header.html.twig' %}
                   {{ page.content|without('messages') }}
                 </div>
               {% else %}
@@ -133,6 +133,6 @@
   {% endif %}
 
   {% block footer %}
-    {% include '@droopler_theme/includes/footer.html.twig' %}
+    {% include '@droopler_subtheme/includes/footer.html.twig' %}
   {% endblock %}
 </div>

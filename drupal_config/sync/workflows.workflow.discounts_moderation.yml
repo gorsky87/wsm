@@ -2,6 +2,8 @@ uuid: d9512181-4cd5-40ea-bc11-22f9ac92f07a
 langcode: pl
 status: true
 dependencies:
+  config:
+    - node.type.discounts
   module:
     - content_moderation
 id: discounts_moderation
@@ -21,17 +23,10 @@ type_settings:
       weight: 0
     ready_to_check_by_wsm:
       published: false
-      default_revision: false
+      default_revision: true
       label: 'Do sprawdzenia przez WSM'
       weight: -1
   transitions:
-    create_new_draft:
-      label: 'Create New Draft'
-      to: draft
-      weight: 0
-      from:
-        - draft
-        - published
     publish:
       label: Publish
       to: published
@@ -40,5 +35,14 @@ type_settings:
         - draft
         - published
         - ready_to_check_by_wsm
-  entity_types: {  }
+    ready_to_check_wsm:
+      label: 'Do sprawdzenia przez WSM'
+      from:
+        - draft
+        - ready_to_check_by_wsm
+      to: ready_to_check_by_wsm
+      weight: 2
+  entity_types:
+    node:
+      - discounts
   default_moderation_state: ready_to_check_by_wsm

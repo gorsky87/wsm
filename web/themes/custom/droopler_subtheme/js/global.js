@@ -5,9 +5,9 @@
   Drupal.behaviors.droopler_subtheme = {
     attach: function (context, settings) {
 
-      $('a').click(function(){
+      $('a').click(function () {
         $('html, body').animate({
-          scrollTop: $( $(this).attr('href') ).offset().top - 130
+          scrollTop: $($(this).attr('href')).offset().top - 130
         }, 500);
         return false;
       });
@@ -18,10 +18,10 @@
           $(this).removeClass('full');
           ifheight = '30vh';
         } else {
-          ifheight = '90vh';
+          ifheight = '80vh';
           $(this).addClass('full');
         }
-        $('.geofield-google-map').animate({height: ifheight}, 500);
+        $('[id^=leaflet-map-view-discounts]').animate({height: ifheight}, 500);
       });
 
     }

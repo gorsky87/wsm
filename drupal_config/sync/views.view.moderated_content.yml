@@ -3,6 +3,7 @@ langcode: pl
 status: true
 dependencies:
   config:
+    - workflows.workflow.discounts_moderation
     - workflows.workflow.moderation_tracks
   enforced:
     module:
@@ -728,6 +729,7 @@ display:
           admin_label: ''
           operator: in
           value:
+            discounts_moderation-ready_to_check_by_wsm: discounts_moderation-ready_to_check_by_wsm
             moderation_tracks-ready_to_publish: moderation_tracks-ready_to_publish
           group: 1
           exposed: false

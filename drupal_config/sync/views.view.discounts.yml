@@ -5,14 +5,18 @@ dependencies:
   config:
     - field.storage.node.field_discount_category
     - field.storage.node.field_geolocation
+    - field.storage.taxonomy_term.field_geo_icon
     - search_api.index.discounts
     - taxonomy.vocabulary.discount_category
   module:
     - better_exposed_filters
     - geofield_map
+    - image
+    - leaflet_views
     - media
     - responsive_views_grid
     - search_api
+    - taxonomy
 id: discounts
 label: Discounts
 module: views
@@ -431,6 +435,12 @@ display:
             multi_separator: ', '
           entity_type: node
           plugin_id: search_api_field
+        field_discount_category_1:
+          id: field_discount_category_1
+          table: search_api_datasource_discounts_entity_node
+          field: field_discount_category
+          entity_type: node
+          plugin_id: search_api_field
       filters:
         search_api_fulltext:
           id: search_api_fulltext
@@ -548,7 +558,13 @@ display:
             value: 'Brak wyników, zmień filtry.'
             format: full_html
           plugin_id: text
-      relationships: {  }
+      relationships:
+        field_discount_category:
+          id: field_discount_category
+          table: search_api_datasource_discounts_entity_node
+          field: field_discount_category
+          entity_type: node
+          plugin_id: search_api
       arguments: {  }
       display_extenders: {  }
       use_ajax: true
@@ -578,6 +594,468 @@ display:
         type: none
         options:
           offset: 0
+      style:
+        type: leaflet_map
+        options:
+          grouping:
+            -
+              field: field_discount_category
+              rendered: true
+              rendered_strip: false
+          data_source: field_geolocation
+          entity_source: __base_table
+          entity_source_submit: 'Update Entity Source'
+          name_field: field_discount_category
+          description_field: '#rendered_entity_ajax'
+          view_mode: teaser_small
+          leaflet_map: wikimedia
+          height: '50'
+          height_unit: vh
+          hide_empty_map: false
+          disable_wheel: false
+          fullscreen_control: true
+          gesture_handling: true
+          reset_map:
+            control: true
+            position: topright
+          map_position:
+            force: false
+            center:
+              lat: !!float 0
+              lon: !!float 0
+            zoom: 12
+            minZoom: 1
+            maxZoom: 18
+            zoomFiner: 0
+          weight: ''
+          icon:
+            iconType: marker
+            iconUrl: '{{ field_geo_icon }}'
+            shadowUrl: ''
+            className: '{{ field_discount_category_1 }}'
+            html: '<div></div>'
+            html_class: leaflet-map-divicon
+            circle_marker_options: '{"radius":100,"color":"red","fillColor":"#f03","fillOpacity":0.5}'
+            iconSize:
+              x: ''
+              'y': ''
+            iconAnchor:
+              x: ''
+              'y': ''
+            shadowSize:
+              x: ''
+              'y': ''
+            shadowAnchor:
+              x: ''
+              'y': ''
+            popupAnchor:
+              x: ''
+              'y': ''
+          leaflet_markercluster:
+            control: false
+            options: '{"spiderfyOnMaxZoom":true,"showCoverageOnHover":true,"removeOutsideVisibleBounds":false}'
+            include_path: 0
+          path: '{"color":"#3388ff","opacity":"1.0","stroke":true,"weight":3,"fill":"depends","fillColor":"*","fillOpacity":"0.2","radius":"6"}'
+      defaults:
+        style: false
+        row: false
+        fields: false
+        relationships: false
+      row:
+        type: search_api
+        options:
+          view_modes:
+            'entity:node':
+              discounts: teaser_small
+      fields:
+        field_discount_category:
+          id: field_discount_category
+          table: search_api_index_discounts
+          field: field_discount_category
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: media_thumbnail
+          settings:
+            link: 1
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api_entity
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+            display_methods:
+              blog_posts_category:
+                display_method: label
+                view_mode: default
+              discount_category:
+                display_method: label
+              tags:
+                display_method: label
+              track_tags:
+                display_method: label
+          entity_type: null
+          entity_field: null
+          plugin_id: search_api_field
+        field_geolocation:
+          id: field_geolocation
+          table: search_api_datasource_discounts_entity_node
+          field: field_geolocation
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: geolocation
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: geofield_google_map
+          settings:
+            map_dimensions:
+              width: 100%
+              height: 450px
+            map_empty:
+              empty_behaviour: '0'
+              empty_message: 'No Geofield Value entered for this field'
+            map_center:
+              center_force: '1'
+              lat: '52.279986'
+              lon: '17.3522939'
+              geocode: 'Znajdź moją lokalizację'
+            map_zoom_and_pan:
+              zoom:
+                initial: '6'
+                force: 0
+                min: '1'
+                max: '22'
+                finer: '0'
+              gestureHandling: auto
+              scrollwheel: '1'
+              draggable: '1'
+              map_reset: 0
+              map_reset_position: TOP_RIGHT
+            map_controls:
+              disable_default_ui: 0
+              zoom_control: 0
+              map_type_id: roadmap
+              map_type_control: 0
+              map_type_control_options_type_ids:
+                roadmap: 0
+                satellite: 0
+                hybrid: 0
+                terrain: 0
+              scale_control: 0
+              street_view_control: 0
+              fullscreen_control: 0
+            map_marker_and_infowindow:
+              icon_image_path: ''
+              infowindow_field: title
+              multivalue_split: 0
+              view_mode: full
+              tooltip_field: title
+              force_open: 0
+              icon_image_mode: icon_file
+              icon_file_wrapper:
+                icon_file:
+                  fids: {  }
+                  upload_button: 'Wyślij plik'
+                  remove_button: Usuń
+                  upload: ''
+                  is_svg: false
+                image_style: geofield_map_default_icon_style
+            map_additional_options: ''
+            map_additional_libraries:
+              places: 0
+              drawing: 0
+              geometry: 0
+              visualization: 0
+            map_geometries_options: '{"strokeColor":"black","strokeOpacity":"0.8","strokeWeight":2,"fillColor":"blue","fillOpacity":"0.1","clickable":false}'
+            map_oms:
+              map_oms_control: 0
+              map_oms_options: '{"markersWontMove":"true","markersWontHide":"true","basicFormatEvents":"true","nearbyDistance":3}'
+            custom_style_map:
+              custom_style_control: 0
+              custom_style_name: ''
+              custom_style_options: ''
+              custom_style_default: 0
+            map_markercluster:
+              markercluster_control: 0
+              markercluster_additional_options: '{"maxZoom":12,"gridSize":50}'
+            map_lazy_load:
+              lazy_load: 0
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+          entity_type: node
+          plugin_id: search_api_field
+        field_discount_category_1:
+          id: field_discount_category_1
+          table: search_api_datasource_discounts_entity_node
+          field: field_discount_category
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: false
+          fallback_handler: search_api_entity
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+            display_methods:
+              blog_posts_category:
+                display_method: label
+                view_mode: default
+              discount_category:
+                display_method: label
+              tags:
+                display_method: label
+              track_tags:
+                display_method: label
+          entity_type: node
+          plugin_id: search_api_field
+        field_geo_icon:
+          id: field_geo_icon
+          table: search_api_entity_taxonomy_term
+          field: field_geo_icon
+          relationship: field_discount_category
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: image_url
+          settings:
+            image_style: ''
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+          entity_type: taxonomy_term
+          plugin_id: search_api_field
+      relationships:
+        field_discount_category:
+          id: field_discount_category
+          table: search_api_datasource_discounts_entity_node
+          field: field_discount_category
+          relationship: none
+          group_type: group
+          admin_label: 'Discount Category: Termin taksonomii'
+          required: false
+          skip_access: false
+          entity_type: node
+          plugin_id: search_api
     cache_metadata:
       max-age: -1
       contexts:
@@ -589,6 +1067,7 @@ display:
       tags:
         - 'config:field.storage.node.field_discount_category'
         - 'config:field.storage.node.field_geolocation'
+        - 'config:field.storage.taxonomy_term.field_geo_icon'
         - 'config:search_api.index.discounts'
   block_1:
     display_plugin: block

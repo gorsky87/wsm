@@ -60,6 +60,8 @@
  */
 #}
 
+
+{{ attach_library('droopler_subtheme/leaflet-gesture-handling') }}
 {% set classes = [
   'card',
   'node',
@@ -70,7 +72,6 @@
   view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
   'clearfix',
 ] %}
-{{ kint() }}
 <article{{ attributes.addClass(classes) }}>
   <div class="main-info">
     <header>
