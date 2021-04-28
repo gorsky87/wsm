@@ -91,8 +91,27 @@ processor_settings:
   aggregated_field: {  }
   content_access:
     weights:
-      preprocess_query: -30
+      preprocess_query: -50
   entity_status: {  }
+  html_filter:
+    all_fields: false
+    fields:
+      - field_track_tags
+      - rendered_item
+      - title
+    title: true
+    alt: true
+    tags:
+      b: 2
+      em: 1
+      h1: 5
+      h2: 3
+      h3: 2
+      strong: 2
+      u: 1
+    weights:
+      preprocess_index: -49
+      preprocess_query: -49
   ignore_character:
     all_fields: false
     fields:
@@ -109,8 +128,8 @@ processor_settings:
       - Po
       - Ps
     weights:
-      preprocess_index: -10
-      preprocess_query: -10
+      preprocess_index: -46
+      preprocess_query: -46
   ignorecase:
     all_fields: false
     fields:
@@ -118,8 +137,8 @@ processor_settings:
       - rendered_item
       - title
     weights:
-      preprocess_index: -20
-      preprocess_query: -20
+      preprocess_index: -48
+      preprocess_query: -48
   language_with_fallback: {  }
   rendered_item: {  }
   stemmer:
@@ -130,8 +149,8 @@ processor_settings:
       mexican: mexic
       texan: texa
     weights:
-      preprocess_index: 0
-      preprocess_query: 0
+      preprocess_index: -43
+      preprocess_query: -43
   stopwords:
     all_fields: false
     fields:
@@ -173,8 +192,8 @@ processor_settings:
       - will
       - with
     weights:
-      preprocess_index: -5
-      preprocess_query: -2
+      preprocess_index: -44
+      preprocess_query: -44
   tokenizer:
     all_fields: false
     fields:
@@ -184,8 +203,8 @@ processor_settings:
     overlap_cjk: 1
     minimum_word_size: '3'
     weights:
-      preprocess_index: -6
-      preprocess_query: -6
+      preprocess_index: -45
+      preprocess_query: -45
   transliteration:
     all_fields: false
     fields:
@@ -193,8 +212,8 @@ processor_settings:
       - rendered_item
       - title
     weights:
-      preprocess_index: -20
-      preprocess_query: -20
+      preprocess_index: -47
+      preprocess_query: -47
 tracker_settings:
   default:
     indexing_order: fifo

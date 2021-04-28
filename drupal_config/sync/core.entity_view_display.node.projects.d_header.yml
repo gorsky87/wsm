@@ -1,0 +1,46 @@
+uuid: 9586f553-e29c-4525-b765-b370e387efed
+langcode: pl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.d_header
+    - field.field.node.projects.field_header_cta
+    - field.field.node.projects.field_header_layout
+    - field.field.node.projects.field_meta_tags
+    - field.field.node.projects.field_page_section
+    - field.field.node.projects.field_teaser_media_image
+    - field.field.node.projects.field_teaser_text
+    - node.type.projects
+  module:
+    - link
+    - user
+id: node.projects.d_header
+targetEntityType: node
+bundle: projects
+mode: d_header
+content:
+  field_header_cta:
+    type: link
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_header_layout: true
+  field_meta_tags: true
+  field_page_section: true
+  field_teaser_media_image: true
+  field_teaser_text: true
+  langcode: true
+  search_api_excerpt: true

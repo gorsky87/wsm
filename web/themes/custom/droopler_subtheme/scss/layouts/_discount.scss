@@ -165,6 +165,9 @@ $max-discount-width: 1400px;
     .field--name-field-partner-phone {
       font-size: 16px;
       margin: 0.75rem;
+      a {
+        color: $color-agamemnon;
+      }
     }
 
     .button-full .btn {

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "034c2b593163e59c2256560519f54953",
+    "content-hash": "0d1084e9006a013988e13b3e808daa3b",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3868,6 +3868,54 @@
             "homepage": "https://www.drupal.org/project/entity_reference_revisions",
             "support": {
                 "source": "https://git.drupalcode.org/project/entity_reference_revisions"
+            }
+        },
+        {
+            "name": "drupal/entity_type_clone",
+            "version": "1.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/entity_type_clone.git",
+                "reference": "8.x-1.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/entity_type_clone-8.x-1.6.zip",
+                "reference": "8.x-1.6",
+                "shasum": "0167ba607b5208471914b621111d5a47cd9934a0"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.6",
+                    "datestamp": "1614180498",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "ajay_reddy",
+                    "homepage": "https://www.drupal.org/user/3261994"
+                },
+                {
+                    "name": "vuil",
+                    "homepage": "https://www.drupal.org/user/3568458"
+                }
+            ],
+            "description": "This module provide option to clone entity types.",
+            "homepage": "https://www.drupal.org/project/entity_type_clone",
+            "support": {
+                "source": "https://git.drupalcode.org/project/entity_type_clone"
             }
         },
         {
@@ -10879,6 +10927,50 @@
                 "standards"
             ],
             "time": "2021-02-06T10:44:32+00:00"
+        },
+        {
+            "name": "drupal/convert_bundles",
+            "version": "1.0.0-alpha6",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/convert_bundles.git",
+                "reference": "8.x-1.0-alpha6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/convert_bundles-8.x-1.0-alpha6.zip",
+                "reference": "8.x-1.0-alpha6",
+                "shasum": "b9267bead6d0f811afd3980496d93bb798682561"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0-alpha6",
+                    "datestamp": "1599049244",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "el1_1el",
+                    "homepage": "https://www.drupal.org/user/1795292"
+                }
+            ],
+            "description": "Convert entity bundles from one value to another",
+            "homepage": "https://www.drupal.org/project/convert_bundles",
+            "support": {
+                "source": "https://git.drupalcode.org/project/convert_bundles"
+            }
         },
         {
             "name": "drupal/core-dev",

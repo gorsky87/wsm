@@ -537,7 +537,7 @@ display:
           type: select
           limit: true
           vid: discount_category
-          hierarchy: false
+          hierarchy: true
           error_message: true
           plugin_id: search_api_term
       sorts: {  }
@@ -608,7 +608,7 @@ display:
           name_field: field_discount_category
           description_field: '#rendered_entity_ajax'
           view_mode: teaser_small
-          leaflet_map: wikimedia
+          leaflet_map: google-roadmap
           height: '50'
           height_unit: vh
           hide_empty_map: false

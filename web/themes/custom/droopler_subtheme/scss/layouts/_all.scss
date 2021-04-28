@@ -1,8 +1,17 @@
 @import "iframe";
 @import "tracks";
 @import 'discount';
+@import "projects";
 
 
 #main {
   margin-top: 0;
+}
+
+.region-breadcrumb {
+  max-width: 1170px;
+  margin: 0 auto;
+  .breadcrumb {
+    background-color: #fafafa;
+  }
 }

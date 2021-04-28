@@ -15,7 +15,7 @@ dependencies:
 _core:
   default_config_hash: Kjqf5d4F134C3zua0tXV7LA3m5OEeS_Fowa2dP9kk2I
 id: moderated_content
-label: 'Moderated content'
+label: 'Moderowanie zawartości'
 module: views
 description: 'Find and moderate content.'
 tag: ''
@@ -763,7 +763,7 @@ display:
           entity_type: node
           plugin_id: moderation_state_filter
       sorts: {  }
-      title: 'Moderated content'
+      title: 'Moderowanie zawartości'
       header: {  }
       footer: {  }
       empty:
@@ -821,7 +821,7 @@ display:
   moderated_content:
     display_plugin: page
     id: moderated_content
-    display_title: 'Moderated content'
+    display_title: 'Moderowanie zawartości'
     position: 1
     display_options:
       display_extenders: {  }

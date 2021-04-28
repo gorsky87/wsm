@@ -157,7 +157,7 @@ processor_settings:
     fields:
       field_discount_category: taxonomy_term-parent
     weights:
-      preprocess_index: -45
+      preprocess_index: -44
   html_filter:
     all_fields: true
     fields:
@@ -179,8 +179,8 @@ processor_settings:
       h3: 2
       strong: 2
     weights:
-      preprocess_index: -48
-      preprocess_query: -48
+      preprocess_index: -50
+      preprocess_query: -49
   ignore_character:
     all_fields: true
     fields:
@@ -203,7 +203,7 @@ processor_settings:
       - Po
       - Ps
     weights:
-      preprocess_index: -49
+      preprocess_index: -48
       preprocess_query: -47
   ignorecase:
     all_fields: true
@@ -218,11 +218,55 @@ processor_settings:
       - rendered_item
       - title
     weights:
-      preprocess_index: -50
-      preprocess_query: -49
+      preprocess_index: -49
+      preprocess_query: -48
   language_with_fallback: {  }
   rendered_item: {  }
-  reverse_entity_references: {  }
+  stopwords:
+    all_fields: false
+    fields:
+      - aggregated_field
+      - field_discount_info
+      - rendered_item
+    stopwords:
+      - a
+      - an
+      - and
+      - are
+      - as
+      - at
+      - be
+      - but
+      - by
+      - for
+      - if
+      - in
+      - into
+      - is
+      - it
+      - 'no'
+      - not
+      - of
+      - 'on'
+      - or
+      - s
+      - such
+      - t
+      - that
+      - the
+      - their
+      - then
+      - there
+      - these
+      - they
+      - this
+      - to
+      - was
+      - will
+      - with
+    weights:
+      preprocess_index: -45
+      preprocess_query: -44
   tokenizer:
     all_fields: true
     fields:
@@ -234,7 +278,7 @@ processor_settings:
     overlap_cjk: 1
     minimum_word_size: '3'
     weights:
-      preprocess_index: -47
+      preprocess_index: -46
       preprocess_query: -45
   transliteration:
     all_fields: true
@@ -249,16 +293,8 @@ processor_settings:
       - rendered_item
       - title
     weights:
-      preprocess_index: -44
+      preprocess_index: -47
       preprocess_query: -46
-  type_boost:
-    boosts:
-      'entity:node':
-        datasource_boost: !!float 1
-        bundle_boosts:
-          discounts: !!float 2
-    weights:
-      preprocess_index: -46
 tracker_settings:
   default:
     indexing_order: fifo

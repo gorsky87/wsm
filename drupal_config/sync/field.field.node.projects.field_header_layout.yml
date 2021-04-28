@@ -1,0 +1,25 @@
+uuid: 31980855-4c5a-4f3c-82d2-9c814af13389
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_layout
+    - node.type.projects
+  module:
+    - options
+_core:
+  default_config_hash: JCsYIvAX-C5YdV4JtxRrRrZaorVt9rnW7S4VEB847Hk
+id: node.projects.field_header_layout
+field_name: field_header_layout
+entity_type: node
+bundle: projects
+label: 'Header layout'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: header_with_menu
+default_value_callback: ''
+settings: {  }
+field_type: list_string

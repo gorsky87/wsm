@@ -9,7 +9,7 @@ _core:
 id: droopler_subtheme_pagetitle
 theme: droopler_subtheme
 region: content
-weight: -5
+weight: -7
 provider: null
 plugin: page_title_block
 settings:

@@ -1,0 +1,7 @@
+uuid: 22a2a9f9-1975-4804-92c1-e5ac5345d9bf
+langcode: pl
+status: false
+dependencies: {  }
+formId: node_discounts_form
+captchaType: default
+label: null

@@ -5,7 +5,7 @@ dependencies: {  }
 _core:
   default_config_hash: GDFDjyBDP56irodOukMdgmyxtW_nyyXgu72E0_PxGoY
 id: node__content_page
-label: 'Content: Content Page'
+label: 'Zawartość: Strona z contentem'
 tags:
   description: '[node:field_teaser_text]'
   title: '[node:title] | [site:name]'

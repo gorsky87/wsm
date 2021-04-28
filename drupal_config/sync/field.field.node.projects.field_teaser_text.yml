@@ -1,0 +1,21 @@
+uuid: 17a453f1-977a-4657-9115-293fb79f8ea8
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teaser_text
+    - node.type.projects
+_core:
+  default_config_hash: IFa2iqrgPQlLizpbh7HXOrzCPgU7xWHPAp4kj3yeBAs
+id: node.projects.field_teaser_text
+field_name: field_teaser_text
+entity_type: node
+bundle: projects
+label: 'Teaser text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,27 @@
+uuid: 59a3049a-c056-4076-9429-aa665c77a99d
+langcode: pl
+status: true
+dependencies:
+  module:
+    - recaptcha
+id: config_sync.module.recaptcha
+snapshotSet: config_sync
+extensionType: module
+extensionName: recaptcha
+items:
+  -
+    collection: ''
+    name: recaptcha.settings
+    data:
+      site_key: ''
+      secret_key: ''
+      verify_hostname: false
+      use_globally: false
+      widget:
+        theme: light
+        type: image
+        size: ''
+        tabindex: 0
+        noscript: false
+      _core:
+        default_config_hash: eKR4FfUD7Cp3bXamsCz6GAxh0PCLIZNMa65y2kChIh0

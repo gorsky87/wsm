@@ -27,6 +27,11 @@ targetEntityType: node
 bundle: discounts
 mode: teaser_small
 content:
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   field_discount_category:
     weight: 0
     label: hidden

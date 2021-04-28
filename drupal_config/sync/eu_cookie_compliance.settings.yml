@@ -19,9 +19,9 @@ popup_clicking_confirmation: false
 popup_scrolling_confirmation: false
 popup_delay: 1000
 show_more_info: true
-popup_more_info_button_message: 'More info'
+popup_more_info_button_message: 'Więcej informacji'
 popup_enabled: true
-popup_find_more_button_message: 'More info'
+popup_find_more_button_message: 'Więcej informacji'
 popup_height: null
 popup_hide_agreed: false
 popup_hide_button_message: Hide

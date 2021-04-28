@@ -1,10 +1,11 @@
-uuid: 723e11c2-5fff-425f-808d-e12758cfea3e
+uuid: ec7db772-adeb-4e25-9dc5-d32ac05c2d83
 langcode: pl
 status: true
 dependencies:
   module:
     - content_translation
     - menu_ui
+    - unique_entity_title
 third_party_settings:
   menu_ui:
     available_menus:
@@ -12,11 +13,13 @@ third_party_settings:
     parent: 'main:'
   content_translation:
     enabled: true
+  unique_entity_title:
+    enabled: false
 _core:
   default_config_hash: akpKKRKlUsJ-GquVupwV9IntkGtihDIj01xWAjw4SDQ
-name: 'Strona z contentem'
-type: content_page
-description: 'Simple page with paragraphs'
+name: Projekty
+type: projects
+description: ''
 help: ''
 new_revision: true
 preview_mode: 0

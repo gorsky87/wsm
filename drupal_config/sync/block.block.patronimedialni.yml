@@ -1,0 +1,31 @@
+uuid: 3c46a8e2-8773-4cfe-9476-29be3e3226d0
+langcode: pl
+status: true
+dependencies:
+  content:
+    - 'block_content:d_paragraph_block:b91683c4-ac55-40aa-8f2a-e357b66309ca'
+  module:
+    - block_content
+    - system
+  theme:
+    - droopler_subtheme
+id: patronimedialni
+theme: droopler_subtheme
+region: page_bottom_content
+weight: -5
+provider: null
+plugin: 'block_content:b91683c4-ac55-40aa-8f2a-e357b66309ca'
+settings:
+  id: 'block_content:b91683c4-ac55-40aa-8f2a-e357b66309ca'
+  label: 'Patroni medialni'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/kontakt"
+    negate: false
+    context_mapping: {  }
