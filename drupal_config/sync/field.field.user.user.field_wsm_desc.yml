@@ -1,0 +1,20 @@
+uuid: 867a71e2-9da4-45a6-9035-a5a6c3c9e1d3
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_wsm_desc
+  module:
+    - user
+id: user.user.field_wsm_desc
+field_name: field_wsm_desc
+entity_type: user
+bundle: user
+label: 'O sobie'
+description: 'Możesz dodać wiadomości o sobie'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -3,9 +3,15 @@ langcode: pl
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_contact
+    - field.field.user.user.field_moto
+    - field.field.user.user.field_name
+    - field.field.user.user.field_public_profile
+    - field.field.user.user.field_wsm_desc
+    - field.field.user.user.field_wsm_function
     - field.field.user.user.user_picture
-    - image.style.thumbnail
   module:
+    - entity_reference_revisions
     - svg_image
     - user
 _core:
@@ -15,17 +21,60 @@ targetEntityType: user
 bundle: user
 mode: default
 content:
-  member_for:
+  field_contact:
     weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_moto:
+    type: entity_reference_revisions_entity_view
+    weight: 4
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_name:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_wsm_desc:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_wsm_function:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   user_picture:
-    type: image
-    weight: 0
-    region: content
+    weight: 6
+    label: above
     settings:
-      image_style: thumbnail
-      image_link: content
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+      image_style: ''
+      image_link: ''
     third_party_settings: {  }
-    label: hidden
+    type: image
+    region: content
 hidden:
+  field_public_profile: true
   langcode: true
+  member_for: true
+  search_api_excerpt: true

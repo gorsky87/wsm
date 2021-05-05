@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.discounts.field_rabat_short
     - image.style.thumbnail
     - node.type.discounts
+    - workflows.workflow.discounts_moderation
   module:
     - content_moderation
     - field_group

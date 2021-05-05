@@ -3,7 +3,7 @@ default_challenge: recaptcha/reCAPTCHA
 description: 'To pytanie sprawdza czy jesteś człowiekiem i zapobiega wysyłaniu spamu.'
 administration_mode: false
 allow_on_admin_pages: false
-add_captcha_description: true
+add_captcha_description: false
 default_validation: 1
 persistence: 1
 enable_stats: false
@@ -11,3 +11,4 @@ log_wrong_responses: false
 _core:
   default_config_hash: _UaIWu0_ZD3lUs97wlFC2Koi-o7Bex69Xr9q36nJtkY
 langcode: pl
+wrong_captcha_response_message: 'Odpowiedź na przedstawione zadanie jest nieprawidłowa.'

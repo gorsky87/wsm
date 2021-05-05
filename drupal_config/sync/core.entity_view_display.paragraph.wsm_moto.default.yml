@@ -1,0 +1,38 @@
+uuid: a2f445b4-42e6-4d7a-82bd-55cb331d1668
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.wsm_moto.field_d_image
+    - field.field.paragraph.wsm_moto.field_d_main_title
+    - paragraphs.paragraphs_type.wsm_moto
+  module:
+    - svg_image
+id: paragraph.wsm_moto.default
+targetEntityType: paragraph
+bundle: wsm_moto
+mode: default
+content:
+  field_d_image:
+    type: image
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+  field_d_main_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  search_api_excerpt: true

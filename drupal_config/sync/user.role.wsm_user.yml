@@ -1,0 +1,13 @@
+uuid: 80bc02d0-2084-496a-a598-6b56c98019b5
+langcode: pl
+status: true
+dependencies: {  }
+id: wsm_user
+label: 'Członek WSM'
+weight: 5
+is_admin: null
+permissions:
+  - 'create field_contact'
+  - 'edit own field_contact'
+  - 'view field_contact'
+  - 'view own field_contact'

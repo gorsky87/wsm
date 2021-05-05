@@ -1,0 +1,24 @@
+uuid: 4d059a95-01be-4e4c-96ff-37233424556b
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_public_profile
+  module:
+    - user
+id: user.user.field_public_profile
+field_name: field_public_profile
+entity_type: user
+bundle: user
+label: 'Pokaż profil na stronie'
+description: 'Twój profil zostanie pokazany na stronie członków.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Tak
+  off_label: Nie
+field_type: boolean

@@ -1,0 +1,14 @@
+uuid: 0a4ef15a-757d-4087-a32e-ce9896da4295
+langcode: pl
+status: true
+dependencies:
+  config:
+    - user.role.wsm_user
+  module:
+    - user
+id: user_remove_role_action.wsm_user
+label: 'Odbierz rolę Członek WSM wskazanym użytkownikom'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: wsm_user

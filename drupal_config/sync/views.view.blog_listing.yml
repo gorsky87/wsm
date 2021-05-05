@@ -336,7 +336,7 @@ display:
         title: Aktualności
         description: ''
         expanded: false
-        parent: ''
+        parent: 'menu_link_content:9ef55463-e7de-4cfa-a86c-bcdf7d5adafc'
         weight: -50
         context: '0'
         menu_name: main

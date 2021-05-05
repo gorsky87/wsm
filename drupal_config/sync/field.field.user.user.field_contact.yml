@@ -1,0 +1,20 @@
+uuid: e9c90738-c4a4-424b-acfb-e22677e972a5
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_contact
+  module:
+    - user
+id: user.user.field_contact
+field_name: field_contact
+entity_type: user
+bundle: user
+label: Kontakt
+description: 'Jeżeli chcesz podać kontakt do siebie to zrób to tutaj. Widoczne tylko dla innych członków WSM'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,23 @@
+uuid: f28d4228-10fc-442d-8540-b7d4059561b1
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_archive
+    - node.type.projects
+id: node.projects.field_archive
+field_name: field_archive
+entity_type: node
+bundle: projects
+label: Archiwalne
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

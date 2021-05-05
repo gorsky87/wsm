@@ -1,0 +1,20 @@
+uuid: a10de12d-3881-493e-99f3-66521db00c43
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_name
+  module:
+    - user
+id: user.user.field_name
+field_name: field_name
+entity_type: user
+bundle: user
+label: 'Imie / Nazwisko / Ksywa'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

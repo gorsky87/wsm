@@ -1,0 +1,14 @@
+uuid: 014d443a-5468-4ca3-b64b-bd2ee5f74fae
+langcode: pl
+status: true
+dependencies:
+  module:
+    - user
+id: user_hash
+label: 'user hash'
+type: 'canonical_entities:user'
+pattern: 'czlonkowie/[random:hash:ripemd160]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }

@@ -1,4 +1,4 @@
-name: 'wsm_discounts'
+name: 'WSM discounts'
 type: module
 description: 'Module discounts'
 core: 8.x

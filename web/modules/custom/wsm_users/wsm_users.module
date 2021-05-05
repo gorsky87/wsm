@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * Implements hook_ENTITY_TYPE_access().
+ */
+function wsm_users_user_access(\Drupal\Core\Entity\EntityInterface $entity, $operation, \Drupal\Core\Session\AccountInterface $account) {
+  if ($operation == 'view') {
+    $field_public_profile = $entity->get('field_public_profile');
+    $value = $field_public_profile->getValue()[0]['value'] ?? 0;
+    if ($value === '1') {
+      return \Drupal\Core\Access\AccessResult::allowedIfHasPermission($account, 'view wsm user who aggre show profile');
+    }
+  }
+}
+

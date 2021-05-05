@@ -1,0 +1,14 @@
+uuid: de34b103-dd3a-425d-bd57-2f78a2d88a81
+langcode: pl
+status: true
+dependencies:
+  config:
+    - user.role.wsm_user
+  module:
+    - user
+id: user_add_role_action.wsm_user
+label: 'Dodaj rolę Członek WSM wskazanym użytkownikom'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: wsm_user

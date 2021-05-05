@@ -1,0 +1,27 @@
+.compact {
+  .field--name-user-picture {
+    float: none;
+    margin: 0;
+    img {
+      border-radius: 10px;
+      margin: 0 0 0.25em
+    }
+  }
+  .field--name-field-wsm-function {
+    text-align: center;
+    font-size: 1.25rem;
+    background: #eee;
+    color: #676767;
+  }
+  .field.field--name-field-name {
+    position: absolute;
+    top: 7px;
+    width: 100%;
+    color: #fff;
+    padding: 2px;
+    text-align: center;
+    font-size: 1.5rem;
+    background: #00000045;
+  }
+}
+

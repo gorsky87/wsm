@@ -4,9 +4,16 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.user.compact
+    - field.field.user.user.field_contact
+    - field.field.user.user.field_moto
+    - field.field.user.user.field_name
+    - field.field.user.user.field_public_profile
+    - field.field.user.user.field_wsm_desc
+    - field.field.user.user.field_wsm_function
     - field.field.user.user.user_picture
-    - image.style.thumbnail
+    - image.style.user_avatar
   module:
+    - lazy
     - svg_image
     - user
 _core:
@@ -16,15 +23,44 @@ targetEntityType: user
 bundle: user
 mode: compact
 content:
-  user_picture:
-    type: image
+  field_name:
+    type: string
     weight: 0
     region: content
+    label: hidden
     settings:
-      image_style: thumbnail
-      image_link: content
+      link_to_entity: false
     third_party_settings: {  }
+  field_wsm_function:
+    type: string
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_picture:
+    type: image
+    weight: 1
+    region: content
+    settings:
+      image_style: user_avatar
+      image_link: ''
+      svg_render_as_image: true
+      svg_attributes:
+        width: null
+        height: null
+    third_party_settings:
+      lazy:
+        lazy_image: '1'
+        placeholder_style: geofield_map_default_icon_style
+        data_uri: false
     label: hidden
 hidden:
+  field_contact: true
+  field_moto: true
+  field_public_profile: true
+  field_wsm_desc: true
   langcode: true
   member_for: true
+  search_api_excerpt: true

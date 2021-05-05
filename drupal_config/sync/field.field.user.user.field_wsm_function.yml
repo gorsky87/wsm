@@ -1,0 +1,22 @@
+uuid: 82fc56d6-f680-4ce7-8e20-e9bffbcc883a
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_wsm_function
+  module:
+    - user
+id: user.user.field_wsm_function
+field_name: field_wsm_function
+entity_type: user
+bundle: user
+label: Funkcja
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 'Członek wspierający'
+default_value_callback: ''
+settings: {  }
+field_type: string

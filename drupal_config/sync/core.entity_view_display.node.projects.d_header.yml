@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.d_header
+    - field.field.node.projects.field_archive
     - field.field.node.projects.field_header_cta
     - field.field.node.projects.field_header_layout
     - field.field.node.projects.field_meta_tags
@@ -37,6 +38,7 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_archive: true
   field_header_layout: true
   field_meta_tags: true
   field_page_section: true

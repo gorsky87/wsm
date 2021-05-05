@@ -4,6 +4,12 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.user.register
+    - field.field.user.user.field_contact
+    - field.field.user.user.field_moto
+    - field.field.user.user.field_name
+    - field.field.user.user.field_public_profile
+    - field.field.user.user.field_wsm_desc
+    - field.field.user.user.field_wsm_function
     - field.field.user.user.user_picture
   module:
     - user
@@ -21,6 +27,12 @@ content:
     third_party_settings: {  }
 hidden:
   contact: true
+  field_contact: true
+  field_moto: true
+  field_name: true
+  field_public_profile: true
+  field_wsm_desc: true
+  field_wsm_function: true
   langcode: true
   language: true
   path: true

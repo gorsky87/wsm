@@ -3,11 +3,88 @@ langcode: pl
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_contact
+    - field.field.user.user.field_moto
+    - field.field.user.user.field_name
+    - field.field.user.user.field_public_profile
+    - field.field.user.user.field_wsm_desc
+    - field.field.user.user.field_wsm_function
     - field.field.user.user.user_picture
-    - image.style.thumbnail
+    - image.style.user_avatar
   module:
+    - field_group
+    - paragraphs
     - svg_image
     - user
+third_party_settings:
+  field_group:
+    group_card:
+      children:
+        - group_account
+        - group_wsm_community
+        - group_motocykl
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+        open: false
+        direction: vertical
+      label: Card
+    group_wsm_community:
+      children:
+        - user_picture
+        - field_wsm_function
+        - field_name
+        - field_public_profile
+        - field_wsm_desc
+        - field_contact
+      parent_name: group_card
+      weight: 21
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Członek wsm'
+    group_account:
+      children:
+        - account
+      parent_name: group_card
+      weight: 20
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Moje konto'
+    group_motocykl:
+      children:
+        - field_moto
+      parent_name: group_card
+      weight: 22
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Motocykl
 _core:
   default_config_hash: EaIiPKvZGVsoYWMTUhWMQwJfvDefVlvXVn4TEX22-X4
 id: user.user.default
@@ -16,18 +93,69 @@ bundle: user
 mode: default
 content:
   account:
-    weight: 0
+    weight: 21
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_contact:
+    weight: 5
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_moto:
+    type: entity_reference_paragraphs
+    weight: 8
+    settings:
+      title: Motocykl
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: wsm_moto
+    third_party_settings: {  }
+    region: content
+  field_name:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_public_profile:
+    weight: 3
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_wsm_desc:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_wsm_function:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   user_picture:
     type: image_image
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    weight: 1
+    weight: 0
     region: content
+    settings:
+      preview_image_style: user_avatar
+      progress_indicator: throbber
+    third_party_settings: {  }
 hidden:
   contact: true
   langcode: true

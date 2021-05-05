@@ -1,0 +1,10 @@
+uuid: e554cb94-b6ac-416e-8732-505a19f9da97
+langcode: pl
+status: true
+dependencies: {  }
+id: wsm_moto
+label: motocykl
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

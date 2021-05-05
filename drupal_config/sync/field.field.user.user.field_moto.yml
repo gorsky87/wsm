@@ -1,0 +1,97 @@
+uuid: 1e58ae00-69d0-4713-980b-18630ab29094
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_moto
+    - paragraphs.paragraphs_type.wsm_moto
+  module:
+    - entity_reference_revisions
+    - user
+id: user.user.field_moto
+field_name: field_moto
+entity_type: user
+bundle: user
+label: 'Czym jeżdzisz'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      wsm_moto: wsm_moto
+    target_bundles_drag_drop:
+      d_p_banner:
+        weight: 24
+        enabled: false
+      d_p_block:
+        weight: 25
+        enabled: false
+      d_p_blog_image:
+        weight: 26
+        enabled: false
+      d_p_blog_text:
+        weight: 27
+        enabled: false
+      d_p_carousel:
+        weight: 28
+        enabled: false
+      d_p_carousel_item:
+        weight: 29
+        enabled: false
+      d_p_form:
+        weight: 30
+        enabled: false
+      d_p_gallery:
+        weight: 31
+        enabled: false
+      d_p_group_of_counters:
+        weight: 32
+        enabled: false
+      d_p_group_of_text_blocks:
+        weight: 33
+        enabled: false
+      d_p_node:
+        weight: 34
+        enabled: false
+      d_p_reference_content:
+        weight: 35
+        enabled: false
+      d_p_side_by_side:
+        weight: 36
+        enabled: false
+      d_p_side_embed:
+        weight: 37
+        enabled: false
+      d_p_side_image:
+        weight: 38
+        enabled: false
+      d_p_side_tiles:
+        weight: 39
+        enabled: false
+      d_p_single_counter:
+        weight: 40
+        enabled: false
+      d_p_single_text_block:
+        weight: 41
+        enabled: false
+      d_p_subscribe_file:
+        weight: 42
+        enabled: false
+      d_p_text_paged:
+        weight: 43
+        enabled: false
+      d_p_text_with_bckg:
+        weight: 44
+        enabled: false
+      d_p_tiles:
+        weight: 45
+        enabled: false
+      wsm_moto:
+        enabled: true
+        weight: 46
+field_type: entity_reference_revisions

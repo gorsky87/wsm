@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0d1084e9006a013988e13b3e808daa3b",
+    "content-hash": "8e436f867854ff669d605dcb708c6c16",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -227,16 +227,16 @@
         },
         {
             "name": "composer/installers",
-            "version": "v1.10.0",
+            "version": "v1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "1a0357fccad9d1cc1ea0c9a05b8847fbccccb78d"
+                "reference": "ae03311f45dfe194412081526be2e003960df74b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/1a0357fccad9d1cc1ea0c9a05b8847fbccccb78d",
-                "reference": "1a0357fccad9d1cc1ea0c9a05b8847fbccccb78d",
+                "url": "https://api.github.com/repos/composer/installers/zipball/ae03311f45dfe194412081526be2e003960df74b",
+                "reference": "ae03311f45dfe194412081526be2e003960df74b",
                 "shasum": ""
             },
             "require": {
@@ -330,6 +330,7 @@
                 "majima",
                 "mako",
                 "mediawiki",
+                "miaoxing",
                 "modulework",
                 "modx",
                 "moodle",
@@ -347,13 +348,14 @@
                 "sydes",
                 "sylius",
                 "symfony",
+                "tastyigniter",
                 "typo3",
                 "wordpress",
                 "yawik",
                 "zend",
                 "zikula"
             ],
-            "time": "2021-01-14T11:07:16+00:00"
+            "time": "2021-04-28T06:42:17+00:00"
         },
         {
             "name": "composer/semver",
@@ -2068,6 +2070,53 @@
             }
         },
         {
+            "name": "drupal/avatars",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/avatars.git",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/avatars-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "94e092bc568e4176041172061a21c8eed4b0df3a"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9",
+                "drupal/unlimited_number": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1591571090",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel Phin",
+                    "homepage": "http://danielph.in",
+                    "email": "pro@danielph.in",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Provides a selection of generated avatars for users.",
+            "homepage": "http://drupal.org/project/avatars",
+            "support": {
+                "source": "https://git.drupalcode.org/project/avatars"
+            }
+        },
+        {
             "name": "drupal/backup_migrate",
             "version": "4.1.0",
             "source": {
@@ -2202,17 +2251,17 @@
         },
         {
             "name": "drupal/captcha",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/captcha.git",
-                "reference": "8.x-1.1"
+                "reference": "8.x-1.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/captcha-8.x-1.1.zip",
-                "reference": "8.x-1.1",
-                "shasum": "2eaf6f00ea256652c09f785b26dc933cc5b3dd26"
+                "url": "https://ftp.drupal.org/files/projects/captcha-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "e35a2ce42b652f833d140f7571d1eef0e06b0edc"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9"
@@ -2220,8 +2269,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.1",
-                    "datestamp": "1591160977",
+                    "version": "8.x-1.2",
+                    "datestamp": "1619673374",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4206,6 +4255,70 @@
             }
         },
         {
+            "name": "drupal/field_permissions",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/field_permissions.git",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/field_permissions-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "11e31db94999e6871ad7633455315bc27989a7ea"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1598646882",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "branch-alias": {
+                    "dev-8.x-1.x": "1.x-dev"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "RobLoach",
+                    "homepage": "https://www.drupal.org/user/61114"
+                },
+                {
+                    "name": "japerry",
+                    "homepage": "https://www.drupal.org/user/45640"
+                },
+                {
+                    "name": "jhedstrom",
+                    "homepage": "https://www.drupal.org/user/208732"
+                },
+                {
+                    "name": "mariacha1",
+                    "homepage": "https://www.drupal.org/user/2210776"
+                },
+                {
+                    "name": "markus_petrux",
+                    "homepage": "https://www.drupal.org/user/39593"
+                }
+            ],
+            "description": "The Field Permissions module allows site administrators to set field-level permissions to edit, view and create fields on any entity.",
+            "homepage": "https://www.drupal.org/project/field_permissions",
+            "support": {
+                "source": "https://git.drupalcode.org/project/field_permissions",
+                "issues": "https://www.drupal.org/project/issues/field_permissions"
+            }
+        },
+        {
             "name": "drupal/geofield",
             "version": "1.22.0",
             "source": {
@@ -5048,6 +5161,58 @@
             }
         },
         {
+            "name": "drupal/mail_login",
+            "version": "2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/mail_login.git",
+                "reference": "8.x-2.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/mail_login-8.x-2.4.zip",
+                "reference": "8.x-2.4",
+                "shasum": "9b9572a9df8efdf185fab8ac7c60e0fdc6b9fb61"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.4",
+                    "datestamp": "1613094368",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Mohammad AlQanneh",
+                    "homepage": "https://www.drupal.org/u/mqanneh",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "This module enables users to login by email address.",
+            "homepage": "https://www.drupal.org/project/mail_login",
+            "keywords": [
+                "drupal",
+                "php",
+                "user"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/mail_login",
+                "issues": "http://drupal.org/project/issues/mail_login",
+                "email": "mqanneh@gmail.com"
+            }
+        },
+        {
             "name": "drupal/menu_link_attributes",
             "version": "1.2.0",
             "source": {
@@ -5577,17 +5742,17 @@
         },
         {
             "name": "drupal/schema_metatag",
-            "version": "2.1.0",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/schema_metatag.git",
-                "reference": "8.x-2.1"
+                "reference": "8.x-2.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/schema_metatag-8.x-2.1.zip",
-                "reference": "8.x-2.1",
-                "shasum": "4bf7cf116ee7ca9c6d390732a38666826009afa1"
+                "url": "https://ftp.drupal.org/files/projects/schema_metatag-8.x-2.2.zip",
+                "reference": "8.x-2.2",
+                "shasum": "67443d138dd8fe3555e882f28f5b5abf9236a554"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
@@ -5601,8 +5766,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.1",
-                    "datestamp": "1600168284",
+                    "version": "8.x-2.2",
+                    "datestamp": "1619640197",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -6153,6 +6318,52 @@
             "homepage": "https://www.drupal.org/project/unique_entity_title",
             "support": {
                 "source": "https://git.drupalcode.org/project/unique_entity_title"
+            }
+        },
+        {
+            "name": "drupal/unlimited_number",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/unlimited_number.git",
+                "reference": "2.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/unlimited_number-2.0.1.zip",
+                "reference": "2.0.1",
+                "shasum": "04c0575f980cf7b1ee0f19ee0e925c271bf8fb29"
+            },
+            "require": {
+                "drupal/core": "^8.9 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.1",
+                    "datestamp": "1591235086",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel Phin",
+                    "homepage": "http://danielph.in",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Provides a render element and a widget for number fields.",
+            "homepage": "http://drupal.org/project/unlimited_number",
+            "support": {
+                "source": "https://github.com/dpi/unlimited_number",
+                "issues": "https://github.com/dpi/unlimited_number/issues"
             }
         },
         {
@@ -7799,16 +8010,16 @@
         },
         {
             "name": "phpmailer/phpmailer",
-            "version": "v6.4.0",
+            "version": "v6.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPMailer/PHPMailer.git",
-                "reference": "050d430203105c27c30efd1dce7aa421ad882d01"
+                "reference": "9256f12d8fb0cd0500f93b19e18c356906cbed3d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/050d430203105c27c30efd1dce7aa421ad882d01",
-                "reference": "050d430203105c27c30efd1dce7aa421ad882d01",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/9256f12d8fb0cd0500f93b19e18c356906cbed3d",
+                "reference": "9256f12d8fb0cd0500f93b19e18c356906cbed3d",
                 "shasum": ""
             },
             "require": {
@@ -7861,7 +8072,7 @@
                 }
             ],
             "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
-            "time": "2021-03-31T20:06:42+00:00"
+            "time": "2021-04-29T12:25:04+00:00"
         },
         {
             "name": "psr/container",
@@ -10655,16 +10866,16 @@
         },
         {
             "name": "composer/composer",
-            "version": "1.10.21",
+            "version": "1.10.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "04021432f4a9cbd9351dd166b8c193f42c36a39c"
+                "reference": "28c9dfbe2351635961f670773e8d7b17bc5eda25"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/04021432f4a9cbd9351dd166b8c193f42c36a39c",
-                "reference": "04021432f4a9cbd9351dd166b8c193f42c36a39c",
+                "url": "https://api.github.com/repos/composer/composer/zipball/28c9dfbe2351635961f670773e8d7b17bc5eda25",
+                "reference": "28c9dfbe2351635961f670773e8d7b17bc5eda25",
                 "shasum": ""
             },
             "require": {
@@ -10731,7 +10942,7 @@
                 "dependency",
                 "package"
             ],
-            "time": "2021-04-01T07:16:35+00:00"
+            "time": "2021-04-27T11:10:45+00:00"
         },
         {
             "name": "composer/spdx-licenses",
@@ -10927,50 +11138,6 @@
                 "standards"
             ],
             "time": "2021-02-06T10:44:32+00:00"
-        },
-        {
-            "name": "drupal/convert_bundles",
-            "version": "1.0.0-alpha6",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/convert_bundles.git",
-                "reference": "8.x-1.0-alpha6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/convert_bundles-8.x-1.0-alpha6.zip",
-                "reference": "8.x-1.0-alpha6",
-                "shasum": "b9267bead6d0f811afd3980496d93bb798682561"
-            },
-            "require": {
-                "drupal/core": "^8 || ^9"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.0-alpha6",
-                    "datestamp": "1599049244",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "el1_1el",
-                    "homepage": "https://www.drupal.org/user/1795292"
-                }
-            ],
-            "description": "Convert entity bundles from one value to another",
-            "homepage": "https://www.drupal.org/project/convert_bundles",
-            "support": {
-                "source": "https://git.drupalcode.org/project/convert_bundles"
-            }
         },
         {
             "name": "drupal/core-dev",

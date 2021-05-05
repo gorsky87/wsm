@@ -1,7 +1,7 @@
 entity_type:
   node: node
   taxonomy: taxonomy
-  user: 0
+  user: user
 url: /
-pages: "/user/login\r\n/user/register"
+pages: "/user/login\r\n/user/register\r\n/czlonkowie/*"
 langcode: pl

@@ -1,0 +1,15 @@
+uuid: 7b2ab10c-ea57-4208-b6a5-49d9be554917
+langcode: pl
+status: true
+dependencies: {  }
+name: user_avatar
+label: 'user avatar'
+effects:
+  08604194-21ed-43c6-8114-7e19daa2f492:
+    uuid: 08604194-21ed-43c6-8114-7e19daa2f492
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 400
+      height: 400
+      anchor: center-center

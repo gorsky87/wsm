@@ -3,6 +3,7 @@ langcode: pl
 status: true
 dependencies:
   config:
+    - field.field.node.projects.field_archive
     - field.field.node.projects.field_header_cta
     - field.field.node.projects.field_header_layout
     - field.field.node.projects.field_meta_tags
@@ -36,11 +37,12 @@ content:
     type: entity_reference_revisions_entity_view
     region: content
   links:
-    weight: 100
+    weight: 2
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
+  field_archive: true
   field_header_cta: true
   field_header_layout: true
   field_teaser_media_image: true
