@@ -22,7 +22,7 @@ entity_type: user
 bundle: user
 label: 'Zdjecie profilowe'
 description: 'Twoje zdjęcie lub obraz.'
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''
@@ -37,11 +37,11 @@ settings:
   title_field: false
   title_field_required: false
   default_image:
-    uuid: ''
+    uuid: 90acd64d-6f21-480a-86bd-e61e0d16b023
     alt: ''
     title: ''
-    width: null
-    height: null
+    width: 330
+    height: 330
   handler: 'default:file'
   handler_settings: {  }
 field_type: image

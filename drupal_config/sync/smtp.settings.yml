@@ -6,14 +6,14 @@ smtp_protocol: ssl
 smtp_autotls: true
 smtp_timeout: 30
 smtp_username: no-replay@wroclawscymotocyklisci.pl
-smtp_password: UYa39cr_
+smtp_password: 7dlRu85f
 smtp_from: no-replay@wroclawscymotocyklisci.pl
 smtp_fromname: 'Wrocławskie Stowarzyszenie Motocyklistów'
 smtp_client_hostname: ''
 smtp_client_helo: ''
-smtp_allowhtml: '0'
+smtp_allowhtml: '1'
 smtp_test_address: ''
-smtp_debugging: true
+smtp_debugging: false
 prev_mail_system: php_mail
 smtp_keepalive: false
 _core:

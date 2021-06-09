@@ -24,7 +24,7 @@ third_party_settings:
         id: ''
         classes: ''
         direction: horizontal
-      label: Zakładki
+      label: Tabs
     group_basic:
       children:
         - field_block
@@ -38,7 +38,7 @@ third_party_settings:
         description: ''
         formatter: open
         required_fields: true
-      label: Podstawowe
+      label: Basic
     group_settings:
       children:
         - field_d_settings
@@ -52,7 +52,7 @@ third_party_settings:
         description: ''
         formatter: closed
         required_fields: true
-      label: Ustawienia
+      label: Settings
 _core:
   default_config_hash: _yQTkmC9g15CBC8BQR5dRO2WiavdNoraE8ailAKLwOQ
 id: paragraph.d_p_block.default

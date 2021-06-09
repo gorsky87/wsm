@@ -41,6 +41,7 @@
         "drupal/r4032login": "^2.1",
         "drupal/recaptcha": "^3.0",
         "drupal/responsive_views_grid": "^1.1",
+        "drupal/restui": "^1.20",
         "drupal/simplelogin": "^6.0",
         "drupal/social_login": "^2.89",
         "drupal/unique_entity_title": "^1.2",

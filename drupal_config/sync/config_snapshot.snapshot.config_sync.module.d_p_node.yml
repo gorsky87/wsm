@@ -171,6 +171,32 @@ items:
         default_config_hash: sZp2pDZsA6uDO8AIQ0I0lfd7B5rosWtGUAAGf4uHm_4
   -
     collection: ''
+    name: field.field.paragraph.d_p_node.field_d_settings
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_d_settings
+          - paragraphs.paragraphs_type.d_p_node
+        module:
+          - d_p
+      id: paragraph.d_p_node.field_d_settings
+      field_name: field_d_settings
+      entity_type: paragraph
+      bundle: d_p_node
+      label: 'Paragraph settings'
+      description: ''
+      required: false
+      translatable: true
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: field_p_configuration_storage
+      _core:
+        default_config_hash: fWz0q6GSzS37Is3uNsTDmjRwICKkBTSTpZBqzVvxbsw
+  -
+    collection: ''
     name: field.storage.paragraph.field_d_display_mode
     data:
       langcode: en

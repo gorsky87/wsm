@@ -31,7 +31,7 @@ third_party_settings:
         id: ''
         classes: ''
         direction: horizontal
-      label: Zakładki
+      label: Tabs
       group_basic:
         children:
           - title
@@ -82,7 +82,7 @@ third_party_settings:
         description: ''
         formatter: closed
         required_fields: true
-      label: Podstawowe
+      label: Basic
     group_page_sections:
       children:
         - field_page_section

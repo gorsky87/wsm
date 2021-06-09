@@ -1,0 +1,18 @@
+uuid: fc66e25b-080d-4f39-8710-f008619c7a1a
+langcode: pl
+status: true
+dependencies:
+  module:
+    - admin_toolbar_tools
+id: config_sync.module.admin_toolbar_tools
+snapshotSet: config_sync
+extensionType: module
+extensionName: admin_toolbar_tools
+items:
+  -
+    collection: ''
+    name: admin_toolbar_tools.settings
+    data:
+      max_bundle_number: 20
+      _core:
+        default_config_hash: RxwZoWRF61FrREs7iffK1ziY2IuKkEci1uWvcznnXwA

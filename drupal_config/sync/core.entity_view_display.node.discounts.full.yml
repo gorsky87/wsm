@@ -30,9 +30,9 @@ mode: full
 content:
   content_moderation_control:
     weight: -20
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   field_discount_category:
     weight: 0
     label: hidden
@@ -93,15 +93,15 @@ content:
     settings:
       image_style: max_325x325
       image_link: ''
-      svg_render_as_image: true
       svg_attributes:
         width: null
         height: null
+      svg_render_as_image: false
     third_party_settings:
       lazy:
         lazy_image: '1'
         placeholder_style: thumbnail
-        data_uri: false
+        data_uri: true
     type: image
     region: content
   field_partner_phone:

@@ -26,7 +26,7 @@ third_party_settings:
         id: ''
         classes: ''
         direction: horizontal
-      label: Zakładki
+      label: Tabs
     group_basic:
       children:
         - field_d_number
@@ -42,7 +42,7 @@ third_party_settings:
         description: ''
         formatter: open
         required_fields: true
-      label: Podstawowe
+      label: Basic
     group_settings:
       children:
         - field_d_settings
@@ -56,7 +56,7 @@ third_party_settings:
         description: ''
         formatter: closed
         required_fields: true
-      label: Ustawienia
+      label: Settings
 _core:
   default_config_hash: ECstArp6Hr1H0d5cQW8UmzfWeLtU41MW7axxRKVuTcE
 id: paragraph.d_p_single_counter.default

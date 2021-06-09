@@ -31,7 +31,7 @@ third_party_settings:
         id: ''
         classes: ''
         direction: horizontal
-      label: Zakładki
+      label: Tabs
       region: content
     group_settings:
       children:
@@ -45,7 +45,7 @@ third_party_settings:
         required_fields: true
         id: ''
         classes: ''
-      label: Ustawienia
+      label: Settings
       region: content
     group_basic:
       children:
@@ -64,7 +64,7 @@ third_party_settings:
         description: ''
         formatter: open
         required_fields: true
-      label: Podstawowe
+      label: Basic
     group_items:
       children:
         - field_d_p_tb_block_reference

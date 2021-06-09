@@ -31,7 +31,7 @@ third_party_settings:
         id: ''
         classes: ''
         direction: horizontal
-      label: Zakładki
+      label: Tabs
       region: content
     group_settings:
       children:
@@ -45,7 +45,7 @@ third_party_settings:
         required_fields: true
         id: ''
         classes: ''
-      label: Ustawienia
+      label: Settings
       region: content
     group_items:
       children:
@@ -77,7 +77,7 @@ third_party_settings:
         description: ''
         formatter: open
         required_fields: true
-      label: Podstawowe
+      label: Basic
 _core:
   default_config_hash: cmReqQpjHdPz1ntiVe8wDq7RfLoRJU0uXqDJmWiaaTA
 id: paragraph.d_p_carousel.default
