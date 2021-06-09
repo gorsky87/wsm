@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8e436f867854ff669d605dcb708c6c16",
+    "content-hash": "d94c8fbcc44e7f5117bfcae866117988",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -127,7 +127,7 @@
             "version": "1.6.4",
             "source": {
                 "type": "git",
-                "url": "git@github.com:jackmoore/colorbox.git",
+                "url": "https://github.com/jackmoore/colorbox.git",
                 "reference": "bac78120c6ca9e63370cc317ab6f400129cd6608"
             },
             "dist": {
@@ -1836,30 +1836,30 @@
         },
         {
             "name": "droptica/droopler",
-            "version": "8.2.2",
+            "version": "8.3.0.0-rc1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/droptica/droopler.git",
-                "reference": "0109912deead23d02842eab4099424c82c26da1e"
+                "reference": "db77bb4d81e07c6270c1a04c1cbd6905f9a3ece2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/droptica/droopler/zipball/0109912deead23d02842eab4099424c82c26da1e",
-                "reference": "0109912deead23d02842eab4099424c82c26da1e",
+                "url": "https://api.github.com/repos/droptica/droopler/zipball/db77bb4d81e07c6270c1a04c1cbd6905f9a3ece2",
+                "reference": "db77bb4d81e07c6270c1a04c1cbd6905f9a3ece2",
                 "shasum": ""
             },
             "require": {
                 "bower-asset/colorbox": "^1.6",
                 "bower-asset/lazysizes": "^5.2",
                 "bower-asset/masonry": "^4.2",
-                "drupal/admin_toolbar": "^2.0",
+                "drupal/admin_toolbar": "^3.0",
                 "drupal/advagg": "^4.0",
                 "drupal/better_exposed_filters": "^5.0",
                 "drupal/checklistapi": "^2.0",
                 "drupal/colorbox": "^1.4",
                 "drupal/config_update": "^1.3",
                 "drupal/contact_formatter": "^2.0",
-                "drupal/core": "~8.0",
+                "drupal/core": "^8.8 || ^9.0",
                 "drupal/entity_reference_display": "^1.2",
                 "drupal/entity_reference_revisions": "^1.3",
                 "drupal/facets": "^1.0",
@@ -1888,7 +1888,8 @@
                 "npm-asset/jquery-ui-touch-punch": "^0.2",
                 "npm-asset/object-fit-images": "^3.2.4",
                 "npm-asset/select2": "^4.0.4",
-                "npm-asset/slick-carousel": "^1.8"
+                "npm-asset/slick-carousel": "^1.8",
+                "php": ">=7.2"
             },
             "conflict": {
                 "drupal/drupal": "*"
@@ -1909,31 +1910,34 @@
             "authors": [
                 []
             ],
-            "description": "Droopler installation profile for Drupal 8",
-            "time": "2021-04-13T10:15:45+00:00"
+            "description": "Droopler installation profile for Drupal 8/9.",
+            "time": "2021-05-17T18:00:48+00:00"
         },
         {
             "name": "drupal/admin_toolbar",
-            "version": "2.4.0",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/admin_toolbar.git",
-                "reference": "8.x-2.4"
+                "reference": "3.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/admin_toolbar-8.x-2.4.zip",
-                "reference": "8.x-2.4",
-                "shasum": "6240047b8d91ac78f98d861ba8282af971fa0b38"
+                "url": "https://ftp.drupal.org/files/projects/admin_toolbar-3.0.0.zip",
+                "reference": "3.0.0",
+                "shasum": "204f7a0e8b62a8a54256142cf38ca139739fb65c"
             },
             "require": {
                 "drupal/core": "^8.8.0 || ^9.0"
             },
+            "require-dev": {
+                "drupal/admin_toolbar_tools": "*"
+            },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.4",
-                    "datestamp": "1601999178",
+                    "version": "3.0.0",
+                    "datestamp": "1611311186",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
