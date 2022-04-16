@@ -1,19 +1,15 @@
 uuid: ebca4d7a-0264-4339-aaf8-13c2e2a62c85
 langcode: pl
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - media
 _core:
   default_config_hash: NIKBt6kw_uPhNI0qtR2DnRf7mSOgAQdx7Q94SKMjXbQ
 name: 'Czysty tekst'
 format: plain_text
 weight: 10
 filters:
-  filter_html_escape:
-    id: filter_html_escape
-    provider: filter
-    status: true
-    weight: -10
-    settings: {  }
   filter_url:
     id: filter_url
     provider: filter
@@ -27,3 +23,21 @@ filters:
     status: true
     weight: 0
     settings: {  }
+  media_embed:
+    id: media_embed
+    provider: media
+    status: false
+    weight: 100
+    settings:
+      default_view_mode: default
+      allowed_media_types: {  }
+      allowed_view_modes: {  }
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -10
+    settings:
+      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type=''1 A I''> <li> <dl> <dt> <dd> <h2 id=''jump-*''> <h3 id> <h4 id> <h5 id> <h6 id>'
+      filter_html_help: true
+      filter_html_nofollow: false

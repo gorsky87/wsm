@@ -1,6 +1,6 @@
 definitions:
   d__blog__d__blog:
-    weight: -48
+    weight: -49
     menu_name: main
     parent: ''
     expanded: false

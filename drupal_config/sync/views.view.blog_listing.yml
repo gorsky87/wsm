@@ -9,8 +9,6 @@ dependencies:
     - system.menu.main
   module:
     - node
-    - rest
-    - serialization
     - taxonomy
     - user
 _core:
@@ -339,7 +337,7 @@ display:
         description: ''
         expanded: false
         parent: 'menu_link_content:9ef55463-e7de-4cfa-a86c-bcdf7d5adafc'
-        weight: -50
+        weight: -49
         context: '0'
         menu_name: main
     cache_metadata:
@@ -386,34 +384,6 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url
-        - 'user.node_grants:view'
-        - user.permissions
-      tags: {  }
-  rest_export_1:
-    display_plugin: rest_export
-    id: rest_export_1
-    display_title: 'Eksport REST'
-    position: 3
-    display_options:
-      display_extenders: {  }
-      path: api/v1/news
-      pager:
-        type: none
-        options:
-          offset: 0
-      style:
-        type: serializer
-        options:
-          uses_fields: false
-          formats:
-            json: json
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - request_format
         - url
         - 'user.node_grants:view'
         - user.permissions

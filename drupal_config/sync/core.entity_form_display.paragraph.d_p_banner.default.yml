@@ -31,7 +31,7 @@ third_party_settings:
         id: ''
         classes: ''
         direction: horizontal
-      label: Tabs
+      label: Zakładki
     group_basic:
       children:
         - field_d_main_title
@@ -51,7 +51,7 @@ third_party_settings:
         description: ''
         formatter: open
         required_fields: true
-      label: Basic
+      label: Podstawowe
     group_settings:
       children:
         - field_d_settings
@@ -65,7 +65,7 @@ third_party_settings:
         description: ''
         formatter: closed
         required_fields: true
-      label: Settings
+      label: Ustawienia
 _core:
   default_config_hash: eK95aqI3jk4w_-BPoGeYjasT5j5wlEBGMFLIPHOkND8
 id: paragraph.d_p_banner.default
