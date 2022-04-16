@@ -3,6 +3,13 @@ $max-discount-width: 1400px;
   .view-content {
     background: #f1f1f1;
   }
+  // todo
+  .view-grouping-header {
+    display: none;
+  }
+  .view-grouping-content > h3 {
+    text-align: center;
+  }
 
   .view-filters {
     background: #eee;
