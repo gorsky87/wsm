@@ -1,5 +1,5 @@
 name: 'WSM users'
 type: module
 description: 'Module users'
-core: 8.x
+core: 9.x
 package: 'wsm'
