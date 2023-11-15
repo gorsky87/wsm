@@ -1,5 +1,5 @@
 name: 'WSM tracks'
 type: module
 description: 'Module tracks'
-core: 9.x
+core_version_requirement: 9.x
 package: 'wsm'

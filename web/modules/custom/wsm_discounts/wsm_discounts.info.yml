@@ -1,5 +1,5 @@
 name: 'WSM discounts'
 type: module
 description: 'Module discounts'
-core: 9.x
+core_version_requirement: 9.x
 package: 'wsm'
